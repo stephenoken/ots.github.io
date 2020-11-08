@@ -1,0 +1,15 @@
+---
+layout: default
+title: Staff
+---
+<h1>Study Cases</h1>
+
+<ul>
+  {% for study_case in site.study_cases %}
+    <li>
+      <h2>{{ study_case.title }}</h2>
+      <!-- <h3>{{ author.position }}</h3> -->
+      <p>{{ study_case.description }}</p>
+    </li>
+  {% endfor %}
+</ul>

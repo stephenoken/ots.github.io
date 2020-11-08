@@ -1,0 +1,22 @@
+.site-header {
+    overflow: hidden;
+    padding: 1em 2em;
+    text-decoration: none;
+    .navbar-items {
+        float: right;
+        padding: 0% 1rem;
+        text-decoration: none;
+        color: inherit;
+        
+        img {
+            vertical-align: middle;
+            width: 24px;
+            height: auto;
+        }
+    }
+    .home-logo {
+        float: left;
+        width: 280.25px;
+        height: auto;
+    }
+}

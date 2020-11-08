@@ -1,0 +1,30 @@
+---
+layout: default
+title: Home
+---
+<div class="wrapper">
+    <div class="heading">
+        <h1>
+            Everything is about the process
+        </h1>
+        <p>
+            Hi, I'm Olga and I do UX design. Feel free to check my study cases.
+        </p>
+    </div>
+    <div>
+        <img src="{{ site.url }}/assets/images/arrows-home.png" alt="" width="100px">
+    </div>
+</div>
+<div class="wrapper">
+    {% for study_case in site.study_cases %}
+    <a href="{{ study_case.url }}">
+        <div class="thumbnail">
+            <img src="{{site.url}}/assets/images/{{study_case.title}}/thumbnail.png" alt="">
+            <div class="overlay">
+                <div class="text">{{ study_case.description }} </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+

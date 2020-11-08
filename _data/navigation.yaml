@@ -1,0 +1,7 @@
+- name: LinkenIn
+  link: https://www.linkedin.com/in/olgatorrents/
+  image: linkedin.png
+- name: About
+  link: /about/
+- name: Study Cases
+  link: /study-cases.html
