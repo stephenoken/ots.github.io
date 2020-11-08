@@ -17,7 +17,7 @@ title: Home
 </div>
 <div class="wrapper">
     {% for study_case in site.study_cases %}
-    <a href="{{ study_case.url }}">
+    <a href="{{ study_case.url | relative_url}}">
         <div class="thumbnail">
             <img src="assets/images/{{ study_case.title }}/thumbnail.png" alt="">
             <div class="overlay">
