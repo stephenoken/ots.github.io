@@ -1,11 +1,11 @@
 <nav class="site-header">
   <a href="{{ site.url }}">
-    <img src="{{ site.url }}/assets/images/ots-lg-logo.png" alt="" class="home-logo">
+    <img src="assets/images/ots-lg-logo.png" alt="" class="home-logo">
   </a>
 {% for item in site.data.navigation %}
     <a href="{%if item.link.starts_with?(http)%}{{ site.url }}{% endif %}{{ item.link }}" class="navbar-items {% if page.url == item.link %}current {% endif %}">
       {% if item.image %}
-      <img src="{{ site.url }}/assets/images/{{ item.image }}" alt="{{ item.image }}">      
+        <img src="assets/images/{{ item.image }}" alt="{{ item.image }}">      
       {% else %}
         {{ item.name }}
       {% endif %}

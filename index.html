@@ -12,14 +12,14 @@ title: Home
         </p>
     </div>
     <div>
-        <img src="{{ site.url }}/assets/images/arrows-home.png" alt="" width="100px">
+        <img src="assets/images/arrows-home.png" alt="" width="100px">
     </div>
 </div>
 <div class="wrapper">
     {% for study_case in site.study_cases %}
     <a href="{{ study_case.url }}">
         <div class="thumbnail">
-            <img src="{{site.url}}/assets/images/{{study_case.title}}/thumbnail.png" alt="">
+            <img src="assets/images/{{ study_case.title }}/thumbnail.png" alt="">
             <div class="overlay">
                 <div class="text">{{ study_case.description }} </div>
             </div>
