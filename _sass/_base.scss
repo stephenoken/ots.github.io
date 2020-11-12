@@ -18,4 +18,51 @@ h1 {
     line-height: 88px;
 }
 
+p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 31px;
+}
 
+h2 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 67px;
+}
+
+h3 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 27px;
+    line-height: 35px;
+}
+
+.hero {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    img {
+        // position: relative;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        // background-size:100% 100%;
+
+    }
+
+    .hero-text {
+        position: absolute;
+        position: absolute;
+        top: 10%;
+        margin: $site-wide-margin;
+        width: 45%;
+    }
+}
+
+.spacer {
+    margin: 4em;
+}

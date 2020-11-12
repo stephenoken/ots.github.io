@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: minmax(min-content, 1fr) 1fr;
     grid-gap: 34px;
-    margin: 3em 3em;
+    margin: $site-wide-margin;
 
     img { 
         width: 100%;
