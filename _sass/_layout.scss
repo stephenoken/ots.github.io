@@ -1,8 +1,5 @@
-.wrapper {
+@mixin element-display {
     display: grid;
-    grid-template-columns: minmax(min-content, 1fr) 1fr;
-    grid-gap: 34px;
-    margin: $site-wide-margin;
 
     img { 
         width: 100%;
@@ -54,6 +51,82 @@
             font-size: 21px;
         }
     }
-    
+
+    .list-box {
+        $content-margin: 1rem ;
+
+        background: #F6F7FB;
+        border: 2px solid #699BF7;
+        box-sizing: border-box;
+        border-radius: 8px;
+
+        h4 {
+            margin: $content-margin;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 23px;
+            line-height: 31px;
+        }
+
+        .subheading {
+            margin: $content-margin;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+            /* or 100% */
+            color: #699BF7;
+        }
+        ul {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 25px;
+            color: #767A7F;
+        }
+    }
+
+    .list-point {
+        color: #699BF7;
+        display: inline-flex;
+    }
+
 }
+.container {
+    margin: $site-wide-margin;
+    .col-2 {
+        @include element-display;
+        grid-template-columns: minmax(min-content, 1fr) 1fr;
+        grid-gap: 34px;
+    }
+
+    .col-4 {
+        @include element-display;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 34px;
+
+    }
+
+    .section-with-subheading {
+        h2 {
+            margin-bottom: 0.25em;
+        }
+        .subheading {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            display: inline-flex;
+        }
+
+        .title {
+            border-bottom: 1px solid $base-font-color;
+            padding-bottom: 2px;
+        }
+
+        .ancillary-text {
+            color: #344454;
+        }
+    }
+}
+
 

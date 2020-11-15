@@ -3,29 +3,31 @@ layout: default
 title: Home
 ---
 <div class="spacer"></div>
-<div class="wrapper">
-    <div class="heading">
-        <h1>
-            Everything is about the process
-        </h1>
-        <p>
-            Hi, I'm Olga and I do UX design. Feel free to check my study cases.
-        </p>
-    </div>
-    <div>
-        <img src="assets/images/arrows-home.png" alt="" width="100px">
-    </div>
-</div>
-<div class="wrapper">
-    {% for study_case in site.study_cases %}
-    <a href="{{ study_case.url | relative_url}}">
-        <div class="thumbnail">
-            <img src="assets/images/{{ study_case.title }}/thumbnail.png" alt="">
-            <div class="overlay">
-                <div class="text">{{ study_case.description }} </div>
-            </div>
+<div class=container>
+    <div class="col-2">
+        <div class="heading">
+            <h1>
+                Everything is about the process
+            </h1>
+            <p>
+                Hi, I'm Olga and I do UX design. Feel free to check my study cases.
+            </p>
         </div>
-    </a>
-    {% endfor %}
+        <div>
+            <img src="assets/images/arrows-home.png" alt="" width="100px">
+        </div>
+    </div>
+    <div class="col-2">
+        {% for study_case in site.study_cases %}
+        <a href="{{ study_case.url | relative_url}}">
+            <div class="thumbnail">
+                <img src="assets/images/{{ study_case.title }}/thumbnail.png" alt="">
+                <div class="overlay">
+                    <div class="text">{{ study_case.description }} </div>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>    
 </div>
 
