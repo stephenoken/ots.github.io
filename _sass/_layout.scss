@@ -31,7 +31,7 @@
         .text {
             text-decoration: none;
             color: $base-font-color;
-            font-size: 24px;
+            font-size: 1em;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -105,7 +105,7 @@
     .col-2 {
         @include element-display;
         grid-template-columns: minmax(min-content, 1fr) 1fr;
-        grid-gap: 34px;
+        grid-gap: 2rem;
     }
 
     // .col-1-sm {
@@ -118,7 +118,7 @@
     .col-4 {
         @include element-display;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 34px;
+        grid-gap: 2rem;
 
     }
 
@@ -130,14 +130,19 @@
         .subheading {
             font-style: normal;
             font-weight: bold;
-            font-size: 16px;
-            line-height: 24px;
+            font-size: 1rem;
+            line-height: 1rem;
             display: inline-flex;
         }
 
-        .tools-img {
+        .tools-img-double {
             margin: 1rem 0%;
-            width: 77px;
+            width: 5rem;
+        }
+
+        .tools-img-single {
+            margin: 1rem 0%;
+            width: 3rem;
         }
 
         .title {
@@ -157,8 +162,8 @@
         p, dd{
             font-style: normal;
             font-weight: normal;
-            font-size: 16px;
-            line-height: 25px;
+            font-size: 1rem;
+            line-height: 1.5rem;
             color: #344454;
         }
 
@@ -173,4 +178,52 @@
     }
 }
 
+.quote-section {
+    position: relative;
+    height: 15em;
+    margin: 3em auto;
+    h2 {
+        color: $ifly-theme-color;
+        line-height: 1em;
+        width: 20em;
+        font-size: 3rem;
+    }
+    img {
+        position: absolute;
+        right: 10em;
+        bottom: 0em;
+    }
+}
 
+// .link-box {
+//     margin: 2rem auto;
+//     background: $ifly-tertiary;
+//     padding: 1rem;
+//     width: 100%;
+//     border-radius: 10%;
+//     align-content: center;
+//     color: $ifly-link-color;
+//     a:link a:visited a:active a:hover {
+//         color: $ifly-link-color;
+//     }
+// }
+.external_link {
+    background: $ifly-tertiary;
+    text-align: center;
+    display: block;
+    margin: 2rem 1rem;
+    padding: 1rem;
+    border-radius: 1%;
+    color: $ifly-link-color;
+    text-decoration: none;
+
+    &:hover {
+        background-color: black;
+        color: $ifly-link-color;
+    }
+
+    &:visited {
+        color: $ifly-link-color;
+    }
+
+}
