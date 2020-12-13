@@ -8,6 +8,10 @@
         border-radius: 2%;
     }
 
+    .image-subtext {
+        color: $ifly-theme-color;
+        font-size: 1rem;
+    }
     .thumbnail {
         position: relative;
         width: 100%;
@@ -122,6 +126,13 @@
 
     }
 
+    .col-3 {
+        @include element-display;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2rem;
+
+    }
+
     .section-with-subheading {
         margin: 3em 0%;
         h2 {
@@ -138,11 +149,13 @@
         .tools-img-double {
             margin: 1rem 0%;
             width: 5rem;
+            display: block;
         }
 
         .tools-img-single {
             margin: 1rem 0%;
             width: 3rem;
+            display: block;
         }
 
         .title {
@@ -175,6 +188,28 @@
             list-style: "★";
             padding-inline-start: 1ch;
         }
+
+        ol {
+            list-style: none;
+            counter-reset: list-counter;
+            color: #344454;
+            line-height: 1.5rem;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                counter-increment: list-counter;
+                font-size: 1rem;
+                display: flex;
+                &::before {
+                    content: counter(list-counter) ". ";
+                    color: $ifly-theme-color;
+                    font-weight: 600;
+                    padding-right: 1rem;
+                }
+            }         
+        }
+        
     }
 }
 
@@ -218,7 +253,7 @@
     text-decoration: none;
 
     &:hover {
-        background-color: black;
+        opacity: .75;
         color: $ifly-link-color;
     }
 
@@ -226,4 +261,38 @@
         color: $ifly-link-color;
     }
 
+}
+
+.quote-box {
+    background: #EEF3F9;
+    border-radius: 10.37px;
+    .quote {
+        padding: 2rem;
+        img {
+            float: left;
+            width: 50px;
+            height: auto;
+        }
+        
+        .quote-heading {
+            padding-bottom: 1rem;
+            .heading-text {
+                margin-left: 4rem;
+                .heading-subtext {
+                    color: $ifly-theme-color;
+                    font-size: 0.75em;
+                }
+            }
+        }
+
+        .body {
+            font-weight: 700;
+        }
+    }
+    
+}
+
+.diagram {
+    width: 100%;
+    height: auto;
 }
