@@ -5,7 +5,7 @@ permalink: /ifly/
 layout: default
 ---
 <div class="hero">
-    <img src="{{site.url}}/assets/images/{{ page.title }}/hero.png" alt="ifly-hero">
+    <!-- <img src="{{site.url}}/assets/images/{{ page.title }}/hero.png" alt="ifly-hero"> -->
     <div class="hero-text">
         <h1>ifly</h1>
         <h1>An airline app with a smooth booking experience.</h1>
@@ -18,7 +18,7 @@ layout: default
 
 <div class="container">
     <div class="col-2">
-        <div>
+        <div class="list-paragragh">
             <h3>Project Overview</h3>
             <p>
                 The simplest part of planning a trip is deciding the destination. 
@@ -26,7 +26,7 @@ layout: default
                 Through this case study I propose a booking flow with a friction free experience. 
             </p>
         </div>
-        <div>
+        <div class="list-paragragh">
             <h3>My Role</h3>
             <p>
                 This case study was my graduation project for the UX design institute. 
@@ -35,50 +35,57 @@ layout: default
             </p>
         </div>
     </div>
-           
-    <h2>Design thinking process</h2>
-    <div class="col-4">
-        <div class="list-box">
-            <h4>Research</h4>
-            <div class="subheading">UNDERSTAND THE PROBLEM</div>  
-            <ul>
-                <li>Competitive benchmarking</li>
-                <li>Online survey</li>
-                <li>Note-taking</li>
-                <li>Usability testing</li>
+    <div class="section-with-subheading">
+        <div class="col-2">
+            <h2>Design thinking process</h2>
+        </div>
+        <div class="col-4">
+            <div class="list-box">
+                <h4>Research</h4>
+                <div class="subheading">UNDERSTAND THE PROBLEM</div>  
+                <ul>
+                    <li>Competitive benchmarking</li>
+                    <li>Online survey</li>
+                    <li>Note-taking</li>
+                    <li>Usability testing</li>
 
-            </ul>
-        </div>
-        <div class="list-box"> 
-            <h4>Analysis</h4>
-            <div class="subheading">STRUCUTRE AND ORGANISE UNSTRUCUTRUED DATA</div>  
-            <ul>
-                <li>Affinity Diagram</li>
-                <li>Personas</li>
-                <li>Customer Journey Map</li>
-            </ul>
-        </div>
-        <div class="list-box">
-            <h4>Define</h4>
-            <div class="subheading">ARTICULATE THE SOLUTION</div>  
-            <ul>
-                <li>Flow Diagram</li>
-                <li>Interaction design</li>
-            </ul>
-        </div>
-        <div class="list-box">
-            <h4>Ideate</h4>
-            <div class="subheading">CREATE THE SOLUTION</div>  
-            <ul>
-                <li>Medium fidelity prototype</li>
-                <li>High fidelity prototype</li>
-                <li>Wireframe</li>
-            </ul>
+                </ul>
+            </div>
+            <div class="list-box"> 
+                <h4>Analysis</h4>
+                <div class="subheading">STRUCUTRE AND ORGANISE UNSTRUCUTRUED DATA</div>  
+                <ul>
+                    <li>Affinity Diagram</li>
+                    <li>Personas</li>
+                    <li>Customer Journey Map</li>
+                </ul>
+            </div>
+            <div class="list-box">
+                <h4>Define</h4>
+                <div class="subheading">ARTICULATE THE SOLUTION</div>  
+                <ul>
+                    <li>Flow Diagram</li>
+                    <li>Interaction design</li>
+                </ul>
+            </div>
+            <div class="list-box">
+                <h4>Ideate</h4>
+                <div class="subheading">CREATE THE SOLUTION</div>  
+                <ul>
+                    <li>Medium fidelity prototype</li>
+                    <li>High fidelity prototype</li>
+                    <li>Wireframe</li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="section-with-subheading">
-        <h2>Research</h2>
-        <div class="subheading"> <div class="title">Research</div>&emsp;<div class="ancillary-text">Understand the problem</div></div>
+        <div class="col-2">
+            <div>
+                <h2>Research</h2>
+                <div class="subheading"> <div class="title">Research</div>&emsp;<div class="ancillary-text">Understand the problem</div></div>
+            </div>
+        </div>
         <div class="col-2">
             <div class="list-paragragh">
                 <h3>The problem</h3>
@@ -92,6 +99,8 @@ layout: default
                     Understanding industry conventions and develop a smooth friction-free booking process.
                 </p>
             </div>
+        </div>
+        <div class="col-2">
             <div class="list-paragragh">
                 <h3>Goal</h3>
                 <p>
@@ -107,8 +116,8 @@ layout: default
         </div>
     </div>
     <div class="quote-section"> 
-        <img src="{{site.url}}/assets/images/{{ page.title }}/quote_section_image_1.png" alt="quote_image_1">
         <h2>How can we help the users feel more confident during the flight booking experience?</h2>
+        <img src="{{site.url}}/assets/images/{{ page.title }}/quote_section_image_1.png" alt="quote_image_1">
     </div>
     <div class="section-with-subheading">
         <div class="col-2">
@@ -278,7 +287,6 @@ layout: default
             </div>
         </div>
     </div>
-        <!-- TODO: Updated images  -->
     <div class="section-with-subheading">
         <div class="col-2">
            <div class="text-content">
@@ -328,7 +336,9 @@ layout: default
         </div> 
     </div>
     <div class="section-with-subheading">
-        <h2>Analysis</h2>
+        <div class="col-2">
+            <h2>Analysis</h2>
+        </div>
         <div class="col-2">
            <div class="text-content">
                 <div class="subheading"> <div class="title">Analysis</div>&emsp;<div class="ancillary-text">Affinity Diagram</div></div>
@@ -385,8 +395,12 @@ layout: default
         </div> 
     </div>
     <div class="section-with-subheading">
-        <div class="subheading"> <div class="title">Analysis</div>&emsp;<div class="ancillary-text">Customer Journey</div></div>
-        <img src="{{ site.url }}/assets/images/{{ page.title }}/note_taking_google_doc_logo.png" alt="note taking and google doc logo" class="tools-img-double">
+        <div class="col-2">
+            <span>
+                <div class="subheading"> <div class="title">Analysis</div>&emsp;<div class="ancillary-text">Customer Journey</div></div>
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/note_taking_google_doc_logo.png" alt="note taking and google doc logo" class="tools-img-double">
+            </span>
+        </div>
         <div class="col-2">
            <div class="text-content">     
                <h5>About</h5>
@@ -401,7 +415,9 @@ layout: default
             </p>
            </div>
         </div>
-        <img src="{{ site.url }}/assets/images/{{ page.title }}/customer-journey.png" alt="customer journey diagram" class="diagram">
+        <div class="col-2">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/customer-journey.png" alt="customer journey diagram" class="diagram">
+        </div>
         <div class="col-2">
             <div class="text-content">
                 <h5>Findings</h5>
@@ -429,9 +445,13 @@ layout: default
         </div> 
     </div>
     <div class="section-with-subheading">
-        <h2>Define</h2>
-        <div class="subheading"> <div class="title">Define</div>&emsp;<div class="ancillary-text">Flow diagram</div></div>
-        <img src="{{ site.url }}/assets/images/{{ page.title }}/note_taking_google_doc_logo.png" alt="note taking and google doc logo" class="tools-img-double">
+        <div class="col-2">
+            <span>
+                <h2>Define</h2>
+                <div class="subheading"> <div class="title">Define</div>&emsp;<div class="ancillary-text">Flow diagram</div></div>
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/note_taking_google_doc_logo.png" alt="note taking and google doc logo" class="tools-img-double">
+            </span>
+        </div>
         <div class="col-2">
            <div class="text-content">     
                <h5>About</h5>
@@ -446,7 +466,9 @@ layout: default
             </p>
            </div>
         </div>
-        <img src="{{ site.url }}/assets/images/{{ page.title }}/flow-diagram.png" alt="flow diagram" class="diagram">
+        <div class="col-2">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/flow-diagram.png" alt="flow diagram" class="diagram">
+        </div>
         <div class="col-2">
             <div class="text-content">
                 <h5>Hypothesis</h5>
@@ -504,12 +526,16 @@ layout: default
         </div> 
     </div>
     <div class="section-with-subheading">
-        <h2>Ideate</h2>
-        <img src="{{ site.url }}/assets/images/{{ page.title }}/medium-fidelity.png" alt="Medium fidelity" class="diagram">
-        <div class="text-content">
-            <div class="subheading"> <div class="title">Ideate</div>&emsp;<div class="ancillary-text">Medium fidelity</div></div>
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/note_taking_google_doc_logo.png" alt="note taking and google doc logo" class="tools-img-double">
+        <div class="col-2">
+            <h2>Ideate</h2>
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/medium-fidelity.png" alt="Medium fidelity" class="diagram">
         </div>
+        <div class="col-2">
+            <div class="text-content">
+                <div class="subheading"> <div class="title">Ideate</div>&emsp;<div class="ancillary-text">Medium fidelity</div></div>
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/note_taking_google_doc_logo.png" alt="note taking and google doc logo" class="tools-img-double">
+            </div>
+        </div>       
         <div class="col-2">
             <div class="text-content">
                 <h5>About</h5>
@@ -523,10 +549,14 @@ layout: default
         </div>
     </div>
     <div class="section-with-subheading">
-        <img src="{{ site.url }}/assets/images/{{ page.title }}/customer-journey.png" alt="customer journey diagram" class="diagram">
-        <div class="text-content">
-            <div class="subheading"> <div class="title">Ideate</div>&emsp;<div class="ancillary-text">Wireframes</div></div>
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/note_taking_google_doc_logo.png" alt="note taking and google doc logo" class="tools-img-double">
+        <div class="col-2">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/customer-journey.png" alt="customer journey diagram" class="diagram">
+        </div>
+        <div class="col-2">
+            <div class="text-content">
+                <div class="subheading"> <div class="title">Ideate</div>&emsp;<div class="ancillary-text">Wireframes</div></div>
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/note_taking_google_doc_logo.png" alt="note taking and google doc logo" class="tools-img-double">
+            </div>
         </div>
         <div class="col-2">
             <div class="text-content">
@@ -546,7 +576,9 @@ layout: default
         </div>
     </div>
     <div class="section-with-subheading">
-        <img src="{{ site.url }}/assets/images/{{ page.title }}/customer-journey.png" alt="customer journey diagram" class="diagram">
+        <div class="col-2">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/customer-journey.png" alt="customer journey diagram" class="diagram">
+        </div>
     </div>
     <div class="section-with-subheading">
         <div class="col-2">
