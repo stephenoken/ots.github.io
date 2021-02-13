@@ -1,0 +1,32 @@
+@mixin hero {
+    position: relative;
+    height: 100vh;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    @include media(">=tablet") {
+        grid-template-columns: minmax(25ch, 55ch);
+    }
+
+    @include media("<tablet") {
+        grid-template-columns:  minmax(25ch, 55ch);
+    }
+    
+    .hero-text {
+        @include media(">=tablet") {
+            margin: auto 6em
+
+        }
+    
+        @include media("<tablet") {
+            margin: auto 1em;
+        }
+        width: 100%;
+    }
+}
+
+.hero-ifly {
+    @include hero;
+    background: $hero-ifly-image center;
+}

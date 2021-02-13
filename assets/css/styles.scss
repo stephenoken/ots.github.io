@@ -2,65 +2,11 @@
 # this ensures Jekyll reads the file to be transformed into CSS later
 # only Main files contain this front matter, not partials.
 ---
-// @import "typography";
-
-// .content {
-//   width: 45rem;
-//   margin: 0 auto;
-// }
-$hero-image: url("{{ site.url }}/assets/images/ifly/hero.png");
+$hero-ifly-image: url("{{ site.url }}/assets/images/ifly/hero.png");
 @import "include-media";
 @import "theme";
 @import "base";
 @import "layout";
 @import "navbar";
 @import "footer";
-
-.hero {
-    position: relative;
-    height: 100vh;
-    width: auto;
-    background: $hero-image center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: grid;
-    @include media(">=tablet") {
-        grid-template-columns: minmax(25ch, 55ch);
-    }
-
-    @include media("<tablet") {
-        grid-template-columns:  minmax(25ch, 55ch);
-    }
-    
-    .hero-text {
-        @include media(">=tablet") {
-            // grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-            margin: auto 6em
-
-        }
-    
-        @include media("<tablet") {
-            // grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
-            margin: auto 1em;
-        }
-        width: 100%;
-    }
-    // img {
-    //     // position: relative;
-    //     width: 100%;
-    //     height: 100%;
-    //     background-position: center;
-    //     background-repeat: no-repeat;
-    //     background-size: cover;
-    //     // background-size:100% 100%;
-
-    // }
-
-//     .hero-text {
-//         position: absolute;
-//         position: absolute;
-//         top: 10%;
-//         margin: $site-wide-margin;
-//         width: 45%;
-//     }
-}
+@import "hero";

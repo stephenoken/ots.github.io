@@ -108,11 +108,11 @@
 }
 .container {
     @include media(">tablet") {
-        margin: 3em 3em ;
+        margin: 5em 3em ;
     }
 
     @include media("<=tablet") {
-        margin: 3em 1em;
+        margin: 5em 1em;
     }
     .col-2 {
         $minmax-content: minmax(25ch, 55ch);
@@ -171,18 +171,12 @@
         @include media("<tablet") {
             grid-template-columns: minmax(15ch, max-content);
         }  
-        // grid-template-columns: 1fr 1fr 1fr;
-        // grid-gap: 2rem;
 
     }
 
     .section-with-subheading {
         margin: 3em 0%;
 
-        h2 {
-            // margin-bottom: 1em;
-            // margin-left: 5vw;
-        }
         .subheading {
             font-style: normal;
             font-weight: bold;
