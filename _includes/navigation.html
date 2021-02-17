@@ -1,14 +1,25 @@
+
 <nav class="site-header">
   <a href="{{ site.url }}">
     <img src="{{ site.url }}/assets/images/ots-lg-logo.png" alt="" class="home-logo">
   </a>
-{% for item in site.data.navigation %}
-    <a href="{%if item.link.starts_with?(http)%}{{ site.url }}{% endif %}{{ item.link }}" class="navbar-items {% if page.url == item.link %}current {% endif %}">
+  <!-- <div class="navbar-item-section">
+    {% for item in site.data.navigation %}
+    <a href="{%if item.link.starts_with?(http)%}{{ site.url }}{% endif %}{{ item.link }}" class="item {% if page.url == item.link %}current {% endif %}">
       {% if item.image %}
         <img src="{{ site.url }}/assets/images/{{ item.image }}" alt="{{ item.image }}">      
       {% else %}
         {{ item.name }}
       {% endif %}
     </a>
-{% endfor %}
+    {% endfor %}
+    <div class="dropdown item">
+      <button>Study Cases <img src="{{ site.url }}/assets/images/chevron-down.svg" alt=""></button>
+      <div class="content">
+        {% for study_case in site.study_cases %}
+          <a href="{{ study_case.url | relative_url}}">{{ study_case.title }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div> -->
 </nav>

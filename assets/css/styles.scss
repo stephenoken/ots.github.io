@@ -2,17 +2,11 @@
 # this ensures Jekyll reads the file to be transformed into CSS later
 # only Main files contain this front matter, not partials.
 ---
-
-// @import "typography";
-
-// .content {
-//   width: 45rem;
-//   margin: 0 auto;
-// }
-// $hero-image: url("{{ site.url }}/assets.images/{{ page.title }}/hero.png");
-
+$hero-ifly-image: url("{{ site.url }}/assets/images/ifly/hero.png");
+@import "include-media";
 @import "theme";
 @import "base";
 @import "layout";
 @import "navbar";
 @import "footer";
+@import "hero";
