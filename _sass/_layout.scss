@@ -1,340 +1,48 @@
-@mixin element-display {
-    display: grid;
-    gap: 1em;
-    
-
-    img { 
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 2%;
+.home {
+    height: 50vh;
+    margin-top: 40vh;
+    img {
+        float: left;
     }
-
-    .image-subtext {
-        color: $ifly-theme-color;
-        font-size: 1rem;
-    }
-    .thumbnail {
-        position: relative;
-        width: 100%;
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            transition: .5s ease;
-            background-color: #FFFEFC;
-        }
-
-        &:hover .overlay {
-            opacity: .75;
-        }
-        .text {
-            text-decoration: none;
-            color: $base-font-color;
-            font-size: 1em;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            text-align: center;
-          }
-    }
-
-    .heading {
-        h1 {
-            font-weight: 800;
-        }
-
-        p {
-            font-size: 21px;
-        }
-    }
-
-    .list-box {
-        $content-margin: 1rem ;
-
-        background: #F6F7FB;
-        border: 2px solid $ifly-theme-color;
-        box-sizing: border-box;
-        border-radius: 8px;
-
-        h4 {
-            margin: $content-margin;
-            font-style: normal;
-            font-weight: 800;
-            font-size: 23px;
-            line-height: 31px;
-        }
-
-        .subheading {
-            margin: $content-margin;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 14px;
-            /* or 100% */
-            color: $ifly-theme-color;
-        }
-        ul {
-            font-style: normal;
-            font-weight: normal;
+    .links {
+        display: flex;
+        justify-content: center;
+        // text-align: center;
+        a {
+            font-weight: 600;
+            background-color: $ifly-theme-color;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 40px;
+            padding-right: 40px;
+            border-radius: 6px;
             font-size: 16px;
-            line-height: 25px;
-            color: #767A7F;
+            text-decoration: none;
+            align-content: center;
+            &:visited {
+                color: inherit;
+            }
+            &:active {
+                background-color: #ffa6a1;
+            }
         }
-    }
-
-    .list-paragragh {
-        h3 {
-            padding-left: 1rem;
-            border-left: $ifly-theme-color 2px solid;
-            margin-bottom: 0%;
+        img {
+            width: 24px;
+            height: auto;
+            margin-top: 3%;
+            padding-right: 5px;
         }
-        p {
-            padding-left: 1rem;;
-        }
-        
-        // display: inline-flex;
-
     }
 
 }
 .container {
-    @include media(">tablet") {
-        margin: 5em 3em ;
-    }
+    align-content: center;
+    max-width: 800px;
+    min-width: min-content;
+    margin-left: auto;
+    margin-right: auto;
 
-    @include media("<=tablet") {
+    @include media("<desktop") {
         margin: 5em 1em;
     }
-    .col-2 {
-        $minmax-content: minmax(25ch, 55ch);
-        @include element-display;
-        @include media(">=tablet") {
-            grid-template-columns: 1fr $minmax-content  $minmax-content 1fr;
-            :nth-child(odd) {
-                grid-column: 2;
-            }
-            :nth-child(even) {
-                grid-column: 3;
-            }
-
-        }
-        @include media("<tablet") {
-            grid-template-columns: $minmax-content;
-        } 
-        .diagram {
-            width: 100%;
-            height: auto;
-            grid-column: 2/4;
-        }  
-    }
-
-    .col-4 {
-        @include element-display;
-        $minmax_col-4: minmax(10ch, 18vw);
-        @include media(">=tablet") {
-            grid-template-columns: 1fr $minmax_col-4  $minmax_col-4  $minmax_col-4  $minmax_col-4 1fr;
-            :nth-child(1) {
-                grid-column: 2;
-            }
-        }
-        @include media("<tablet") {
-            grid-template-columns: minmax(15ch, max-content);
-        }  
-        // repeat(auto-fill, minmax(15ch, 30ch));
-        // margin: auto 5vw;
-        // grid-gap: 1em;
-        width: 100%;
-    }
-
-    .col-3 {
-        @include element-display;
-        $minmax_col-3: minmax(10ch, 25vw);
-        @include media(">=tablet") {
-            grid-template-columns: 1fr $minmax_col-3  $minmax_col-3  $minmax_col-3  1fr;
-            :nth-child(1) {
-                grid-column: 2;
-            }
-            :nth-child(n+1){
-                background: #EEF3F9;
-                border-radius: 10.37px;
-            }
-        }
-        @include media("<tablet") {
-            grid-template-columns: minmax(15ch, max-content);
-        }  
-
-    }
-
-    .section-with-subheading {
-        margin: 3em 0%;
-
-        .subheading {
-            font-style: normal;
-            font-weight: bold;
-            font-size: 1rem;
-            line-height: 1rem;
-            display: inline-flex;
-            // margin-left: 5vw;
-        }
-
-        .tools-img-double {
-            margin: 1rem 0%;
-            width: 5rem;
-            display: block;
-        }
-
-        .tools-img-single {
-            margin: 1rem 0%;
-            width: 3rem;
-            display: block;
-        }
-
-        .title {
-            border-bottom: 1px solid $base-font-color;
-            padding-bottom: 2px;
-        }
-
-        .ancillary-text {
-            color: #344454;
-        }
-    }
-
-    .text-content {
-        .subheading {
-            margin: initial;
-        }
-
-        h5 {
-            margin-bottom: 0%;
-        }
-        p, dd{
-            font-style: normal;
-            font-weight: normal;
-            font-size: 1rem;
-            line-height: 1.5rem;
-            color: #344454;
-        }
-
-        dd {
-            &::marker {
-                color: $ifly-theme-color;
-            }
-            display: list-item;
-            list-style: "★";
-            padding-inline-start: 1ch;
-        }
-
-        ol {
-            list-style: none;
-            counter-reset: list-counter;
-            color: #344454;
-            line-height: 1.5rem;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            li {
-                counter-increment: list-counter;
-                font-size: 1rem;
-                display: flex;
-                &::before {
-                    content: counter(list-counter) ". ";
-                    color: $ifly-theme-color;
-                    font-weight: 600;
-                    padding-right: 1rem;
-                }
-            }         
-        }
-        
-    }
-}
-
-.quote-section {
-    @include media(">tablet") {
-        margin: 3em 7em ;
-        grid-template-columns: minmax(20ch, 60ch) 500px
-    }
-
-    @include media("<=tablet") {
-        margin: 3em 1em;
-        grid-template-columns: minmax(20ch, 60ch)
-    }
-    position: relative;
-    // height: 15em;
-    // grid-template-columns: repeat(auto-fit, minmax(20ch, 60ch));
-    width: 100%;
-    display: grid;
-    h2 {
-        color: $ifly-theme-color;
-        line-height: 1em;
-        // width: 20em;
-        font-size: 2em;
-        // @include media("<tablet") {
-        //     font-size: 2em;
-        // }
-    }
-    img {
-        // position: absolute;
-        // right: 10em;
-        // bottom: 0em;
-        align-self: end;
-        margin-left: -1em;
-        width: 100%;
-        height: auto;
-    }
-}
-.external_link {
-    background: $ifly-tertiary;
-    text-align: center;
-    display: block;
-    margin: 2rem 1rem;
-    padding: 1rem;
-    border-radius: 1%;
-    color: $ifly-link-color;
-    text-decoration: none;
-
-    &:hover {
-        opacity: .75;
-        color: $ifly-link-color;
-    }
-
-    &:visited {
-        color: $ifly-link-color;
-    }
-
-}
-
-.quote-box {
-    .quote {
-        padding: 2rem;
-        img {
-            float: left;
-            width: 50px;
-            height: auto;
-        }
-        
-        .quote-heading {
-            padding-bottom: 1rem;
-            .heading-text {
-                margin-left: 4rem;
-                .heading-subtext {
-                    color: $ifly-theme-color;
-                    font-size: 0.75em;
-                }
-            }
-        }
-
-        .body {
-            font-weight: 700;
-        }
-    }
-    
 }

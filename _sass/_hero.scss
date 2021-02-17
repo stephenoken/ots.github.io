@@ -3,7 +3,7 @@
     height: 100vh;
     width: auto;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     display: grid;
     @include media(">=tablet") {
         grid-template-columns: minmax(25ch, 55ch);
@@ -22,11 +22,12 @@
         @include media("<tablet") {
             margin: auto 1em;
         }
-        width: 100%;
+        width: 40vw;
     }
 }
 
 .hero-ifly {
     @include hero;
-    background: $hero-ifly-image center;
+    background: $hero-ifly-image no-repeat center center fixed;
+    object-fit: fill;
 }
