@@ -1,0 +1,51 @@
+@mixin column {
+
+    display: grid;
+    gap: 1em;
+
+    .thumbnail {
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 2%;
+            display: block;
+        }
+        position: relative;
+        width: 100%;
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #FFFEFC;
+        }
+
+        &:hover .overlay {
+            opacity: .75;
+        }
+        .text {
+            text-decoration: none;
+            color: $base-font-color;
+            font-size: 1em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    }
+    margin: 5vh auto;
+
+    .list-box {
+        background-color: $ifly-tertiary;
+        padding: 5px;
+        border-radius: 8px;
+    }
+}

@@ -14,15 +14,48 @@
     }
     
     .hero-text {
-        @include media(">=tablet") {
-            margin: auto 6em
+        @include media("<1400px", ">tablet") {
+            h1 {
+                font-size: 6vw;
+                margin: 0;
+                text-transform: capitalize;
+            }
+            h2 {
+                font-size: 5vw;
+            }
+            margin: 20vw 20vw;
+            width: max-content;
+            max-width: 50ch;
+        }
 
+        @include media(">=1440px") {
+            h1 {
+                font-size:5vw;
+                margin: 0;
+                text-transform: capitalize;
+            }
+            max-width: 70ch;
+            h2 {
+                font-size: 2vw;
+            }
+            margin: 20vw 20vw;
+            width: max-content;
+            // max-width: 70ch;
         }
     
-        @include media("<tablet") {
-            margin: auto 1em;
+        @include media("<=1024px") {
+            h1 {
+                font-size: 15vw;
+                text-transform: capitalize;
+            }
+            h2 {
+                font-size: 5vw;
+            }
+            width: max-content;
+            max-width: 25ch;
+            margin: auto 10vw;
         }
-        width: 40vw;
+        
     }
 }
 

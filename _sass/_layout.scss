@@ -1,48 +1,60 @@
-.home {
-    height: 50vh;
-    margin-top: 40vh;
-    img {
-        float: left;
-    }
-    .links {
-        display: flex;
-        justify-content: center;
-        // text-align: center;
-        a {
-            font-weight: 600;
-            background-color: $ifly-theme-color;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            padding-left: 40px;
-            padding-right: 40px;
-            border-radius: 6px;
-            font-size: 16px;
-            text-decoration: none;
-            align-content: center;
-            &:visited {
-                color: inherit;
-            }
-            &:active {
-                background-color: #ffa6a1;
-            }
-        }
-        img {
-            width: 24px;
-            height: auto;
-            margin-top: 3%;
-            padding-right: 5px;
-        }
-    }
-
-}
 .container {
     align-content: center;
-    max-width: 800px;
+    max-width: 1000px;
     min-width: min-content;
     margin-left: auto;
     margin-right: auto;
 
     @include media("<desktop") {
         margin: 5em 1em;
+    }
+
+    .col-2 {
+        @include column;
+        $minmax-content: minmax(25ch, 55ch);
+        grid-template-columns: repeat(2, $minmax-content);
+        @include media("<tablet") {
+            grid-template-columns: $minmax-content;
+        }
+    }
+
+    .col-3 {
+        @include column;
+        grid-template-columns: repeat(3, 1fr);
+        @include media("<tablet") {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .col-4 {
+        @include column;
+        $minmax-content: minmax(25ch, 55ch);
+        grid-template-columns: repeat(4, $minmax-content);
+        @include media("<=tablet") {
+            grid-template-columns: repeat(2, $minmax-content);
+        }
+        @include media("<tablet") {
+            grid-template-columns: $minmax-content;
+        }
+    }
+
+    .heading {
+        text-align: center;
+        max-width: 40ch;
+        min-width: min-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .col-2-uneven {
+        @include column;
+        grid-template-columns: 1fr 4fr;
+        @include media("<tablet") {
+            grid-template-columns: 1fr;
+        }
+        img {
+            margin: auto;
+        }
+        align-items: center;
     }
 }
