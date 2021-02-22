@@ -351,7 +351,7 @@ description:
             <div class="description">
                 Remote Usability Test: SAS
             </div>
-            <a href="" target="_blank">Go to full remote usability test</a>
+            <a href="https://youtu.be/tBUa1OqhWpw" target="_blank">Go to full remote usability test</a>
         </div>
     </div>
     <linebreak></linebreak>
@@ -404,7 +404,7 @@ description:
             <div class="description">
                 Digital Affinity Diagram
             </div>
-            <a href="" target="_blank">Go to digital version on Miro</a>
+            <a href="https://miro.com/app/board/o9J_lTQu_MQ=/?moveToWidget=3074457354802085472&cot=10" target="_blank">Go to digital version on Miro</a>
         </div>
     </div>
     <div class="col-2">
@@ -441,7 +441,9 @@ description:
         </div>
         <div class="diagram">
             <img src="{{ site.url }}/assets/images/{{ page.title }}/customer-journey.svg">
-            <a href="{{ site.url }}/assets/images/{{ page.title }}/customer-journey.svg" target="_blank">Click to zoom</a>
+            <a href="javascript:void(0)" onclick="openModal('{{ site.url }}/assets/images/{{ page.title }}/customer-journey.svg')">
+                Click to zoom
+            </a>
         </div>
     </div>
     <linebreak></linebreak>
@@ -476,14 +478,18 @@ description:
         </div>
         <div class="diagram">
             <img src="{{ site.url }}/assets/images/{{ page.title }}/flow-diagram.svg">
-            <a href="{{ site.url }}/assets/images/{{ page.title }}/flow-diagram.svg" target="_blank">Click to zoom</a>
+            <a href="javascript:void(0)" onclick="openModal('{{ site.url }}/assets/images/{{ page.title }}/flow-diagram.svg')">
+                Click to zoom
+            </a>
         </div>
     </div>
     <div class="col-2">
         <div>
             <h2>Interaction Design</h2>
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/handwriting-logo.png" alt="" class="tools-img-double">
-            Tools: Handwriting
+            <div class="tools">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/handwriting-logo.png" alt="" class="tools-img-double">
+                Tools: Handwriting
+            </div>
             <h3>About</h3>
             <p>
                 At this point I began to develop a solution to the problem. This involved creating 
@@ -536,8 +542,10 @@ description:
     <div class="col-2">
         <div>
             <h2>Interaction Design</h2>
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/figma-logo.png" alt="" class="tools-img-double">
-            Tools: Figma
+            <div class="tools">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/figma-logo.png" alt="" class="tools-img-double">
+                Tools: Figma
+            </div>
             <h3>About</h3>
             <p>
                 With the sketches I was able to begin creating an interactive prototype of my solution. 
@@ -549,7 +557,7 @@ description:
             <img src="{{site.url}}/assets/images/{{ page.title }}/man-cat-phone.svg" alt="" class="main-image">
         </div>
         <div class="video-img-display">
-            <video autoplay loop>
+            <video autoplay loop class="long-video">
                 <source src="{{ site.url }}/assets/video/{{ page.title }}/medium-fidelity.mp4" type="video/mp4"/>
             </video>
         </div>
@@ -557,8 +565,10 @@ description:
     <div class="col-2">
         <div>
             <h2>Wireframes</h2>
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/miro-logo.png" alt="" class="tools-img-double">
-            Tools: Miro
+            <div class="tools">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/miro-logo.png" alt="" class="tools-img-double">
+                Tools: Miro
+            </div>
             <h3>About</h3>
             <p>
                 This was the final project for my UX course. The focus here was to create a wireframe 
@@ -579,7 +589,7 @@ description:
         </div>
         <div class="diagram">
             <img src="{{ site.url }}/assets/images/{{ page.title }}/wireframes.svg">
-            <a href="{{ site.url }}/assets/images/{{ page.title }}/wireframes.svg" target="_blank">Click to zoom</a>
+            <a href="https://miro.com/app/board/o9J_lTQu_MQ=/?moveToWidget=3074457354802084754&cot=14" target="_blank">Click here to see full wireframe on Miro</a>
         </div>
     </div>
     <video autoplay loop muted class="section-break-img">
@@ -588,8 +598,10 @@ description:
     <div class="col-2">
         <div>
             <h2>High fidelity prototype</h2>
-        <img src="{{ site.url }}/assets/images/{{ page.title }}/figma-logo.png" alt="" class="tools-img-double">
-        Tools: Figma
+            <div class="tools">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/figma-logo.png" alt="" class="tools-img-double">
+                Tools: Figma
+            </div>
         <h3>About</h3>
         <p>
             As an extra step I decided to create a more realistic prototype. My focus was 
@@ -602,7 +614,7 @@ description:
         </p>
         </div>
         <div class="diagram">
-            <video autoplay loop>
+            <video autoplay loop class="long-video">
                 <source src="{{ site.url }}/assets/video/{{ page.title }}/evolution-of-design.mp4" type="video/mp4"/>
             </video>
             <div class="description">
@@ -623,42 +635,39 @@ description:
                 <h2>The problem</h2>
                 <b>Select Fares</b>
                 <ul>
-                    <li>Select fare is confusing</li>
+                    <li>Selecting the fare is confusing</li>
                     <li>Users are not sure what is selected</li>
                     <li>Hard to find and compare fares</li>
                 </ul>
                 <h2>My solution</h2>
                 <b>Select Fares</b>
                 <ul>
-                    <li>Lorem ipsum dolor sit amet consectetur</li>
-                    <li>Lorem ipsum dolor sit amet consectetur</li>
-                    <li>Lorem ipsum dolor sit amet consectetur</li>
+                    <li>Flow leads the user through the steps</li>
+                    <li>User can't proceed unitl the fare is selected</li>
                 </ul>
             </div>
-            <video autoplay loop>
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/solution-select-fares.gif" alt="">
+            <!-- <video autoplay loop>
                 <source src="{{ site.url }}/assets/video/{{ page.title }}/evolution-of-design.mp4" type="video/mp4"/>
-            </video>
+            </video> -->
         </div>
         <div class="conclusion-col-2">
             <div>
                 <h2>The problem</h2>
-                <b>Select Fares</b>
+                <b>Swipe Between Departure and Return flights</b>
                 <ul>
-                    <li>Select fare is confusing</li>
-                    <li>Users are not sure what is selected</li>
-                    <li>Hard to find and compare fares</li>
+                    <li>Unexpected swipe between departure and return flights</li>
+                    <li>User gets perplexed and feel lost</li>
                 </ul>
                 <h2>My solution</h2>
-                <b>Select Fares</b>
+                <b>Swipe Between Departure and Return flights</b>
                 <ul>
-                    <li>Lorem ipsum dolor sit amet consectetur</li>
-                    <li>Lorem ipsum dolor sit amet consectetur</li>
-                    <li>Lorem ipsum dolor sit amet consectetur</li>
+                    <li>User can't move to return until they first select the fare and the flight</li>
+                    <li>Visual animation confirm flights is selected</li>
+                    <li>Animation informs the user about the new flights are being loaded</li>
                 </ul>
             </div>
-            <video autoplay loop>
-                <source src="{{ site.url }}/assets/video/{{ page.title }}/evolution-of-design.mp4" type="video/mp4"/>
-            </video>
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/solution-swipe-between-flights.gif" alt="">
         </div>
     </div>
     <linebreak></linebreak>

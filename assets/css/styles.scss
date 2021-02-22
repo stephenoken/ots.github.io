@@ -3,6 +3,7 @@
 # only Main files contain this front matter, not partials.
 ---
 $hero-ifly-image: url("{{ site.url }}/assets/images/ifly/hero.png");
+$hero-blink-image: url("{{ site.url }}/assets/images/blink/hero.png");
 @import "include-media";
 @import "theme";
 @import "base";

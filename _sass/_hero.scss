@@ -3,7 +3,7 @@
     height: 100vh;
     width: auto;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100vw 100vh;
     display: grid;
     @include media(">=tablet") {
         grid-template-columns: minmax(25ch, 55ch);
@@ -55,6 +55,10 @@
             max-width: 25ch;
             margin: auto 10vw;
         }
+
+        .subscript {
+            color: $ifly-theme-color;
+        }
         
     }
 }
@@ -62,5 +66,13 @@
 .hero-ifly {
     @include hero;
     background: $hero-ifly-image no-repeat center center fixed;
+    background-size: auto 100vh;
+    object-fit: fill;
+}
+
+.hero-blink {
+    @include hero;
+    background: $hero-blink-image no-repeat center center fixed;
+    background-size: auto 100vh;
     object-fit: fill;
 }

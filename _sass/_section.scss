@@ -31,6 +31,7 @@ linebreak {
     background: $ifly-tertiary;
     border-radius: 8px;
     padding: 1em;
+    margin: auto;
     img {
         display: block;
         // margin: 1em auto;
@@ -92,10 +93,11 @@ linebreak {
 }
 
 .video-img-display {
+    margin: auto;
     video {
-        width: 100%;
+        // width: 100%;
         border-radius: 8px;
-        height: auto;
+        // height: auto;
         margin: 1em 0;
     }
     img {
@@ -103,6 +105,12 @@ linebreak {
         height: auto;
         margin: 1em 0;
     }
+}
+
+.long-video {
+    height: 500px; 
+    margin: auto;
+    border-radius: 8px;
 }
 
 .section-break-img {
@@ -140,11 +148,10 @@ ol {
     border-radius: 8px;
     padding: 1em;
     vertical-align: middle;
-    video {
-        margin: auto;
-        display: block;
-        // margin: 1em auto;
+    img {
         width: 100%;
+        margin: auto;
+        border-radius: 8px;
     }
 }
 
@@ -181,6 +188,7 @@ ol {
     border-radius: 6px;
     font-size: 16px;
     width: 140px;
+    color: inherit;
     img {
         width: 24px;
         height: auto;
@@ -192,5 +200,49 @@ ol {
     }
     &:active {
         background-color: #ffa6a1;
+    }
+}
+
+.lightbox {
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba($color: $ifly-tertiary, $alpha: 0.90);
+    .close {
+        color: silver;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+        &:hover, &:focus {
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;          
+        }
+      }
+    .lightbox-display {
+        margin: auto;
+        img {
+            width: 100%;
+            height: auto;
+            padding: 30px;
+        }
+    }
+}
+
+.washed-out {
+    background: rgba($color: $ifly-tertiary, $alpha: 0.7) !important;
+    h4, li {
+        color: rgba($color: $base-font-color, $alpha: .70);
+    }
+
+    .subheading {
+        color: rgba($color: $ifly-theme-color, $alpha: 0.7) !important;
     }
 }
