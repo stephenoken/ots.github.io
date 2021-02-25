@@ -57,4 +57,28 @@
         }
         align-items: center;
     }
+
+    .col-2-wip {
+        // @include column;
+        display: grid;
+        // gap: a;
+        grid-template-columns: 1fr 30ch 1fr;
+        // @include media("<tablet") {
+        //     grid-template-columns: 1fr;
+        // }
+        h2, p, a {
+            text-align: center;
+
+        }
+        img {
+            margin: auto 0;
+            margin-left: auto;
+        }
+        align-items: center;
+        a {
+            text-align: center;
+            margin: auto;
+            display: block;
+        }
+    }
 }

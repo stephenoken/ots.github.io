@@ -2,30 +2,20 @@
 layout: default
 title: Home
 ---
-<div class="spacing"></div>
-<div class="container">
-    <div class="col-2">
-        <div class="heading">
-            <h1>
-                Everything is about the process
-            </h1>
-            <p>
-                Hi, I'm Olga and I do UX design. Feel free to check my study cases.
-            </p>
+<!-- <div class="spacing"></div> -->
+<div class="container home">
+    <div class="col-2-wip">
+        <img src="{{ site.url}}/assets/images/Olga.png" alt="">
+        <div class="">
+            <h1>Hej!</h1>
+            <h2>Portfolio will be available soon</h2>
+            <p>In the meantime feel free to reach out to me for more information.</p>
+            <a href="https://www.linkedin.com/in/olgatorrents/">
+                <img src="{{ site.url }}/assets/images/linkedin-btn.png">
+            </a>
+            
         </div>
-        <img src="assets/images/arrows-home.png" alt="" class="main-image">
     </div>
-    <div class="col-2">
-        {% for study_case in site.study_cases %}
-        <a href="{{ study_case.url | relative_url}}">
-            <div class="thumbnail">
-                <img src="assets/images/{{ study_case.title }}/thumbnail.png" alt="">
-                <div class="overlay">
-                    <div class="text">{{ study_case.description.headline }} </div>
-                </div>
-            </div>
-        </a>
-        {% endfor %}
-    </div>
+
 </div>
 
