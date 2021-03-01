@@ -2,6 +2,7 @@
 title: ifly
 permalink: /ifly/
 layout: study_case
+navbar-theme: white
 
 description: 
     headline: "How can we help the users feel more confident during the flight booking experience?"
@@ -17,8 +18,8 @@ description:
         </p>
     </div>
     <div class="col-2">
-        <div class="summary-point">
-            <img src="{{ site.url }}/assets/images/gear.svg" class="icon">
+        <div>
+            <img src="{{ site.url }}/assets/images/ifly/zap.svg" class="icon">
             <h3>The problem</h3>
             <p>
                 Booking a flight through a mobile app can be a complex experience. 
@@ -26,8 +27,8 @@ description:
                 friction free experience.
             </p>
         </div>
-        <div class="list-paragragh">
-            <img src="{{ site.url }}/assets/images/gear.svg" class="icon">
+        <div>
+            <img src="{{ site.url }}/assets/images/ifly/gear.svg" class="icon">
             <h3>My Role</h3>
             <p>
                 This case study was my graduation project for the UX design institute. 
@@ -35,8 +36,8 @@ description:
                 achieve the professional diploma. 
             </p>
         </div>
-        <div class="list-paragragh">
-            <img src="{{ site.url }}/assets/images/rocket.svg" class="icon">
+        <div>
+            <img src="{{ site.url }}/assets/images/ifly/rocket.svg" class="icon">
             <h3>The Solution</h3>
             <p>
                 To streamline the fare and flights selection I added a clear button 
@@ -44,8 +45,8 @@ description:
                 information that need in each stage. 
             </p>
         </div>
-        <div class="list-paragragh">
-            <img src="{{ site.url }}/assets/images/academic-hat.svg" class="icon">
+        <div>
+            <img src="{{ site.url }}/assets/images/ifly/academic-hat.svg" class="icon">
             <h3>Learnings</h3>
             <p>
                 This project gave me valuable insight into the UX process and what is 
@@ -72,7 +73,7 @@ description:
         </div>
         <div class="list-box"> 
             <h4>Analysis</h4>
-            <div class="subheading">STRUCUTRE AND ORGANISE UNSTRUCUTRUED DATA</div>  
+            <div class="subheading">ORGANISE UNSTRUCUTRUED DATA</div>  
             <ul>
                 <li>Affinity Diagram</li>
                 <li>Customer Journey Map</li>
@@ -92,6 +93,7 @@ description:
             <ul>
                 <li>Medium fidelity prototype</li>
                 <li>Wireframe</li>
+                <li>High fidelity prototype</li>
                 <li>My solution</li>
             </ul>
         </div>
@@ -99,6 +101,9 @@ description:
     <div class="heading">
         <h1>About Ifly</h1>
     </div>
+    <video autoplay loop muted class="section-break-img">
+        <source src="{{ site.url }}/assets/video/{{ page.title }}/live-demo-480.mp4" type="video/mp4"/>
+    </video>
     <div class="col-2">
         <div>
             <h3>What is Ifly</h3>
@@ -109,7 +114,7 @@ description:
                 tasks in order to successfully book a flight. Ifly is an User center airline 
                 app desingend to deliver a smooth booking experience.
             </p>
-            <img src="{{site.url}}/assets/images/{{ page.title }}/woman-cat-phone.png" alt="" class="main-image">
+            <img src="{{site.url}}/assets/images/{{ page.title }}/about/woman-cat-phone.svg" alt="" class="main-image">
         </div>
         <div>
             <h3>Goal</h3>
@@ -139,7 +144,7 @@ description:
         <div>
             <h2>Competitive benchmarking</h2>
             <div class="tools">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/notion-figma-logo.png" alt="notion figma logo" class="tools-img-double">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/notion_figma.svg" alt="notion figma logo" class="tools-img-double">
                 Tools: Notion - Figma
             </div>
             <h3>About</h3>
@@ -164,24 +169,15 @@ description:
                 Across the airline industry there is a well defined process for booking flights, 
                 so breaking that convention could backfire.
             </p>
+            <a class="external-link" href="https://www.figma.com/file/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?node-id=218%3A477" target="_blank">Go to full benchmark</a>
         </div>
-        <div class="diagram">
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/easy_jet_benchmark.png">
-            <div class="description">
-                EasyJet Home and book trip screen
-            </div>
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/ryanair_benchmark.png">
-            <div class="description">
-                Ryanair fares selection screen
-            </div>
-            <a href="https://www.figma.com/file/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?node-id=218%3A477" target="_blank">Go to full benchmark</a>
-        </div>
+        <img class="img-box" src="{{ site.url }}/assets/images/{{ page.title }}/research/benchmark.png">
     </div>
     <div class="col-2">
         <div>
             <h2>Online Survey</h2>
             <div class="tools">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/survey_monkey_logo.png" alt="notion figma logo" class="tools-img-double">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survery_monkey.svg">
                 Tools: SurveyMonkey
             </div>
             <h3>About</h3>
@@ -201,20 +197,21 @@ description:
             <p>
                 This process has helped me gain insight into how users use these types of apps.
             </p>
+            <a class="external-link" target="blank_" href="https://sv.surveymonkey.com/results/SM-NTP7JFJK9/">Go to full suvery</a>
         </div>
-        <div class="diagram">
+        <div class="diagram-ifly-light">
             <div class="img-col-2">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/travel_times_diag.png">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/booking_times_diag.png">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survery_1.svg">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survery_2.svg">
             </div>
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/features_used_diag.png">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survery_3.svg">
         </div>
     </div>
     <div class="col-2">
         <div>
             <h2>Note taking</h2>
             <div class="tools">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/writing-google-docs-logo.png" alt="" class="tools-img-double">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/note_taking_icons.svg" alt="" class="tools-img-double">
                 Tools: Handwriting - Google docs
             </div>
             <h3>About</h3>
@@ -243,14 +240,13 @@ description:
                 point for the user.
             </p>
         </div>
-        <div class="diagram notetaking">
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/notetaking.png" alt="">    
-            <video autoplay loop width="100%">
-                <source src="{{ site.url }}/assets/video/{{ page.title }}/note-taking.mp4" type="video/mp4"/>
-            </video>
+        <div class="diagram-ifly-light">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/research/notetaking.png" alt="">    
         </div>
     </div>
-    <h2>What users said</h2>
+    <div class="col-2">
+        <h2>What users had to say...</h2>
+    </div>
     <div class="col-3">
         <div class="user-quote-section">
             <div class="user-quote-heading">
@@ -306,7 +302,7 @@ description:
         <div>
             <h2>Remote usability test</h2>
             <div class="tools">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/notion-loom-logo.png" alt="" class="tools-img-double">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/usability_icons.svg" alt="" class="tools-img-double">
                 Tools: Notion - Loom
             </div>
             <h3>About</h3>
@@ -341,17 +337,11 @@ description:
                 The user had never used the SAS or Norwegian app before. But they still knew how 
                 to navigate through them. This confirms that industry conventions are well known.
             </p>
+            <a  class="external-link" href="https://youtu.be/tBUa1OqhWpw" target="_blank">Go to full remote usability test</a>
         </div>
-        <div class="diagram">
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/remote-usability-sas.png">
-            <div class="description">
-                Remote Usability Test: SAS
-            </div>
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/remote-usability-sas.png">
-            <div class="description">
-                Remote Usability Test: SAS
-            </div>
-            <a href="https://youtu.be/tBUa1OqhWpw" target="_blank">Go to full remote usability test</a>
+        <div class="diagram-ifly-light usability-image-section">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/research/remote-usability-sas.png">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/research/remote-usability-norwegian.png">
         </div>
     </div>
     <linebreak></linebreak>
@@ -365,7 +355,7 @@ description:
         <div>
             <h2>Affinity Diagram</h2>
             <div class="tools">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/handwriting-miro-logo.png" alt="" class="tools-img-double">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/analysis/affinity_icons.svg" alt="" class="tools-img-double">
                 Tools: Handwriting - Miro
             </div>
             <h3>
@@ -393,25 +383,29 @@ description:
                 it together into a structured format and then we were able to identify logical theme 
                 patterns. 
             </p>
+            <a class="external-link" href="https://miro.com/app/board/o9J_lTQu_MQ=/?moveToWidget=3074457354802085472&cot=10" target="_blank">Go to digital version on Miro</a>
         </div>
-        <div class="diagram">
-            <video autoplay loop width="100%">
+        <div class="default-image-display">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/analysis/affinity_diagram.gif">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/analysis/affinity_miro.png">
+            <!-- <video autoplay loop width="100%">
                 <source src="{{ site.url }}/assets/video/{{ page.title }}/affinity-diagram.mp4" type="video/mp4"/>
-            </video>            <div class="description">
+            </video>            
+            <div class="description">
                 Affinity Diagram Session
             </div>
             <img src="{{ site.url }}/assets/images/{{ page.title }}/affinity-diagram-2.png">
             <div class="description">
                 Digital Affinity Diagram
-            </div>
-            <a href="https://miro.com/app/board/o9J_lTQu_MQ=/?moveToWidget=3074457354802085472&cot=10" target="_blank">Go to digital version on Miro</a>
+            </div> -->
+            
         </div>
     </div>
     <div class="col-2">
         <div>
-            <h2>Affinity Diagram</h2>
+            <h2>User Journey Map</h2>
             <div class="tools">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/handwriting-figma-logo.png" alt="" class="tools-img-double">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/analysis/user_journey_icons.svg" alt="" class="tools-img-double">
                 Tools: Handwriting - Figma
             </div>
             <h3>About</h3>
@@ -438,12 +432,12 @@ description:
                 on their goals. These goals are not always global and each step can have it’s own 
                 mini goals. The mini goals can either improve or disimprove the user’s experience.
             </p>
-        </div>
-        <div class="diagram">
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/customer-journey.svg">
-            <a href="javascript:void(0)" onclick="openModal('{{ site.url }}/assets/images/{{ page.title }}/customer-journey.svg')">
+            <a  class="external-link" href="javascript:void(0)" onclick="openModal('{{ site.url }}/assets/images/{{ page.title }}/analysis/user_journey_map.svg')">
                 Click to zoom
             </a>
+        </div>
+        <div class="ifly-theme-image-display">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/analysis/user_journey_map.svg">
         </div>
     </div>
     <linebreak></linebreak>
@@ -457,7 +451,7 @@ description:
         <div>
             <h2>Flow diagram</h2>
             <div class="tools">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/handwriting-figma-logo.png" alt="" class="tools-img-double">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/define/flow_chart_icons.svg" alt="" class="tools-img-double">
                 Tools: Handwriting - Figma
             </div>
             <h3>About</h3>
@@ -475,19 +469,19 @@ description:
                 This step allowed me to further organize the data I collected and I was able 
                 to start designing a more concrete architecture for the booking process.
             </p>
-        </div>
-        <div class="diagram">
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/flow-diagram.svg">
-            <a href="javascript:void(0)" onclick="openModal('{{ site.url }}/assets/images/{{ page.title }}/flow-diagram.svg')">
+            <a class="external-link" href="javascript:void(0)" onclick="openModal('{{ site.url }}/assets/images/{{ page.title }}/define/flow_chart.svg')">
                 Click to zoom
             </a>
+        </div>
+        <div class="ifly-tertiary-image-display">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/define/flow_chart.svg">
         </div>
     </div>
     <div class="col-2">
         <div>
             <h2>Interaction Design</h2>
             <div class="tools">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/handwriting-logo.png" alt="" class="tools-img-double">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/define/interaction_icons.png" alt="" class="tools-img-double">
                 Tools: Handwriting
             </div>
             <h3>About</h3>
@@ -524,11 +518,13 @@ description:
                 design UI elements that have purpose in mind.
             </p>
         </div>
-        <div class="video-img-display">
-            <video autoplay loop width="100%">
+        <div class="default-image-display">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/define/sketches_evolution.gif">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/define/sketches.png">
+            <!-- <video autoplay loop width="100%">
                 <source src="{{ site.url }}/assets/video/{{ page.title }}/sketch-prototype.mp4" type="video/mp4"/>
             </video> 
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/low-fidelity-sketches.png">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/low-fidelity-sketches.png"> -->
         </div>
     </div>
     <linebreak></linebreak>
@@ -538,12 +534,12 @@ description:
             Create the solution
         </p>
     </div>
-    <img src="{{ site.url }}/assets/images/{{ page.title }}/medium-fidelity.png" alt="" class="section-break-img">
+    <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/medium-fidelity.png" alt="" class="section-break-img">
     <div class="col-2">
         <div>
             <h2>Interaction Design</h2>
             <div class="tools">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/figma-logo.png" alt="" class="tools-img-double">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/figma_icon.svg" alt="" class="tools-img-double">
                 Tools: Figma
             </div>
             <h3>About</h3>
@@ -554,19 +550,22 @@ description:
                 worked. At this point I didn’t focus on the theming or branding of the app, since I 
                 wanted to focus on building recognizable UI elements with different states. 
             </p>
-            <img src="{{site.url}}/assets/images/{{ page.title }}/man-cat-phone.svg" alt="" class="main-image">
+            <!-- <img src="{{site.url}}/assets/images/{{ page.title }}/man-cat-phone.svg" alt="" class="main-image"> -->
         </div>
-        <div class="video-img-display">
+        <div class="default-image-display">
+            <img class="resize-gif" src="{{ site.url }}/assets/images/{{ page.title }}/ideate/low_fidelity.gif" alt="">
+        </div>
+        <!-- <div class="video-img-display">
             <video autoplay loop class="long-video">
                 <source src="{{ site.url }}/assets/video/{{ page.title }}/medium-fidelity.mp4" type="video/mp4"/>
             </video>
-        </div>
+        </div> -->
     </div>
     <div class="col-2">
         <div>
             <h2>Wireframes</h2>
             <div class="tools">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/miro-logo.png" alt="" class="tools-img-double">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/miro_icon.svg" alt="" class="tools-img-double">
                 Tools: Miro
             </div>
             <h3>About</h3>
@@ -586,20 +585,22 @@ description:
                 To develop this wireframe I had to go through the entire flow. It was useful to reflect 
                 on the work and see what could be further improved.
             </p>
+            <a class="external-link" href="https://miro.com/app/board/o9J_lTQu_MQ=/?moveToWidget=3074457354802084754&cot=14" target="_blank">Click here to see full wireframe on Miro</a>
         </div>
-        <div class="diagram">
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/wireframes.svg">
-            <a href="https://miro.com/app/board/o9J_lTQu_MQ=/?moveToWidget=3074457354802084754&cot=14" target="_blank">Click here to see full wireframe on Miro</a>
+        <div class="ifly-light-image-display">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/wireframe.png">
+            
         </div>
     </div>
-    <video autoplay loop muted class="section-break-img">
+    <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/high-fidelity.png" alt="" class="section-break-img">
+    <!-- <video autoplay loop muted class="section-break-img">
         <source src="{{ site.url }}/assets/video/{{ page.title }}/live-demo-480.mp4" type="video/mp4"/>
-    </video>
+    </video> -->
     <div class="col-2">
         <div>
             <h2>High fidelity prototype</h2>
             <div class="tools">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/figma-logo.png" alt="" class="tools-img-double">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/figma_icon.svg" alt="" class="tools-img-double">
                 Tools: Figma
             </div>
         <h3>About</h3>
@@ -613,14 +614,22 @@ description:
             As well as validate design decisions with the UI elements.    
         </p>
         </div>
-        <div class="diagram">
+        <div class="diagram-default-light ">
+            <div class="img-col-2">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/high_1.svg" style="height: 309px;">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/high_2.gif">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/high_3.png">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/high_4.png">
+            </div>
+        </div>
+        <!-- <div class="diagram">
             <video autoplay loop class="long-video">
                 <source src="{{ site.url }}/assets/video/{{ page.title }}/evolution-of-design.mp4" type="video/mp4"/>
             </video>
             <div class="description">
                 Evolution of the ifly design
             </div>
-        </div>
+        </div> -->
     </div>
     <linebreak></linebreak>
     <div class="heading">
@@ -628,6 +637,14 @@ description:
         <p>
             High fidelity prototype
         </p>
+    </div>
+    <div class="col-2">
+        <div>
+            <h2>About</h2>
+            <p>My focus was to improve the look and feel of the prototype as well as include
+                small animations.
+            </p>
+        </div>
     </div>
     <div class="col-2">
         <div class="conclusion-col-2">
@@ -676,7 +693,7 @@ description:
     </div>
     <div class="col-2">
         <div class="summary-point">
-            <img src="{{ site.url }}/assets/images/telescope.svg" class="icon">
+            <img src="{{ site.url }}/assets/images/ifly/telescope.svg" class="icon">
             <h3>Project Overview</h3>
             <p>
                 I found that this project really highlighted to me the importance of how each stage 
@@ -693,7 +710,7 @@ description:
             </p>
         </div>
         <div  class="summary-point">
-            <img src="{{ site.url }}/assets/images/milestone.svg" class="icon">
+            <img src="{{ site.url }}/assets/images/ifly/milestone.svg" class="icon">
             <h3>Next step</h3>
             <p>
                 If I were to continue working on this project, I would start doing usability tests 
@@ -703,6 +720,5 @@ description:
     </div>
     <div class="heading">
         <h2>Thank you for reading!</h2>
-        <h2>Tack så mycket!</h2>
     </div>
 </div>

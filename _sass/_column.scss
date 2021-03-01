@@ -1,7 +1,8 @@
 @mixin column {
 
     display: grid;
-    gap: 1em;
+    gap: 2em;
+    justify-content: center;
 
     .thumbnail {
         img {
@@ -44,9 +45,26 @@
     margin: 5vh auto;
 
     .list-box {
-        background-color: $ifly-tertiary;
-        padding: 5px;
+        background-color: $base-theme-light-color;
+        padding: 2em 2em;
         border-radius: 8px;
+        h4 {
+            font-weight: 800;
+            font-size: 23px;
+            margin: 0 0;
+            margin-bottom: 0.5em;
+        }
+
+        .subheading {
+            font-weight: 800;
+            font-size: 1em;
+            letter-spacing: 0.8px;
+            color: $ifly-accent-color;
+        }
+
+        ul {
+            font-size: 1em;
+        }
     }
     
 }

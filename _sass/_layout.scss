@@ -1,6 +1,6 @@
 .container {
     align-content: center;
-    max-width: 1000px;
+    max-width: 1440px;
     min-width: min-content;
     margin-left: auto;
     margin-right: auto;
@@ -12,7 +12,9 @@
     .col-2 {
         @include column;
         $minmax-content: minmax(25ch, 55ch);
-        grid-template-columns: repeat(2, $minmax-content);
+        // grid-template-columns: repeat(2, $minmax-content);
+        // grid-template-columns: 1fr 1fr;
+        grid-template-columns: 60ch 60ch;
         @include media("<tablet") {
             grid-template-columns: $minmax-content;
         }
@@ -20,7 +22,7 @@
 
     .col-3 {
         @include column;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 40ch);
         @include media("<tablet") {
             grid-template-columns: 1fr;
         }
@@ -28,7 +30,7 @@
 
     .col-4 {
         @include column;
-        $minmax-content: minmax(25ch, 55ch);
+        $minmax-content: 29ch;
         grid-template-columns: repeat(4, $minmax-content);
         @include media("<=tablet") {
             grid-template-columns: repeat(2, $minmax-content);
@@ -40,15 +42,22 @@
 
     .heading {
         text-align: center;
-        max-width: 40ch;
-        min-width: min-content;
+
         margin-left: auto;
         margin-right: auto;
+        p {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            max-width: 70ch;
+            min-width: 40ch;
+            font-size: 1em;
+        }
     }
 
     .col-2-uneven {
         @include column;
-        grid-template-columns: 1fr 4fr;
+        grid-template-columns: 30ch 90ch;
         @include media("<tablet") {
             grid-template-columns: 1fr;
         }
@@ -80,5 +89,13 @@
             margin: auto;
             display: block;
         }
+    }
+
+    .col-2-btn {
+        display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: fit-content;
+    grid-gap: 2em;
+    margin: auto;
     }
 }

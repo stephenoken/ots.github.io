@@ -2,15 +2,17 @@
 layout: default
 ---
 <div class="hero-{{page.title}}">
-    <div class="hero-text">
-        <h1>{{ page.title }}</h1>
-        <h2>
-            {{page.description.headline}}
-        </h2>
-
-        <p class="subscript">
-             {{ page.description.content}}
-        </p>
+    <div class="hero-grid">
+        <div class="hero-text">
+            <h1>{{ page.title }}</h1>
+            <h2>
+                {{page.description.headline}}
+            </h2>
+            <p class="subscript">
+                {{ page.description.content}}
+            </p>
+        </div>
     </div>
+    
 </div>
 {{ content }}

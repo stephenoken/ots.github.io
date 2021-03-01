@@ -1,14 +1,50 @@
+@mixin diagram($background-colour) {
+    background: $background-colour;
+    border-radius: 8px;
+    padding: 1em;
+    margin: auto;
+    width: 90%;
+    img {
+        display: block;
+        // margin: 1em auto;
+        width: 100%;
+        margin: auto;
+    }
+    video {
+        display: block;
+        width: 100%;
+        border-radius: 8px;
+        margin-top: 1em;
+    }
+    .description {
+        // margin: 1em 0;
+        color: $base-font-light-color;
+    }
+    .img-col-2 {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 1em;
+        @include media("<desktop") {
+            grid-template-columns: 1fr;
+        }
+    }
+
+}
+
+.diagram-ifly-light {
+    @include diagram($ifly-light-color)
+}
+.diagram-default-light {
+    @include diagram($background-color)
+}
+
 .summary-point {
     .icon {
         width: 43px;
         height: auto;
         display: block;
     }
-}
-
-
-.subheading {
-    color: $ifly-theme-color;
 }
 
 linebreak {
@@ -27,45 +63,12 @@ linebreak {
    }
 }
 
-.diagram {
-    background: $ifly-tertiary;
-    border-radius: 8px;
-    padding: 1em;
-    margin: auto;
-    img {
-        display: block;
-        // margin: 1em auto;
-        width: 100%;
-    }
-    video {
-        display: block;
-        width: 100%;
-        border-radius: 8px;
-        margin-top: 1em;
-    }
-    .description {
-        // margin: 1em 0;
-        color: $base-font-light-color;
-    }
-    a {
-        margin-top: 2em;
-        margin-bottom: 1em;
-        display: block;
-        color: $ifly-theme-color;
-        &::after {
-            content: "-->";
-        }
-    }
-    .img-col-2 {
-        display: grid;
-        gap: 1em;
-        grid-template-columns: repeat(2, 1fr);
-        margin-bottom: 1em;
-        @include media("<desktop") {
-            grid-template-columns: 1fr;
-        }
-    }
-
+.external-link {
+    color: $ifly-accent-color;
+    font-size: 16px;
+    &::after {
+        content: "-->";
+    }   
 }
 
 .main-image {
@@ -73,20 +76,17 @@ linebreak {
     height: auto;
 }
 
-.notetaking {
-    background-color: initial;
-}
-
 .user-quote-section{
-    background: $ifly-tertiary;
+    background: $base-theme-light-color;
     border-radius: 8px;
-    padding: 1em;
+    padding: 2em;
     .user-quote-heading {
         display: flex;
         align-items:center;
         .quote-heading-text {
             span {
                 display: block;
+                margin: .5em 0;
             }
         }
     }
@@ -135,7 +135,7 @@ ol {
 }
 
 .conclusion-col-2 {
-    background: $ifly-tertiary;
+    background: $base-theme-light-color;
     display: grid;
     gap: 1em;
     grid-template-columns: repeat(2, 1fr);
@@ -159,6 +159,7 @@ ol {
     padding: 30px;
     background-color: #D7F3E6;
     border-radius: 8px;
+    margin: auto;
     .profile-image {
         width: 100%;
         height: auto;
@@ -180,7 +181,7 @@ ol {
     text-decoration: none;
     align-content: center;
     font-weight: 600;
-    background-color: $ifly-theme-color;
+    background-color: $base-theme-color;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 40px;
@@ -212,16 +213,16 @@ ol {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba($color: $ifly-tertiary, $alpha: 0.90);
+    background-color: rgba($color: $ifly-theme-color, $alpha: 0.75);
     .close {
-        color: silver;
+        color: #333;
         position: absolute;
         top: 10px;
         right: 25px;
         font-size: 35px;
         font-weight: bold;
         &:hover, &:focus {
-            color: #999;
+            color: #333;
             text-decoration: none;
             cursor: pointer;          
         }
@@ -237,7 +238,7 @@ ol {
 }
 
 .washed-out {
-    background: rgba($color: $ifly-tertiary, $alpha: 0.7) !important;
+    background: rgba($color: $ifly-tertiary-color, $alpha: 0.7) !important;
     h4, li {
         color: rgba($color: $base-font-color, $alpha: .70);
     }
@@ -251,4 +252,64 @@ ol {
     height: 80vh;
     margin: auto;
     display: grid;
+}
+
+.home-heading {
+    h1 {
+        font-size: 80px;
+        line-height: 88px;
+        // max-width: 40ch;
+    }
+}
+
+.img-box {
+    width: 100%;
+    border-radius: 8px;
+    // height: 754px;
+    margin: auto;
+}
+
+.usability-image-section {
+    img {
+        margin: 36px 0;
+    }
+}
+
+@mixin image-display($backgound-color:$background-color) {
+    
+    img{
+        background-color: $backgound-color;
+        padding: 20px;
+        width: 100%;
+        height: auto;
+        border-radius: 30px;
+        // &:nth-child(even) {
+            // margin-top: 50px;
+            // margin-bottom: 50px;
+        // }
+    }
+}
+
+.default-image-display {
+    @include image-display
+}
+
+.ifly-accent-image-display {
+    @include image-display($ifly-accent-color)
+}
+
+.ifly-theme-image-display {
+    @include image-display($ifly-theme-color)
+}
+.ifly-tertiary-image-display {
+    @include image-display($ifly-tertiary-color)
+}
+.ifly-light-image-display {
+    @include image-display($ifly-light-color)
+}
+
+.resize-gif {
+    height: 500px!important;
+    width: auto !important;
+    margin: auto !important;
 }
