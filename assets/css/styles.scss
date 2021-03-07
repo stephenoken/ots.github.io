@@ -2,8 +2,9 @@
 # this ensures Jekyll reads the file to be transformed into CSS later
 # only Main files contain this front matter, not partials.
 ---
-$hero-ifly-image: url("{{ site.url }}/assets/images/ifly/hero.png");
-$hero-blink-image: url("{{ site.url }}/assets/images/blink/hero.png");
+$base-url: "{{site.url}}";
+// $hero-ifly-image: url("{{ site.url }}/assets/images/ifly/hero.png");
+// $hero-blink-image: url("{{ site.url }}/assets/images/blink/hero.png");
 @import "include-media";
 @import "theme";
 @import "base";
