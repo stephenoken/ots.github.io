@@ -89,3 +89,9 @@
     background-color: $ifly-theme-color !important;
 
 }
+
+.hero-blinkin {
+    @include hero('', $base-font-color);
+    background-color: $blink-theme-color !important;
+
+}

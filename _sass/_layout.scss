@@ -1,4 +1,4 @@
-.container {
+@mixin container($primary-color, $accent-color, $tertiary-color) {
     align-content: center;
     max-width: 1440px;
     min-width: min-content;
@@ -10,10 +10,8 @@
     }
 
     .col-2 {
-        @include column;
+        @include column($primary-color, $accent-color, $tertiary-color);
         $minmax-content: minmax(25ch, 55ch);
-        // grid-template-columns: repeat(2, $minmax-content);
-        // grid-template-columns: 1fr 1fr;
         grid-template-columns: 60ch 60ch;
         @include media("<tablet") {
             grid-template-columns: $minmax-content;
@@ -21,7 +19,7 @@
     }
 
     .col-3 {
-        @include column;
+        @include column($primary-color, $accent-color, $tertiary-color);
         grid-template-columns: repeat(3, 40ch);
         @include media("<tablet") {
             grid-template-columns: 1fr;
@@ -29,7 +27,7 @@
     }
 
     .col-4 {
-        @include column;
+        @include column($primary-color, $accent-color, $tertiary-color);
         $minmax-content: 29ch;
         grid-template-columns: repeat(4, $minmax-content);
         @include media("<=tablet") {
@@ -56,7 +54,7 @@
     }
 
     .col-2-uneven {
-        @include column;
+        @include column($primary-color, $accent-color, $tertiary-color);
         grid-template-columns: 30ch 90ch;
         @include media("<tablet") {
             grid-template-columns: 1fr;

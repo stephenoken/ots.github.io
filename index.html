@@ -26,20 +26,14 @@ navbar-theme: black
     </div>
     <div class="col-2 fade-in-thumbnails">
         {% for study_case in site.study_cases reversed %}
-            {% if  study_case.title == "blink" %}
+            <a href="{{ study_case.url | relative_url}}">
                 <div class="thumbnail fade-in">
                     <img src="assets/images/{{ study_case.title }}/thumbnail.png" alt="">
-                </div>
-            {% else %}
-                <a href="{{ study_case.url | relative_url}}">
-                    <div class="thumbnail fade-in">
-                        <img src="assets/images/{{ study_case.title }}/thumbnail.png" alt="">
-                        <div class="overlay">
-                            <div class="text">{{ study_case.description.headline }} </div>
-                        </div>
+                    <div class="overlay">
+                        <div class="text">{{ study_case.description.headline }} </div>
                     </div>
-                </a>
-            {% endif %}       
+                </div>
+            </a>     
         {% endfor %}
     </div>
 </div>

@@ -6,13 +6,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ site.url }}/assets/css/styles.css">
     <link rel="shortcut icon" type="image/png" href="{{ site.url }}/assets/images/ots-portfolio-icon.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
   </head>
   <body>
       {%include navigation.html%}
       {{ content }}
       {%include footer.html %}
   </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="{{site.url}}/assets/js/main.js"></script>
+  <script>
+    AOS.init()
+  </script>
 </html>

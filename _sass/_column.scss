@@ -1,4 +1,4 @@
-@mixin column {
+@mixin column($primary-color, $accent-color, $tertiary-color) {
 
     display: grid;
     gap: 2em;
@@ -59,7 +59,7 @@
             font-weight: 800;
             font-size: 1em;
             letter-spacing: 0.8px;
-            color: $ifly-accent-color;
+            color: $accent-color;
         }
 
         ul {

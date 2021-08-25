@@ -1,178 +1,231 @@
 @mixin diagram($background-colour) {
-    background: $background-colour;
-    border-radius: 8px;
-    padding: 1em;
+  background: $background-colour;
+  border-radius: 8px;
+  padding: 1em;
+  margin: auto;
+  width: 90%;
+  img {
+    display: block;
+    // margin: 1em auto;
+    width: 100%;
     margin: auto;
-    width: 90%;
-    img {
-        display: block;
-        // margin: 1em auto;
-        width: 100%;
-        margin: auto;
+  }
+  video {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 1em;
+  }
+  .description {
+    // margin: 1em 0;
+    color: $base-font-light-color;
+  }
+  .img-col-2 {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 1em;
+    @include media("<desktop") {
+      grid-template-columns: 1fr;
     }
-    video {
-        display: block;
-        width: 100%;
-        border-radius: 8px;
-        margin-top: 1em;
-    }
-    .description {
-        // margin: 1em 0;
-        color: $base-font-light-color;
-    }
-    .img-col-2 {
-        display: grid;
-        gap: 1em;
-        grid-template-columns: repeat(2, 1fr);
-        margin-bottom: 1em;
-        @include media("<desktop") {
-            grid-template-columns: 1fr;
-        }
-    }
+  }
 
 }
 
-.diagram-ifly-light {
-    @include diagram($ifly-light-color)
-}
 .diagram-default-light {
-    @include diagram($background-color)
+  @include diagram($background-color)
 }
 
-.summary-point {
+
+@mixin image-display($backgound-color:$background-color) {
+
+  img {
+    background-color: $backgound-color;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    // &:nth-child(even) {
+    // margin-top: 50px;
+    // margin-bottom: 50px;
+    // }
+  }
+}
+
+.default-image-display {
+  @include image-display
+}
+
+.resize-gif {
+  height: 500px !important;
+  width: auto !important;
+  margin: auto !important;
+}
+
+@mixin theme($primary-color, $accent-color, $tertiary-color, $light-color) {
+  .accent-image-display {
+    @include image-display($accent-color)
+  }
+
+  .theme-image-display {
+    @include image-display($primary-color)
+  }
+  .tertiary-image-display {
+    @include image-display($tertiary-color)
+  }
+  .light-image-display {
+    @include image-display($ifly-light-color)
+  }
+
+  .diagram-light {
+    @include diagram($light-color)
+  }
+  .summary-point {
     .icon {
-        width: 43px;
-        height: auto;
-        display: block;
+      width: 43px;
+      height: auto;
+      display: block;
     }
-}
+  }
 
-linebreak {
+  linebreak {
     border: $base-line-color solid 1px;
     width: 100%;
     display: block;
-}
-.tools {
+  }
+  .tools {
     display: flex;
-   align-items:center;
+    align-items: center;
 
-   img{
-       height: 32px;
-       width: auto;
-       padding-right: 5px;
-   }
-}
+    img {
+      height: 32px;
+      width: auto;
+      padding-right: 5px;
+    }
+  }
 
-.external-link {
-    color: $ifly-accent-color;
+  .external-link {
+    color: $accent-color;
     font-size: 16px;
-    &::after {
-        content: "-->";
-    }   
-}
 
-.main-image {
+    &::after {
+      content: "-->";
+    }
+  }
+
+  .main-image {
     width: 100%;
     height: auto;
-}
+  }
 
-.user-quote-section{
+  .user-quote-section {
     background: $base-theme-light-color;
     border-radius: 8px;
     padding: 2em;
+
     .user-quote-heading {
-        display: flex;
-        align-items:center;
-        .quote-heading-text {
-            span {
-                display: block;
-                margin: .5em 0;
-            }
+      display: flex;
+      align-items: center;
+
+      .quote-heading-text {
+        span {
+          display: block;
+          margin: .5em 0;
         }
+      }
     }
-}
+  }
 
-.video-img-display {
+  .video-img-display {
     margin: auto;
-    video {
-        // width: 100%;
-        border-radius: 8px;
-        // height: auto;
-        margin: 1em 0;
-    }
-    img {
-        width: 100%;
-        height: auto;
-        margin: 1em 0;
-    }
-}
 
-.long-video {
-    height: 500px; 
+    video {
+      // width: 100%;
+      border-radius: 8px;
+      // height: auto;
+      margin: 1em 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: 1em 0;
+    }
+  }
+
+  .long-video {
+    height: 500px;
     margin: auto;
     border-radius: 8px;
-}
+  }
 
-.section-break-img {
+  .section-break-img {
     width: 100%;
     height: auto;
     margin: 1em 0;
     border-radius: 8px;
-}
+  }
 
-ol {
+  ol {
     list-style: none;
     counter-reset: list-counter;
-    li {
-        counter-increment: list-counter;
-        display: flex;
-        &::before {
-            content: counter(list-counter) ". ";
-            padding-right: 1em;
-            color: $ifly-theme-color;
-        }
-    }
-}
 
-.conclusion-col-2 {
+    li {
+      counter-increment: list-counter;
+      display: flex;
+
+      &::before {
+        content: counter(list-counter) ". ";
+        padding-right: 1em;
+        color: $primary-color;
+      }
+    }
+  }
+
+  .conclusion-col-2 {
     background: $base-theme-light-color;
     display: grid;
     gap: 1em;
     grid-template-columns: repeat(2, 1fr);
     @include media("<desktop") {
-        grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
     }
+
     b {
-        color: $ifly-theme-color;
+      color: $primary-color;
     }
+
     border-radius: 8px;
     padding: 1em;
     vertical-align: middle;
-    img {
-        width: 100%;
-        margin: auto;
-        border-radius: 8px;
-    }
-}
 
-.about-profile {
+    img {
+      width: 100%;
+      margin: auto;
+      border-radius: 8px;
+    }
+  }
+
+  .about-profile {
     padding: 30px;
     background-color: #D7F3E6;
     border-radius: 8px;
     margin: auto;
-    .profile-image {
-        width: 100%;
-        height: auto;
-        margin-bottom: 1em;
-    }
-    img {
-        display: block;
-        margin: auto;
-    }
-    
-}
 
-.btn-link {
+    .profile-image {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1em;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+    }
+
+  }
+
+  .btn-link {
     display: flex;
     height: 25px;
     justify-content: center;
@@ -190,21 +243,24 @@ ol {
     font-size: 16px;
     width: 140px;
     color: inherit;
-    img {
-        width: 24px;
-        height: auto;
-        margin-top: 3%;
-        padding-right: 5px;
-    }
-    &:visited {
-        color: inherit;
-    }
-    &:active {
-        background-color: #ffa6a1;
-    }
-}
 
-.lightbox {
+    img {
+      width: 24px;
+      height: auto;
+      margin-top: 3%;
+      padding-right: 5px;
+    }
+
+    &:visited {
+      color: inherit;
+    }
+
+    &:active {
+      background-color: #ffa6a1;
+    }
+  }
+
+  .lightbox {
     position: fixed;
     z-index: 1;
     padding-top: 100px;
@@ -213,103 +269,96 @@ ol {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba($color: $ifly-theme-color, $alpha: 0.75);
-    .close {
-        color: #333;
-        position: absolute;
-        top: 10px;
-        right: 25px;
-        font-size: 35px;
-        font-weight: bold;
-        &:hover, &:focus {
-            color: #333;
-            text-decoration: none;
-            cursor: pointer;          
-        }
-      }
-    .lightbox-display {
-        margin: auto;
-        img {
-            width: 100%;
-            height: auto;
-            padding: 30px;
-        }
-    }
-}
+    background-color: rgba($color: $primary-color, $alpha: 0.75);
 
-.washed-out {
-    background: rgba($color: $ifly-tertiary-color, $alpha: 0.7) !important;
+    .close {
+      color: #333;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+
+      &:hover, &:focus {
+        color: #333;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    .lightbox-display {
+      margin: auto;
+
+      img {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+      }
+    }
+  }
+
+  .washed-out {
+    background: rgba($color: $tertiary-color, $alpha: 0.7) !important;
+
     h4, li {
-        color: rgba($color: $base-font-color, $alpha: .70);
+      color: rgba($color: $base-font-color, $alpha: .70);
     }
 
     .subheading {
-        color: rgba($color: $ifly-theme-color, $alpha: 0.7) !important;
+      color: rgba($color: $primary-color, $alpha: 0.7);
     }
-}
+  }
 
-.home {
+  .home {
     height: 80vh;
     margin: auto;
     display: grid;
-}
+  }
 
-.home-heading {
+  .home-heading {
     h1 {
-        font-size: 80px;
-        line-height: 88px;
-        // max-width: 40ch;
+      font-size: 80px;
+      line-height: 88px;
+      // max-width: 40ch;
     }
-}
+  }
 
-.img-box {
+  .img-box {
     width: 100%;
     border-radius: 8px;
     // height: 754px;
     margin: auto;
-}
+  }
 
-.usability-image-section {
+  .usability-image-section {
     img {
-        margin: 36px 0;
+      margin: 36px 0;
     }
+  }
 }
 
-@mixin image-display($backgound-color:$background-color) {
-    
-    img{
-        background-color: $backgound-color;
-        padding: 20px;
-        width: 100%;
-        height: auto;
-        border-radius: 30px;
-        // &:nth-child(even) {
-            // margin-top: 50px;
-            // margin-bottom: 50px;
-        // }
-    }
+.ifly-container {
+  @include theme($ifly-theme-color, $ifly-accent-color, $ifly-tertiary-color, $ifly-light-color);
+  @include container($ifly-theme-color, $ifly-accent-color, $ifly-tertiary-color);
 }
 
-.default-image-display {
-    @include image-display
+.blinkin-container {
+  @include theme($blink-theme-color, $blink-accent-color, $blink-tertiary-color, $blink-light-color);
+  @include container($blink-theme-color, $blink-accent-color, $blink-accent-color);
 }
 
-.ifly-accent-image-display {
-    @include image-display($ifly-accent-color)
+.container {
+  @include theme($blink-theme-color, $blink-accent-color, $blink-tertiary-color, $blink-light-color);
+  @include container($base-theme-color, $base-theme-light-color, $base-theme-light-color);
 }
 
-.ifly-theme-image-display {
-    @include image-display($ifly-theme-color)
-}
-.ifly-tertiary-image-display {
-    @include image-display($ifly-tertiary-color)
-}
-.ifly-light-image-display {
-    @include image-display($ifly-light-color)
-}
-
-.resize-gif {
-    height: 500px!important;
-    width: auto !important;
-    margin: auto !important;
+.about-container {
+  @include theme($blink-theme-color, $blink-accent-color, $blink-tertiary-color, $blink-light-color);
+  @include container($base-theme-color, $base-theme-light-color, $base-theme-light-color);
+  .col-2 {
+    margin: auto;
+  }
+  .col-4 {
+    margin: auto;
+  }
 }

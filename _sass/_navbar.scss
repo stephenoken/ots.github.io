@@ -141,3 +141,7 @@
 .navbar-theme-About {
     @include navbar
 }
+.navbar-theme-blinkin {
+    background: $blink-theme-color;
+    @include navbar
+}

@@ -7,10 +7,9 @@
       <div class="dropdown item">
         <button>Study Cases <img src="{{ site.url }}/assets/images/chevron-down-{{page.navbar-theme}}.svg" alt=""></button>
         <div class="content">
-          <!-- {% for study_case in site.study_cases reverse%}
+          {% for study_case in site.study_cases reverse%}
             <a href="{{ study_case.url | relative_url}}">{{ study_case.title }}</a>
-          {% endfor %} -->
-          <a href="{{site.url}}/ifly">ifly</a>
+          {% endfor %}
         </div>
       </div>
       {% for item in site.data.navigation %}
