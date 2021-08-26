@@ -1,0 +1,39 @@
+@mixin swiper($background-color) {
+  .swiper {
+    width: 100vw;
+    height: auto;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: $background-color;
+    padding: 2em;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 50vw;
+    height: auto;
+    object-fit: cover;
+  }
+
+}
+:root {
+  --swiper-navigation-color: white !important;
+  --swiper-theme-color: white !important;
+}

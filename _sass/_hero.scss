@@ -1,6 +1,6 @@
 
 // $hero-ifly-image: url("{{ site.url }}/assets/images/ifly/hero.png");
-@mixin hero($page-name, $font-color:$base-font-color) {
+@mixin hero($page-name, $font-color:$base-font-color, $hero-height:85vh) {
     background:  url("#{$base-url}/assets/images/#{$page-name}/hero.png") no-repeat right;
     background-size: 100%;
     background-position: bottom;
@@ -8,13 +8,13 @@
     @include media("<=1440px") {
         background:  url("#{$base-url}/assets/images/#{$page-name}/hero-1440.png") no-repeat left;
         background-size: 100%;
-        height: 85vh;
+        height: $hero-height;
     }
     @include media("<=1280px") {
         background:  url("#{$base-url}/assets/images/#{$page-name}/hero-1152.png") no-repeat right bottom;
         background-size: 75%;
         // background-position: top;
-        height: 85vh;
+        height: $hero-height;
     }
 
     @include media("<=500px") {
@@ -91,7 +91,7 @@
 }
 
 .hero-blinkin {
-    @include hero('', $base-font-color);
+    @include hero('blinkin', $base-font-color, 40vh);
     background-color: $blink-theme-color !important;
 
 }

@@ -1,5 +1,3 @@
-console.log("Hello World");
-
 function openModal(imgUri) {
     const modalDiv = document.createElement("div")
     modalDiv.id = "lightbox"
@@ -17,3 +15,17 @@ function closeModal() {
     const modalDiv = document.getElementById("lightbox")
     modalDiv.remove()
 }
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    updateOnWindowResize: false,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+    },
+});

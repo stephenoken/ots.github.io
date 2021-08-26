@@ -36,6 +36,13 @@
   @include diagram($background-color)
 }
 
+.diagram-default {
+  @include diagram(initial);
+  img {
+    border: #eee 1px solid;
+  }
+}
+
 
 @mixin image-display($backgound-color:$background-color) {
 
@@ -208,7 +215,6 @@
 
   .about-profile {
     padding: 30px;
-    background-color: #D7F3E6;
     border-radius: 8px;
     margin: auto;
 
@@ -345,6 +351,7 @@
 .blinkin-container {
   @include theme($blink-theme-color, $blink-accent-color, $blink-tertiary-color, $blink-light-color);
   @include container($blink-theme-color, $blink-accent-color, $blink-accent-color);
+  @include swiper($blink-theme-color);
 }
 
 .container {
