@@ -1,7 +1,7 @@
 @mixin column($primary-color, $accent-color, $tertiary-color) {
 
     display: grid;
-    gap: 2em;
+    gap: 5em;
     justify-content: center;
 
     .thumbnail {

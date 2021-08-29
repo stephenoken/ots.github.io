@@ -29,3 +29,21 @@ var swiper = new Swiper(".mySwiper", {
         onlyInViewport: false,
     },
 });
+
+let scrollToTopButton = document.getElementById("scrollToTopBtn");
+
+function scroll() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+        scrollToTopButton.style.display = "block";
+    }
+    else {
+        scrollToTopButton.style.display = "none";
+    }
+}
+
+window.onscroll = function () { scroll();};
+
+function topFunction() {
+    document.body.scrollTop=0;
+    document.documentElement.scrollTop = 0;
+}
