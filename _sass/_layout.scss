@@ -13,6 +13,7 @@
         @include column($primary-color, $accent-color, $tertiary-color);
         $minmax-content: minmax(25ch, 55ch);
         grid-template-columns: 60ch 60ch;
+        gap: 5em;
         @include media("<tablet") {
             grid-template-columns: $minmax-content;
         }
@@ -21,6 +22,7 @@
     .col-3 {
         @include column($primary-color, $accent-color, $tertiary-color);
         grid-template-columns: repeat(3, 40ch);
+        gap: 2em;
         @include media("<tablet") {
             grid-template-columns: 1fr;
         }
@@ -28,8 +30,9 @@
 
     .col-4 {
         @include column($primary-color, $accent-color, $tertiary-color);
-        $minmax-content: 29ch;
+        $minmax-content: 32ch;
         grid-template-columns: repeat(4, $minmax-content);
+        gap: 1em;
         @include media("<=tablet") {
             grid-template-columns: repeat(2, $minmax-content);
         }

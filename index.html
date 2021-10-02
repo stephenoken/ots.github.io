@@ -8,11 +8,17 @@ navbar-theme: black
     <div class="col-2">
         <div class="home-heading">
             <h1>
-                Everything is about the process
+                Hej! I'm Olga a UX designer based in Sweden.
             </h1>
             <p>
-                Hi, I'm Olga and I do UX design. Feel free to check my study cases.
+                I love building simple and unique digital experiences that puts people first.
+                Combining my skills in UX design along with a graphic design background. <br/>
+                I apply Human centered design processes to create solutions with value.
             </p>
+            <a href="#my-work" class="btn-link">
+                <i class="fas fa-arrow-down"></i>
+                Check my work
+            </a>
         </div>
         <div class="home-animation">
             <img src="assets/images/User.png" alt="" class="animated-image center">
@@ -24,7 +30,7 @@ navbar-theme: black
         </div>
         <!-- <img src="assets/images/arrows-home.png" alt="" class="main-image"> -->
     </div>
-    <div class="col-2 fade-in-thumbnails">
+    <div id="my-work" class="col-2 fade-in-thumbnails">
         {% for study_case in site.study_cases reversed %}
             <a href="{{ study_case.url | relative_url}}">
                 <div class="thumbnail fade-in">

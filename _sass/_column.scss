@@ -1,9 +1,9 @@
 @mixin column($primary-color, $accent-color, $tertiary-color) {
-
     display: grid;
-    gap: 5em;
     justify-content: center;
-
+    margin: 1vh auto;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     .thumbnail {
         img {
             width: 100%;
@@ -25,7 +25,6 @@
             transition: .5s ease;
             background-color: #FFFEFC;
         }
-
         &:hover .overlay {
             opacity: .75;
         }
@@ -42,8 +41,6 @@
             text-align: center;
         }
     }
-    margin: 10vh auto;
-
     .list-box {
         background-color: $base-theme-light-color;
         padding: 2em 2em;
@@ -66,5 +63,4 @@
             font-size: 1em;
         }
     }
-    
 }

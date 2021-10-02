@@ -1,14 +1,30 @@
 footer {
     text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
-    color: #767A7F;
+    background-color: #333;
+    color: #fff;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 14px !important;
     line-height: 16.7px;
-    margin: 3em 3em;
-    img {
-        width: 30px;
-        height: auto;
+    width: 100%;
+    padding-bottom: 1em;
+    padding-top: 2em;
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        img {
+            display: block;
+            margin: auto;
+            height: auto;
+            width: 75px;
+        }
+        .logo {
+            align-content: center;
+            display: flex;
+        }
+        div {
+            margin: auto;
+        }
     }
 }
 

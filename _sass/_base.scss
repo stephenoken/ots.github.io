@@ -1,4 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap');
+:root {
+    --ratio: 1.2;
+    --base: 1;
+    --base-em: calc(var(--base) * 1em);
+    --base-px: calc(var(--base) * 14px);
+}
+
+:root {
+    --ms0: 1;
+    --ms1: var(--ratio);                    /* 1.2   */
+    --ms2: calc(var(--ratio) * var(--ms1)); /* 1.44  */
+    --ms3: calc(var(--ratio) * var(--ms2)); /* 1.728 */
+    --ms4: calc(var(--ratio) * var(--ms3)); /* 2.074 */
+    --ms5: calc(var(--ratio) * var(--ms4)); /* 2.488 */
+    --ms6: calc(var(--ratio) * var(--ms5)); /* 2.986 */
+    --ms7: calc(var(--ratio) * var(--ms6)); /* 3.583 */
+}
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -6,8 +25,9 @@ body {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    margin: 0%;
+    font-size: calc(var(--base-px) * var(--ms0));
+    line-height: calc(var(--base) * var(--ms2));
+    margin: 0;
     color: $base-font-color;
     background: $background-color;
 }
@@ -16,25 +36,19 @@ body {
     margin: 4em;
 }
 
-h1 {
-    @include media(">1920px") {
-        font-size: 48px;
-    }
-    @include media("<1920px") {
-        font-size: 4em;
-    }
-}
-
+h6 { font-size: calc(var(--base-px) / var(--ms1)); }
+h5 { font-size: calc(var(--base-px) * var(--ms0)); }
+h4 { font-size: calc(var(--base-px) * var(--ms1)); }
+h3 { font-size: calc(var(--base-px) * var(--ms2)); }
 h2 {
-    font-size: 32px;
+    font-size: calc(var(--base-px) * var(--ms3));
+    line-height: calc(var(--base) * var(--ms1));
 }
-// p {
-//     font-size: 1.5em;
-// }
+h1 {
+    font-size: calc(var(--base-px) * var(--ms6));
+    line-height: calc(var(--base) * var(--ms0));
+}
 
-h3 {
-    font-size: 23px;
-}
 
 
 p, ul, ol {

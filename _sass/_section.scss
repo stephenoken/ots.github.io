@@ -242,20 +242,21 @@
     text-decoration: none;
     align-content: center;
     font-weight: 600;
-    background-color: $base-theme-color;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
+    background-color: #333;
+    border: #333 4px solid;
+    padding: 10px 40px;
     border-radius: 6px;
     font-size: 16px;
     width: 140px;
     color: #FFF;
 
+    i {
+      margin-right: .25em;
+    }
+    // TODO remove this class
     img {
-      width: 24px;
+      width: 12px;
       height: auto;
-      margin-top: 3%;
       padding-right: 5px;
     }
 
@@ -263,8 +264,15 @@
       color: #FFF;
     }
 
+    &:hover {
+      background-color: #fff;
+      color: #333;
+    }
+
     &:active {
-      background-color: #ffa6a1;
+      background-color: #fff;
+      border: #828282 4px solid;
+      color: #828282;
     }
   }
 
@@ -288,13 +296,6 @@
     display: grid;
   }
 
-  .home-heading {
-    h1 {
-      font-size: 80px;
-      line-height: 88px;
-      // max-width: 40ch;
-    }
-  }
 
   .img-box {
     width: 100%;
@@ -359,6 +360,12 @@
   .theme-background {
     background-color: $blink-theme-color;
   }
+  .about-cartoon {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    display: block;
+  }
 }
 
 .container {
@@ -377,4 +384,22 @@
   .col-4 {
     margin: auto;
   }
+
+  .get-intouch-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .child {
+      margin: 4em auto;
+      text-align: center;
+      a {
+        margin: auto;
+      }
+    }
+  }
+}
+.background-colour {
+  background-color: $blink-theme-color;
+  width: 100vw;
+  max-width: initial;
 }
