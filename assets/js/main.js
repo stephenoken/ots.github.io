@@ -16,7 +16,7 @@ function closeModal() {
     modalDiv.remove()
 }
 
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".carousel-swiper", {
     slidesPerView: 1,
     spaceBetween: 0,
     updateOnWindowResize: false,
@@ -30,6 +30,18 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
+new Swiper(".autoplay-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    updateOnWindowResize: false,
+    autoplay: {
+        delay: 1000,
+    },
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+})
 let scrollToTopButton = document.getElementById("scrollToTopBtn");
 
 function scroll() {

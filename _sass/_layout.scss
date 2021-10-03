@@ -13,7 +13,7 @@
         @include column($primary-color, $accent-color, $tertiary-color);
         $minmax-content: minmax(25ch, 55ch);
         grid-template-columns: 60ch 60ch;
-        gap: 5em;
+        gap: 1em;
         @include media("<tablet") {
             grid-template-columns: $minmax-content;
         }
@@ -43,7 +43,6 @@
 
     .heading {
         text-align: center;
-
         margin-left: auto;
         margin-right: auto;
         p {
@@ -54,6 +53,10 @@
             min-width: 40ch;
             font-size: 1em;
         }
+    }
+
+    .heading-margin {
+        margin-bottom: 5em;
     }
 
     .col-2-uneven {

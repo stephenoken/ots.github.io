@@ -25,6 +25,16 @@ footer {
         div {
             margin: auto;
         }
+        .link {
+            font-size: 16px;
+            &:visited {
+                color: #FFF;
+            }
+
+            &:active {
+                background-color: #fff;
+            }
+        }
     }
 }
 

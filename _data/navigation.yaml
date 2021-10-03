@@ -1,8 +1,10 @@
 - name: About
   link: /about/
-- name: LinkenIn
-  link: https://www.linkedin.com/in/olgatorrents/
-  image: linkedin
+- name: Contact
+  link: /about#contact
+#- name: LinkenIn
+#  link: https://www.linkedin.com/in/olgatorrents/
+#  image: linkedin
 # - name: Resume
 #   link: https://www.linkedin.com/in/olgatorrents/
 

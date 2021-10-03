@@ -1,6 +1,5 @@
 @mixin diagram($background-colour) {
   background: $background-colour;
-  border-radius: 8px;
   padding: 1em;
   margin: auto;
   width: 90%;
@@ -14,7 +13,6 @@
   video {
     display: block;
     width: 100%;
-    border-radius: 8px;
     margin: auto auto 1em;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
@@ -51,7 +49,6 @@
     padding: 20px;
     width: 100%;
     height: auto;
-    border-radius: 30px;
     // &:nth-child(even) {
     // margin-top: 50px;
     // margin-bottom: 50px;
@@ -67,6 +64,7 @@
   height: 500px !important;
   width: auto !important;
   margin: auto !important;
+  display: block;
 }
 
 @mixin theme($primary-color, $accent-color, $tertiary-color, $light-color) {
@@ -81,7 +79,7 @@
     @include image-display($tertiary-color)
   }
   .light-image-display {
-    @include image-display($ifly-light-color)
+    @include image-display($blink-theme-color)
   }
 
   .diagram-light {
@@ -100,6 +98,10 @@
     width: 100%;
     display: block;
   }
+
+  .line-margin {
+    margin-top: 5em;
+  }
   .tools {
     display: flex;
     align-items: center;
@@ -107,8 +109,13 @@
     img {
       height: 32px;
       width: auto;
-      padding-right: 5px;
+      //padding-right: 5px;
+      vertical-align: middle;
+      &:nth-last-child(1) {
+        padding-right: 5px;
+      }
     }
+
   }
 
   .external-link {
@@ -126,7 +133,7 @@
   }
 
   .user-quote-section {
-    background: $base-theme-light-color;
+    background: $background-color;
     border-radius: 8px;
     padding: 2em;
 
@@ -143,12 +150,17 @@
     }
   }
 
+  .point-view {
+    p {
+      font-size: 1.25em !important;
+      max-width: 60ch !important;
+    }
+  }
   .video-img-display {
     margin: auto;
 
     video {
       // width: 100%;
-      border-radius: 8px;
       // height: auto;
       margin: 1em 0;
     }
@@ -163,16 +175,21 @@
   .long-video {
     height: 500px;
     margin: auto;
-    border-radius: 8px;
   }
 
   .section-break-img {
     width: 100%;
     height: auto;
     margin: 1em 0;
-    border-radius: 8px;
     margin: auto;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .img-section {
+    display: block;
+    margin: auto;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
   }
 
   ol {
@@ -217,7 +234,6 @@
 
   .about-profile {
     padding: 30px;
-    border-radius: 8px;
     margin: auto;
 
     .profile-image {
@@ -247,11 +263,12 @@
     padding: 10px 40px;
     border-radius: 6px;
     font-size: 16px;
-    width: 140px;
+    width: max-content;
+    min-width: 140px;
     color: #FFF;
 
     i {
-      margin-right: .25em;
+      margin-right: 1em;
     }
     // TODO remove this class
     img {
@@ -347,9 +364,18 @@
     }
   }
 }
+.design-process-img {
+  display: block;
+  margin: 7.5em auto;
+}
+
 .ifly-container {
-  @include theme($ifly-theme-color, $ifly-accent-color, $ifly-tertiary-color, $ifly-light-color);
+  @include theme($ifly-accent-color, $ifly-theme-color, $ifly-tertiary-color, $ifly-light-color);
   @include container($ifly-theme-color, $ifly-accent-color, $ifly-tertiary-color);
+  @include swiper($blink-theme-color);
+  .theme-background {
+    background-color: $blink-theme-color;
+  }
 }
 
 .blinkin-container {
@@ -386,6 +412,7 @@
   }
 
   .get-intouch-section {
+    height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -394,6 +421,10 @@
       text-align: center;
       a {
         margin: auto;
+      }
+      div {
+        padding-top: 1em;
+        padding-bottom: 1em;
       }
     }
   }

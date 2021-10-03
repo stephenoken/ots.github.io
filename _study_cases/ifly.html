@@ -91,54 +91,21 @@ description:
             </p>
         </div>
     </div>
+    <linebreak></linebreak>
     <div class="heading">
         <h1>My design thinking process</h1>
     </div>
-    <div class="col-4">
-        <div class="list-box">
-            <h4>Research</h4>
-            <div class="subheading">UNDERSTAND THE PROBLEM</div>  
-            <ul>
-                <li>Competitive benchmarking</li>
-                <li>Online survey</li>
-                <li>Note-taking</li>
-                <li>Usability testing</li>
-
-            </ul>
-        </div>
-        <div class="list-box"> 
-            <h4>Analysis</h4>
-            <div class="subheading">ORGANISE UNSTRUCUTRUED DATA</div>  
-            <ul>
-                <li>Affinity Diagram</li>
-                <li>Customer Journey Map</li>
-            </ul>
-        </div>
-        <div class="list-box">
-            <h4>Define</h4>
-            <div class="subheading">ARTICULATE THE SOLUTION</div>  
-            <ul>
-                <li>Flow Diagram</li>
-                <li>Interaction design</li>
-            </ul>
-        </div>
-        <div class="list-box">
-            <h4>Ideate</h4>
-            <div class="subheading">CREATE THE SOLUTION</div>  
-            <ul>
-                <li>Medium fidelity prototype</li>
-                <li>Wireframe</li>
-                <li>High fidelity prototype</li>
-                <li>My solution</li>
-            </ul>
-        </div>
+    <div data-aos="fade-up" class="">
+        <img src="{{ site.url }}/assets/images/{{ page.title }}/design-process.svg" class="design-process-img">
     </div>
     <div class="heading">
         <h1>About Ifly</h1>
     </div>
-    <video autoplay loop muted class="section-break-img">
-        <source src="{{ site.url }}/assets/video/{{ page.title }}/live-demo-480.mp4" type="video/mp4"/>
-    </video>
+    <div class="theme-background">
+        <video autoplay loop muted class="img-section">
+            <source src="{{ site.url }}/assets/video/{{ page.title }}/live-demo-480.mp4" type="video/mp4"/>
+        </video>
+    </div>
     <div class="col-2">
         <div>
             <h3>What is Ifly?</h3>
@@ -172,7 +139,7 @@ description:
     <div class="heading">
         <h1>Research</h1>
         <p>
-            Understanding the problem
+            Using empathy to understand the problem
         </p>
     </div>
     <div class="col-2">
@@ -199,139 +166,100 @@ description:
                     as selecting dates and filling out passenger forms
                 </li>
             </ul>
-            <h4>Hypothesis</h4>
+            <h4>My thoughts</h4>
             <p>
                 Across the airline industry there is a well defined process for booking flights, 
                 so breaking that convention could backfire.
             </p>
-            <a class="external-link" href="https://www.figma.com/file/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?node-id=218%3A477" target="_blank">Go to full benchmark</a>
+            <a class="external-link" href="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?page-id=218%3A477&node-id=218%3A746&viewport=243%2C48%2C0.08&scaling=contain" target="_blank">Go to full benchmark</a>
         </div>
         <img class="img-box" src="{{ site.url }}/assets/images/{{ page.title }}/research/benchmark.png">
     </div>
-    <div class="col-2">
-        <div>
-            <h2>Online Survey</h2>
-            <div class="tools">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survery_monkey.svg">
-                Tools: SurveyMonkey
-            </div>
+    <div class="theme-background">
+        <div class="col-2 theme-background">
+            <div>
+                <h2>Online Survey</h2>
+                <div class="tools">
+                    <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survery_monkey.svg">
+                    Tools: SurveyMonkey
+                </div>
 
-            <p>
-                In order to acquire more quantitative and qualitative data about the project, 
-                I ran an online survey. Using both closed-ended and 
-                open-ended questions I was able to collect useful data about user behaviour.
-            </p>
-            <h4>Findings</h4>
-            <ul>
-                <li>Users prefer searching for flights on airline websites. </li>
-                <li>Mobile apps are typically used for checking-in.</li>
-                <li>Most users make short-distance trips.</li>
-                <li>Users associate their travel experience with the in app experience.</li>
-            </ul>
-            <h4>Hypothesis</h4>
-            <p>
-                This process has helped me gain insight into how users use these types of apps.
-            </p>
-            <a class="external-link" target="blank_" href="https://sv.surveymonkey.com/results/SM-NTP7JFJK9/">Go to full suvery</a>
-        </div>
-        <div class="diagram-light">
-            <div class="img-col-2">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survery_1.svg">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survery_2.svg">
+                <p>
+                    In order to acquire more quantitative and qualitative data about the project,
+                    I ran an online survey. Using both closed-ended and
+                    open-ended questions I was able to collect useful data about user behaviour.
+                </p>
+                <h4>Findings</h4>
+                <ul>
+                    <li>Users prefer searching for flights on airline websites. </li>
+                    <li>Mobile apps are typically used for checking-in.</li>
+                    <li>Most users make short-distance trips.</li>
+                    <li>Users associate their travel experience with the in app experience.</li>
+                </ul>
+                <h4>My thoughts</h4>
+                <p>
+                    This process has helped me gain insight into how users use these types of apps.
+                </p>
             </div>
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survery_3.svg">
-        </div>
-    </div>
-    <div class="col-2">
-        <div>
-            <h2>Note taking</h2>
-            <div class="tools">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/note_taking_icons.svg" alt="" class="tools-img-double">
-                Tools: Handwriting - Google docs
-            </div>
-
-            <p>
-                During this phase, I reviewed two usability test recordings that were provided by 
-                the UX Institute. Each recording was of a user performing the task of booking a 
-                flight in both the Aer Lingus and Eurowings apps. The test began with an in-depth 
-                interview to give the user context. Throughout the interviews I took detailed notes 
-                about the user’s goals, behaviour, pain points and mental models.
-            </p>
-            <h4>Findings</h4>
-            <ul>
-                <li>Price and flight times are the main search criteria for users.</li>
-                <li>
-                    On the home screen of the apps, the intrusive advertising distracts 
-                    the users from their goal of booking a flight.
-                </li>
-                <li>
-                    Extra steps not well highlighted when selecting the breakdown of 
-                    different fares. This breaks the user’s mental models of the flow.
-                </li>
-            </ul>
-            <h4>Hypothesis</h4>
-            <p>
-                The selection of both the flight and the type of fare is a major pain 
-                point for the user.
-            </p>
-        </div>
-        <div class="diagram-light">
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/research/notetaking.png" alt="">    
-        </div>
-    </div>
-    <div class="col-2">
-        <h2>What users had to say...</h2>
-    </div>
-    <div class="col-3">
-        <div class="user-quote-section">
-            <div class="user-quote-heading">
-                <img src="{{ site.url }}/assets/images/person.svg" class="icon">
-                <div class="quote-heading-text">
-                    <span>User Test 1</span>
-                    <span><b>Aerlingus App Fare Selection</b></span>
+            <div class="diagram-light">
+                <div class="img-col-2">
+                    <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survery_1.svg">
+                    <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survery_2.svg">
                 </div>
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survery_3.svg">
             </div>
-            <p> 
-                <i>
-                    “But that has now moved me onto the 2nd of November for some reason.
-                    I don't know why that would happen. Because I want, I don't know why 
-                    that has happened.”
-                </i>
-            </p>
         </div>
-        <div class="user-quote-section">
-            <div class="user-quote-heading">
-                <img src="{{ site.url }}/assets/images/person.svg" class="icon">
-                <div class="quote-heading-text">
-                    <span>User Test 2</span>
-                    <span><b>Eurowings App Fare Selection</b></span>
+        <div class="col-3">
+            <div class="user-quote-section">
+                <div class="user-quote-heading">
+                    <img src="{{ site.url }}/assets/images/person.svg" class="icon">
+                    <div class="quote-heading-text">
+                        <span>User Test 1</span>
+                        <span><b>Aerlingus App Fare Selection</b></span>
+                    </div>
                 </div>
+                <p>
+                    <i>
+                        “But that has now moved me onto the 2nd of November for some reason.
+                        I don't know why that would happen. Because I want, I don't know why
+                        that has happened.”
+                    </i>
+                </p>
             </div>
-            <p> 
-                <i>
-                    “I didn't like the fact that... 
-                    unless you're familiar with the app, you wouldn't 
-                    know to click on it for other options.”
-                </i>
-            </p>
+            <div class="user-quote-section">
+                <div class="user-quote-heading">
+                    <img src="{{ site.url }}/assets/images/person.svg" class="icon">
+                    <div class="quote-heading-text">
+                        <span>User Test 2</span>
+                        <span><b>Eurowings App Fare Selection</b></span>
+                    </div>
+                </div>
+                <p>
+                    <i>
+                        “I didn't like the fact that...
+                        unless you're familiar with the app, you wouldn't
+                        know to click on it for other options.”
+                    </i>
+                </p>
+            </div>
+            <div class="user-quote-section">
+                <div class="user-quote-heading">
+                    <img src="{{ site.url }}/assets/images/person.svg" class="icon">
+                    <div class="quote-heading-text">
+                        <span>User Test 3</span>
+                        <span><b>Norwegian App Selecting Flights</b></span>
+                    </div>
+                </div>
+                <p>
+                    <i>
+                        “The select button didn't actually pop out visually because it
+                        is the same colours as the other menus, so that is maybe why I
+                        miss it. I didn't realize I had to do an extra step to select my
+                        flights.”
+                    </i>
+                </p>
+            </div>
         </div>
-        <div class="user-quote-section">
-            <div class="user-quote-heading">
-                <img src="{{ site.url }}/assets/images/person.svg" class="icon">
-                <div class="quote-heading-text">
-                    <span>User Test 3</span>
-                    <span><b>Norwegian App Selecting Flights</b></span>
-                </div>
-            </div>
-            <p> 
-                <i>
-                    “The select button didn't actually pop out visually because it 
-                    is the same colours as the other menus, so that is maybe why I 
-                    miss it. I didn't realize I had to do an extra step to select my 
-                    flights.”
-                </i>
-            </p>
-        </div>        
     </div>
     <div class="col-2">
         <div>
@@ -367,7 +295,7 @@ description:
                     were not clear. The user was getting lost at different points in the flow.
                 </li>
             </ul>
-            <h4>Hypothesis</h4>
+            <h4>My thoughts</h4>
             <p>
                 The user had never used the SAS or Norwegian app before. But they still knew how 
                 to navigate through them. This confirms that industry conventions are well known.
@@ -379,14 +307,51 @@ description:
             <img src="{{ site.url }}/assets/images/{{ page.title }}/research/remote-usability-norwegian.png">
         </div>
     </div>
-    <linebreak></linebreak>
-    <div class="heading">
-        <h1>Analysis</h1>
+    <div class="col-2 theme-background">
+        <div>
+            <h2>Note taking</h2>
+            <div class="tools">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/note_taking_icons.svg" alt="" class="tools-img-double">
+                Tools: Handwriting - Google docs
+            </div>
+
+            <p>
+                During this phase, I reviewed two usability test recordings that were provided by
+                the UX Institute. Each recording was of a user performing the task of booking a
+                flight in both the Aer Lingus and Eurowings apps. The test began with an in-depth
+                interview to give the user context. Throughout the interviews I took detailed notes
+                about the user’s goals, behaviour, pain points and mental models.
+            </p>
+            <h4>Findings</h4>
+            <ul>
+                <li>Price and flight times are the main search criteria for users.</li>
+                <li>
+                    On the home screen of the apps, the intrusive advertising distracts
+                    the users from their goal of booking a flight.
+                </li>
+                <li>
+                    Extra steps not well highlighted when selecting the breakdown of
+                    different fares. This breaks the user’s mental models of the flow.
+                </li>
+            </ul>
+            <h4>My thoughts</h4>
+            <p>
+                The selection of both the flight and the type of fare is a major pain
+                point for the user.
+            </p>
+        </div>
+        <div class="diagram-light">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/research/notetaking.png" alt="">
+        </div>
+    </div>
+    <linebreak class="line-margin"></linebreak>
+    <div class="heading heading-margin">
+        <h1>Define</h1>
         <p>
-            Organize unstructured data
+            Define the problem
         </p>
     </div>
-    <div class="col-2">
+    <div class="col-2 theme-background">
         <div>
             <h2>Affinity Diagram</h2>
             <div class="tools">
@@ -412,13 +377,13 @@ description:
                 <li>Selecting fares is confusing and the Compare Fares screen has too much information.</li>
                 <li>Giving constant feedback helps users to stay in the flow.</li>
             </ul>
-            <h4>Hypothesis</h4>
+            <h4>My thoughts</h4>
             <p>
                 Working with someone else, we were able to take the unstructured data and clustered 
                 it together into a structured format and then we were able to identify logical theme 
                 patterns. 
             </p>
-            <a class="external-link" href="https://miro.com/app/board/o9J_lTQu_MQ=/?moveToWidget=3074457354802085472&cot=10" target="_blank">Go to digital version on Miro</a>
+            <a class="external-link" href="https://miro.com/app/board/o9J_lTQu_MQ=/?moveToWidget=3074457364995508587&cot=14" target="_blank">Go to digital version on Miro</a>
         </div>
         <div class="default-image-display">
             <img src="{{ site.url }}/assets/images/{{ page.title }}/analysis/affinity_diagram.gif">
@@ -448,7 +413,7 @@ description:
                 The purpose of the customer journey diagram was to continue shaping and structuring 
                 the data previously obtained, and to create a visualisation. To achieve this, I put 
                 myself in the mind of the user and attributed their positive and negative points to 
-                each steps of the flow. 
+                each step of the flow.
             </p>
             <h4>Findings</h4>
             <p>
@@ -461,28 +426,36 @@ description:
                 <li>Selecting different fare types</li>
                 <li>Unclear information about whether the flight is direct or not.</li>
             </ul>
-            <h4>Hypothesis</h4>
+            <h4>My thoughts</h4>
             <p>
                 Going through this process allowed me to understand that a user’s experience depends 
-                on their goals. These goals are not always global and each step can have it’s own 
-                mini goals. The mini goals can either improve or disimprove the user’s experience.
+                on their goals. These goals are not always global and each step can have its own
+                mini goals. The mini goals can either improve or disprove the user’s experience.
             </p>
-            <a  class="external-link" href="javascript:void(0)" onclick="openModal('{{ site.url }}/assets/images/{{ page.title }}/analysis/user_journey_map.svg')">
-                Click to zoom
+            <a  target="_blank" class="external-link" href="https://www.figma.com/file/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?node-id=629%3A429">
+                Go to user journey map
             </a>
         </div>
         <div class="theme-image-display">
             <img src="{{ site.url }}/assets/images/{{ page.title }}/analysis/user_journey_map.svg">
         </div>
     </div>
-    <linebreak></linebreak>
     <div class="heading">
-        <h1>Define</h1>
-        <p>
-            Articulate the solution
+        <img src="{{ site.url }}/assets/images/{{ page.title }}/light_bulb.gif">
+        <h1>POINT OF VIEW</h1>
+        <b>Problem statement</b>
+        <p>Tailor the product search experience to help the user efficiently and confidently narrow down the search
+            results allowing them to find the products that suits their needs
         </p>
     </div>
-    <div class="col-2">
+    <linebreak></linebreak>
+    <div class="heading heading-margin">
+        <h1>Ideate</h1>
+        <p>
+            Generating ideas
+        </p>
+    </div>
+    <div class="col-2 theme-background">
         <div>
             <h2>Flow diagram</h2>
             <div class="tools">
@@ -499,13 +472,13 @@ description:
                 For me, this process helped me to identify the main and sub screens. It also 
                 informed me which screen the content will go on. 
             </p>
-            <h4>Hypothesis</h4>
+            <h4>My thoughts</h4>
             <p>
                 This step allowed me to further organize the data I collected and I was able 
                 to start designing a more concrete architecture for the booking process.
             </p>
-            <a class="external-link" href="javascript:void(0)" onclick="openModal('{{ site.url }}/assets/images/{{ page.title }}/define/flow_chart.svg')">
-                Click to zoom
+            <a target="_blank" class="external-link" href="https://www.figma.com/file/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?node-id=419%3A669">
+                Go to flow diagram
             </a>
         </div>
         <div class="tertiary-image-display">
@@ -547,15 +520,23 @@ description:
                     to validate that the solution satisfies the user’s end goal of booking a flight.
                 </li>
             </ol>
-            <h4>Hypothesis</h4>
+            <h4>My thoughts</h4>
             <p>
                 By listing the key features and the user’s goal for each section, I was able to 
                 design UI elements that have purpose in mind.
             </p>
         </div>
         <div class="default-image-display">
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/define/sketches_evolution.gif">
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/define/sketches.png">
+            <div class="swiper autoplay-swiper">
+                <div class="swiper-wrapper">
+                    {% for i in (1..6) %}
+                    <div class="swiper-slide">
+                        <img src="{{ site.url }}/assets/images/{{ page.title }}/define/sketch_{{ i }}.png">
+                    </div>
+                    {% endfor%}
+                </div>
+            </div>
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/define/sketches.png" style="padding-left: initial;padding-right: initial">
             <!-- <video autoplay loop width="100%">
                 <source src="{{ site.url }}/assets/video/{{ page.title }}/sketch-prototype.mp4" type="video/mp4"/>
             </video> 
@@ -563,8 +544,8 @@ description:
         </div>
     </div>
     <linebreak></linebreak>
-    <div class="heading">
-        <h1>Ideate</h1>
+    <div class="heading heading-margin">
+        <h1>Prototyping</h1>
         <p>
             Create the solution
         </p>
@@ -572,7 +553,7 @@ description:
     <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/medium-fidelity.png" alt="" class="section-break-img">
     <div class="col-2">
         <div>
-            <h2>Interaction Design</h2>
+            <h2>Medium fidelity prototyping</h2>
             <div class="tools">
                 <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/figma_icon.svg" alt="" class="tools-img-double">
                 Tools: Figma
@@ -588,16 +569,14 @@ description:
                 worked. At this point I didn't focus on the theming or branding of the app, since I
                 wanted to focus on building recognizable UI elements with different states. 
             </p>
+            <a href="https://www.figma.com/proto/iArq9wzE7chG7DFabV9gq4/OlgaTorrents_Project12?page-id=135%3A641&node-id=135%3A1629&viewport=243%2C48%2C0.13&scaling=min-zoom&starting-point-node-id=135%3A1629" target="_blank" class="external-link">
+                Go to medium fidelity prototype
+            </a>
             <!-- <img src="{{site.url}}/assets/images/{{ page.title }}/man-cat-phone.svg" alt="" class="main-image"> -->
         </div>
-        <div class="default-image-display" style="margin: auto;">
+        <div class="light-image-display theme-background">
             <img class="resize-gif" src="{{ site.url }}/assets/images/{{ page.title }}/ideate/low_fidelity.gif" alt="">
         </div>
-        <!-- <div class="video-img-display">
-            <video autoplay loop class="long-video">
-                <source src="{{ site.url }}/assets/video/{{ page.title }}/medium-fidelity.mp4" type="video/mp4"/>
-            </video>
-        </div> -->
     </div>
     <div class="col-2">
         <div>
@@ -623,7 +602,7 @@ description:
                 To develop this wireframe I had to go through the entire flow. It was useful to reflect 
                 on the work and see what could be further improved.
             </p>
-            <a class="external-link" href="https://miro.com/app/board/o9J_lTQu_MQ=/?moveToWidget=3074457354802084754&cot=14" target="_blank">Click here to see full wireframe on Miro</a>
+            <a class="external-link" href="https://miro.com/app/board/o9J_lTQu_MQ=/?moveToWidget=3074457364995692175&cot=14" target="_blank">Go to wireframes</a>
         </div>
         <div class="light-image-display">
             <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/wireframe.png">
@@ -651,15 +630,9 @@ description:
             From creating this prototype I was able to identify areas of improvement within the solution. 
             As well as validate design decisions with the UI elements.    
         </p>
+            <a href="https://www.figma.com/proto/H7pcJUbRhEKlblKTVUZPYl/IFLY-DEFINITIVO?page-id=811%3A18007&node-id=811%3A25407&viewport=243%2C48%2C0.09&scaling=min-zoom&starting-point-node-id=811%3A25407" class="external-link" target="_blank">Go to high fidelity prototype</a>
         </div>
-        <div class="diagram-default-light ">
-            <div class="img-col-2">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/high_1.svg" style="height: 309px;">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/high_2.gif">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/high_3.png">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/high_4.png">
-            </div>
-        </div>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); margin: auto" width="400" height="800" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FH7pcJUbRhEKlblKTVUZPYl%2FIFLY-DEFINITIVO%3Fpage-id%3D811%253A18007%26node-id%3D811%253A25353%26viewport%3D243%252C48%252C0.09%26scaling%3Dmin-zoom%26starting-point-node-id%3D811%253A25407" allowfullscreen></iframe>
         <!-- <div class="diagram">
             <video autoplay loop class="long-video">
                 <source src="{{ site.url }}/assets/video/{{ page.title }}/evolution-of-design.mp4" type="video/mp4"/>
@@ -670,60 +643,27 @@ description:
         </div> -->
     </div>
     <linebreak></linebreak>
-    <div class="heading">
-        <h1>My Solution</h1>
-        <p>
-            High fidelity prototype
-        </p>
-    </div>
-    <div class="col-2">
-        <div>
-            <h2>About</h2>
-            <p>My focus was to improve the look and feel of the prototype as well as include
-                small animations.
+    <div class="heading heading-margin">
+        <h2>My Solution</h2>
+        <div class="tools" style="display: block">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/figma_logo.svg" alt="miro logo"
+                 class="tools-img-double">
+            Tools: Figma
+            <p>
+                My focus was to improve the look and feel of the prototype as well as include small animations.
             </p>
+            <a target="_blank" class="external-link" href="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?page-id=630%3A115&node-id=630%3A115&viewport=243%2C48%2C0.85&scaling=min-zoom&starting-point-node-id=630%3A120">Go to full solution.</a>
         </div>
     </div>
-    <div class="col-2">
-        <div class="conclusion-col-2">
-            <div>
-                <h2>The problem</h2>
-                <b>Select Fares</b>
-                <ul>
-                    <li>Selecting the fare is confusing</li>
-                    <li>Users are not sure what is selected</li>
-                    <li>Hard to find and compare fares</li>
-                </ul>
-                <h2>My solution</h2>
-                <b>Select Fares</b>
-                <ul>
-                    <li>Flow leads the user through the steps</li>
-                    <li>User can't proceed unitl the fare is selected</li>
-                </ul>
+    <div class="swiper carousel-swiper heading-margin">
+        <div class="swiper-wrapper">
+            {% for i in (1..2) %}
+            <div class="swiper-slide">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/my_solution/my_solution_{{ i }}.png">
             </div>
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/solution-select-fares.gif" alt="">
-            <!-- <video autoplay loop>
-                <source src="{{ site.url }}/assets/video/{{ page.title }}/evolution-of-design.mp4" type="video/mp4"/>
-            </video> -->
+            {% endfor%}
         </div>
-        <div class="conclusion-col-2">
-            <div>
-                <h2>The problem</h2>
-                <b>Swipe Between Departure and Return flights</b>
-                <ul>
-                    <li>Unexpected swipe between departure and return flights</li>
-                    <li>User gets perplexed and feel lost</li>
-                </ul>
-                <h2>My solution</h2>
-                <b>Swipe Between Departure and Return flights</b>
-                <ul>
-                    <li>User can't move to return until they first select the fare and the flight</li>
-                    <li>Visual animation confirm flights is selected</li>
-                    <li>Animation informs the user about the new flights are being loaded</li>
-                </ul>
-            </div>
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/solution-swipe-between-flights.gif" alt="">
-        </div>
+        <div class="swiper-pagination"></div>
     </div>
     <linebreak></linebreak>
     <div class="heading">
