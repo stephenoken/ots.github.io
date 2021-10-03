@@ -146,7 +146,8 @@ description:
         <div>
             <h2>Competitive benchmarking</h2>
             <div class="tools">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/notion_figma.svg" alt="notion figma logo" class="tools-img-double">
+                <img src="{{ site.url }}/assets/images/pen-paper-dark.svg" alt="miro logo">
+                <img src="{{ site.url }}/assets/images/figma.svg" alt="miro logo">
                 Tools: Notion - Figma
             </div>
 
@@ -173,7 +174,17 @@ description:
             </p>
             <a class="external-link" href="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?page-id=218%3A477&node-id=218%3A746&viewport=243%2C48%2C0.08&scaling=contain" target="_blank">Go to full benchmark</a>
         </div>
-        <img class="img-box" src="{{ site.url }}/assets/images/{{ page.title }}/research/benchmark.png">
+        <div>
+            <div class="swiper autoplay-swiper">
+                <div class="swiper-wrapper">
+                    {% for i in (1..4) %}
+                    <div class="swiper-slide">
+                        <img src="{{ site.url }}/assets/images/{{ page.title }}/research/competitive_benchmark_{{i}}.png">
+                    </div>
+                    {% endfor%}
+                </div>
+            </div>
+        </div>
     </div>
     <div class="theme-background">
         <div class="col-2 theme-background">
@@ -200,14 +211,142 @@ description:
                 <p>
                     This process has helped me gain insight into how users use these types of apps.
                 </p>
+                <h4>
+                    In your opinion which airline had the worst flight booking experience and why?
+                </h4>
             </div>
-            <div class="diagram-light">
-                <div class="img-col-2">
-                    <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survery_1.svg">
-                    <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survery_2.svg">
+            <div class="diagram-default">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survey_1.png">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survey_2.png">
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="user-quote-section">
+                <div class="user-quote-heading">
+                    <img src="{{ site.url }}/assets/images/person.svg" class="icon">
+                    <div class="quote-heading-text">
+                        <span>User Test 1</span>
+                        <span><b>Survey Answer</b></span>
+                    </div>
                 </div>
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survery_3.svg">
+                <p>
+                    <i>
+                        "Wizzair. Lack of clarity, bad design, bad translations, intrusive advertising."
+                    </i>
+                </p>
             </div>
+            <div class="user-quote-section">
+                <div class="user-quote-heading">
+                    <img src="{{ site.url }}/assets/images/person.svg" class="icon">
+                    <div class="quote-heading-text">
+                        <span>User Test 2</span>
+                        <span><b>Survey Answer</b></span>
+                    </div>
+                </div>
+                <p>
+                    <i>
+                        "Ryanair, the process becomes too long with all the adverts."
+                    </i>
+                </p>
+            </div>
+            <div class="user-quote-section">
+                <div class="user-quote-heading">
+                    <img src="{{ site.url }}/assets/images/person.svg" class="icon">
+                    <div class="quote-heading-text">
+                        <span>User Test 3</span>
+                        <span><b>Survey Answer</b></span>
+                    </div>
+                </div>
+                <p>
+                    <i>
+                        "Jet Airways, the UI was really clunky and confusing.
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-2">
+        <div>
+            <h2>Remote usability test</h2>
+            <div class="tools">
+                <img src="{{ site.url }}/assets/images/notion-dark.svg" alt="">
+                <img src="{{ site.url }}/assets/images/loom.svg" alt="">
+                Tools: Notion - Loom
+            </div>
+
+            <p>
+                The next logical step was to perform a usability test. To acheive this,
+                I recruited a friend who travels by air on a regular basis and books their
+                flights online. I conducted the test remotely.
+
+            </p>
+            <p>
+                Since I did not have an existing product but was researching for a new one,
+                I decided to use two existing competitor apps instead. They were
+                SAS and Norwegian apps. I prepared an in depth interview and test 
+                to be completed within one hour. 
+            </p>
+            <b>Task To Complete:</b>
+            <p>
+                Book a flight for a City break. Fly from Copenhagen to Paris from November
+                9th to 11th but flexible with departure dates. The trip is for two people.
+                The flow stops before seat selection. 
+            </p>
+            <h4>Findings</h4>
+            <ul>
+                <li>The SAS interface was less cluttered and that prevented the flow from being interrupted.</li>
+                <li>
+                    In the Norwegian app test, it was more challenging for the user to book a 
+                    flight. There was confusion on selecting the flight and the fares, which 
+                    were not clear. The user was getting lost at different points in the flow.
+                </li>
+            </ul>
+            <h4>My thoughts</h4>
+            <p>
+                The user had never used the SAS or Norwegian app before. But they still knew how 
+                to navigate through them. This confirms that industry conventions are well known.
+            </p>
+            <a  class="external-link" href="https://youtu.be/tBUa1OqhWpw" target="_blank">Go to full remote usability test</a>
+        </div>
+        <div class="diagram-default">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/research/remote-usability.png">
+        </div>
+    </div>
+    <div class="col-2 theme-background">
+        <div>
+            <h2>Note taking</h2>
+            <div class="tools">
+                <img src="{{ site.url }}/assets/images/google_docs.svg" alt="" >
+                Tools: Google docs
+            </div>
+
+            <p>
+                During this phase, I reviewed two usability test recordings that were provided by
+                the UX Institute. Each recording was of a user performing the task of booking a
+                flight in both the Aer Lingus and Eurowings apps. The test began with an in-depth
+                interview to give the user context. Throughout the interviews I took detailed notes
+                about the user’s goals, behaviour, pain points and mental models.
+            </p>
+            <h4>Findings</h4>
+            <ul>
+                <li>Price and flight times are the main search criteria for users.</li>
+                <li>
+                    On the home screen of the apps, the intrusive advertising distracts
+                    the users from their goal of booking a flight.
+                </li>
+                <li>
+                    Extra steps not well highlighted when selecting the breakdown of
+                    different fares. This breaks the user’s mental models of the flow.
+                </li>
+            </ul>
+            <h4>My thoughts</h4>
+            <p>
+                The selection of both the flight and the type of fare is a major pain
+                point for the user.
+            </p>
+        </div>
+        <div class="diagram-default">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/research/notetaking.png" alt="">
         </div>
         <div class="col-3">
             <div class="user-quote-section">
@@ -261,89 +400,6 @@ description:
             </div>
         </div>
     </div>
-    <div class="col-2">
-        <div>
-            <h2>Remote usability test</h2>
-            <div class="tools">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/usability_icons.svg" alt="" class="tools-img-double">
-                Tools: Notion - Loom
-            </div>
-
-            <p>
-                The next logical step was to perform a usability test. To acheive this,
-                I recruited a friend who travels by air on a regular basis and books their
-                flights online. I conducted the test remotely.
-            </p>
-            <p>
-                Since the I did not have an existing product but was researching for a new one,
-                Idecided to use two existing competitor apps instead. They were
-                SAS and Norwegian apps. I prepared an in depth interview and test 
-                to be completed within one hour. 
-            </p>
-            <b>Task To Complete:</b>
-            <p>
-                Book a flight for a City break. Fly from Copenhagen to Paris from November
-                9th to 11th but flexible with departure dates. The trip is for two people.
-                The flow stops before seat selection. 
-            </p>
-            <h4>Findings</h4>
-            <ul>
-                <li>The SAS interface was less cluttered and that prevented the flow from being interrupted.</li>
-                <li>
-                    In the Norwegian app test, it was more challenging for the user to book a 
-                    flight. There was confusion on selecting the flight and the fares, which 
-                    were not clear. The user was getting lost at different points in the flow.
-                </li>
-            </ul>
-            <h4>My thoughts</h4>
-            <p>
-                The user had never used the SAS or Norwegian app before. But they still knew how 
-                to navigate through them. This confirms that industry conventions are well known.
-            </p>
-            <a  class="external-link" href="https://youtu.be/tBUa1OqhWpw" target="_blank">Go to full remote usability test</a>
-        </div>
-        <div class="diagram-light usability-image-section">
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/research/remote-usability-sas.png">
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/research/remote-usability-norwegian.png">
-        </div>
-    </div>
-    <div class="col-2 theme-background">
-        <div>
-            <h2>Note taking</h2>
-            <div class="tools">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/note_taking_icons.svg" alt="" class="tools-img-double">
-                Tools: Handwriting - Google docs
-            </div>
-
-            <p>
-                During this phase, I reviewed two usability test recordings that were provided by
-                the UX Institute. Each recording was of a user performing the task of booking a
-                flight in both the Aer Lingus and Eurowings apps. The test began with an in-depth
-                interview to give the user context. Throughout the interviews I took detailed notes
-                about the user’s goals, behaviour, pain points and mental models.
-            </p>
-            <h4>Findings</h4>
-            <ul>
-                <li>Price and flight times are the main search criteria for users.</li>
-                <li>
-                    On the home screen of the apps, the intrusive advertising distracts
-                    the users from their goal of booking a flight.
-                </li>
-                <li>
-                    Extra steps not well highlighted when selecting the breakdown of
-                    different fares. This breaks the user’s mental models of the flow.
-                </li>
-            </ul>
-            <h4>My thoughts</h4>
-            <p>
-                The selection of both the flight and the type of fare is a major pain
-                point for the user.
-            </p>
-        </div>
-        <div class="diagram-light">
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/research/notetaking.png" alt="">
-        </div>
-    </div>
     <linebreak class="line-margin"></linebreak>
     <div class="heading heading-margin">
         <h1>Define</h1>
@@ -355,7 +411,8 @@ description:
         <div>
             <h2>Affinity Diagram</h2>
             <div class="tools">
-                <img src="{{ site.url }}/assets/images/{{ page.title }}/analysis/affinity_icons.svg" alt="" class="tools-img-double">
+                <img src="{{ site.url }}/assets/images/pen-paper-white.svg" alt="">
+                <img src="{{ site.url }}/assets/images/miro.svg" alt="">
                 Tools: Handwriting - Miro
             </div>
             <h3>
@@ -380,13 +437,21 @@ description:
             <h4>My thoughts</h4>
             <p>
                 Working with someone else, we were able to take the unstructured data and clustered 
-                it together into a structured format and then we were able to identify logical theme 
+                it together into a structured formatand then we were able to identify logical theme
                 patterns. 
             </p>
             <a class="external-link" href="https://miro.com/app/board/o9J_lTQu_MQ=/?moveToWidget=3074457364995508587&cot=14" target="_blank">Go to digital version on Miro</a>
         </div>
-        <div class="default-image-display">
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/analysis/affinity_diagram.gif">
+        <div class="diagram-default">
+            <div class="swiper autoplay-swiper">
+                <div class="swiper-wrapper">
+                    {% for i in (1..5) %}
+                    <div class="swiper-slide">
+                        <img src="{{ site.url }}/assets/images/{{ page.title }}/analysis/affinity_{{ i }}.png">
+                    </div>
+                    {% endfor%}
+                </div>
+            </div>
             <img src="{{ site.url }}/assets/images/{{ page.title }}/analysis/affinity_miro.png">
             <!-- <video autoplay loop width="100%">
                 <source src="{{ site.url }}/assets/video/{{ page.title }}/affinity-diagram.mp4" type="video/mp4"/>
@@ -403,7 +468,7 @@ description:
     </div>
     <div class="col-2">
         <div>
-            <h2>User Journey Map</h2>
+            <h2>Journey Map</h2>
             <div class="tools">
                 <img src="{{ site.url }}/assets/images/{{ page.title }}/analysis/user_journey_icons.svg" alt="" class="tools-img-double">
                 Tools: Handwriting - Figma
@@ -436,8 +501,8 @@ description:
                 Go to user journey map
             </a>
         </div>
-        <div class="theme-image-display">
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/analysis/user_journey_map.svg">
+        <div class="diagram-default">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/analysis/user_journey_map.png">
         </div>
     </div>
     <div class="heading">
@@ -481,8 +546,8 @@ description:
                 Go to flow diagram
             </a>
         </div>
-        <div class="tertiary-image-display">
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/define/flow_chart.svg">
+        <div class="diagram-default">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/define/flow_chart.png">
         </div>
     </div>
     <div class="col-2">
