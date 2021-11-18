@@ -1,0 +1,71 @@
+<div class="heading">
+    <h1>Project Overview</h1>
+</div>
+<div class="col-4">
+    <div>
+        <p>
+            Project By
+        </p>
+        <linebreak></linebreak>
+        <p>
+            {{include.project_by}}
+        </p>
+    </div>
+    <div>
+        <p>
+            My Role
+        </p>
+        <linebreak></linebreak>
+        <p>
+            {{include.role}}
+        </p>
+    </div>
+    <div>
+        <p>
+            Duration
+        </p>
+        <linebreak></linebreak>
+        <p>
+            {{include.duration}}
+        </p>
+    </div>
+    <div>
+        <p>
+            Key tools
+        </p>
+        <linebreak></linebreak>
+        <p>
+            {{include.tools}}
+        </p>
+    </div>
+</div>
+<div class="col-2">
+    <div>
+        <img src="{{ site.url }}/assets/images/{{page.title}}/zap.svg" class="icon">
+        <h3>The problem</h3>
+        <p>
+            {{include.problem}}
+        </p>
+    </div>
+    <div>
+        <img src="{{ site.url }}/assets/images/{{page.title}}/gear.svg" class="icon">
+        <h3>My Role</h3>
+        <p>
+            {{include.role_description}}
+        </p>
+    </div>
+    <div>
+        <img src="{{ site.url }}/assets/images/{{page.title}}/rocket.svg" class="icon">
+        <h3>The Solution</h3>
+        <p>
+            {{include.solution}}
+        </p>
+    </div>
+    <div>
+        <img src="{{ site.url }}/assets/images/{{page.title}}/learnings.svg" class="icon">
+        <h3>Learnings</h3>
+        <p>
+            {{include.learnings}}
+        </p>
+    </div>
+</div>

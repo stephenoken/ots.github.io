@@ -35,7 +35,7 @@ new Swiper(".autoplay-swiper", {
     spaceBetween: 0,
     updateOnWindowResize: false,
     autoplay: {
-        delay: 1000,
+        delay: 2000,
     },
     effect: 'fade',
     fadeEffect: {

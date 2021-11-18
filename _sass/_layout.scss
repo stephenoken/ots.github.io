@@ -9,6 +9,10 @@
         margin: 5em 1em;
     }
 
+    .col-1 {
+        @include column($primary-color, $accent-color, $tertiary-color);
+        grid-template-columns: 1fr;
+    }
     .col-2 {
         @include column($primary-color, $accent-color, $tertiary-color);
         $minmax-content: minmax(25ch, 55ch);

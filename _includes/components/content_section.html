@@ -1,0 +1,40 @@
+<div class="col-2 {%if include.is_themed_section%}section-theme{%else%}section-no-theme{%endif%}">
+    <div>
+        <h2>{{include.title}}</h2>
+        {{include.content | markdownify}}
+    </div>
+    {%assign img_range = include.slide_show_img_range | split: "," %}
+    <div class="diagram-default">
+        {%if include.slide_show_imgs%}
+        <div class="swiper autoplay-swiper">
+            <div class="swiper-wrapper">
+                {% for i in (img_range[0]..img_range[1]) %}
+                <div class="swiper-slide">
+                    <img src="{{ site.url }}/assets/images/{{ page.title }}/{{include.slide_show_imgs}}{{i}}.{{include.slide_show_ext}}">
+                </div>
+                {% endfor%}
+            </div>
+        </div>
+        {%elsif include.diagram_img%}
+        <img src="{{ site.url }}/assets/images/{{ page.title }}/{{include.diagram_img}}">
+        {%endif%}
+        {%if include.external_link_description%}
+        <a  class="external-link" href="{{include.external_link_uri}}" target="_blank">{{include.external_link_description}}</a>
+        {%endif%}
+        <div class="tool-card">
+            <h6>
+                Why I used this tool:
+            </h6>
+            {%assign tools-imgs = include.tools_imgs | split: "," %}
+            {%assign tools=include.tools | split: ","%}
+            {%assign tools_explanations = include.tools_explanations | split: "|"%}
+            {%assign range_bound=tools-imgs.size | minus: 1%}
+            {%for i in (0..range_bound)%}
+            <div class="tool-card-content">
+                <img class="tool-icon" src="{{ site.url }}/assets/images/{{tools-imgs[i]}}.svg" alt="">
+                {{tools[i]}}: {{tools_explanations[i] | strip}}
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</div>

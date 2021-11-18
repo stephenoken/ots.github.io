@@ -1,0 +1,14 @@
+<div class="user-quote-section" style="background-color: {{include.background_colour|default: "#F3F2EE"}}">
+    <div class="user-quote-heading">
+        <img src="{{ site.url }}/{{include.img_path}}" class="icon">
+        <div class="quote-heading-text">
+            <span>{{include.title}}</span>
+            {%if include.sub_text%}
+            <span><b>{{include.sub_text}}</b></span>
+            {%endif%}
+        </div>
+    </div>
+    <p>
+        {{include.content}}
+    </p>
+</div>

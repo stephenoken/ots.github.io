@@ -9,6 +9,24 @@ description:
 ---
 <div class="spacing"></div>
 <div class="blinkin-container">
+    {%
+    include case_study/project_overview.html
+    project_by="Self Project"
+    role="UX Designer / UX Research"
+    duration="6 weeks"
+    tools="Miro - Figma"
+    problem="In-line sites don´t suit the experience of each visitor with his unique needs."
+    role_description="This case study is a personal project where I will apply new learnings from the online platform
+    Interaction Design Foundations and other self-learning research. Throughout this project, I performed
+    both the research and design processes."
+    solution="
+    Provide a tool that users can deliberately choose between options designed to make the user experience
+    more personal and also get better search results.
+    "
+    learnings="
+    This study case allowed to me to explore alternative techniques for applying UX design to my work.
+    "
+    %}
     <div data-aos="fade-up" class="heading">
         <h1>Project Overview</h1>
     </div>
@@ -88,9 +106,7 @@ description:
     <div class="heading">
         <h1>My design thinking process</h1>
     </div>
-    <div data-aos="fade-up" class="">
-        <img src="{{ site.url }}/assets/images/{{ page.title }}/design-process.svg" class="design-process-img">
-    </div>
+    {%include case_study/design_thinking.html%}
     <div class="heading">
         <h1>About Blinkin</h1>
     </div>

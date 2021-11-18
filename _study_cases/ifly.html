@@ -11,93 +11,48 @@ description:
 ---
 <div class="spacing"></div>
 <div class="ifly-container">
-    <div class="heading">
-        <h1>Project Overview</h1>
-    </div>
-    <div class="col-4">
-        <div>
-            <p>
-                Project By
-            </p>
-            <linebreak></linebreak>
-            <p>
-                UX Design Institute and the Glasgow Caledonian University
-            </p>
-        </div>
-        <div>
-            <p>
-                My Role
-            </p>
-            <linebreak></linebreak>
-            <p>
-                UX Designer
-            </p>
-        </div>
-        <div>
-            <p>
-                Duration
-            </p>
-            <linebreak></linebreak>
-            <p>
-                20 Weeks
-            </p>
-        </div>
-        <div>
-            <p>
-                Key tools
-            </p>
-            <linebreak></linebreak>
-            <p>
-                Miro - Figma
-            </p>
-        </div>
-    </div>
-    <div class="col-2">
-        <div>
-            <img src="{{ site.url }}/assets/images/ifly/zap.svg" class="icon">
-            <h3>The problem</h3>
-            <p>
-                Booking a flight through a mobile app can be a complex experience. 
-                Through this case study I propose a booking flow with a 
-                friction free experience.
-            </p>
-        </div>
-        <div>
-            <img src="{{ site.url }}/assets/images/ifly/gear.svg" class="icon">
-            <h3>My Role</h3>
-            <p>
-                This case study was my graduation project for the UX design institute. 
-                Throughout this project I performed both the research and design process in order to 
-                achieve the professional diploma. 
-            </p>
-        </div>
-        <div>
-            <img src="{{ site.url }}/assets/images/ifly/rocket.svg" class="icon">
-            <h3>The Solution</h3>
-            <p>
-                To streamline the fare and flights selection I added a clear button 
-                selection and strong visual feedback. To ensure the user get all the 
-                information that need in each stage. 
-            </p>
-        </div>
-        <div>
-            <img src="{{ site.url }}/assets/images/ifly/academic-hat.svg" class="icon">
-            <h3>Learnings</h3>
-            <p>
-                This project gave me valuable insight into the UX process and what is 
-                required of them. Also taught me the correct methodology and the right mindset 
-                needed to be a thoughtful user advocate, and I have learend how to build 
-                something usable and desirable, that creates a positive experience for the user.
-            </p>
-        </div>
-    </div>
+    {%
+    include case_study/project_overview.html
+    project_by="UX Design Institute and the Glasgow Caledonian University"
+    role="UX Designer"
+    duration="20 Weeks"
+    tools="Miro - Figma"
+    problem="Booking a flight through a mobile app can be a complex experience.
+    Through this case study I propose a booking flow with a
+    friction free experience."
+    role_description="This case study was my graduation project for the UX design institute.
+    Throughout this project I performed both the research and design process in order to
+    achieve the professional diploma."
+    solution="
+    To streamline the fare and flights selection I added a clear button
+    selection and strong visual feedback. To ensure the user get all the
+    information that need in each stage.
+    "
+    learnings="
+    This project gave me valuable insight into the UX process and what is
+    required of them. Also taught me the correct methodology and the right mindset
+    needed to be a thoughtful user advocate, and I have learned how to build
+    something usable and desirable, that creates a positive experience for the user.
+    "
+    %}
     <linebreak></linebreak>
     <div class="heading">
         <h1>My design thinking process</h1>
     </div>
-    <div data-aos="fade-up" class="">
-        <img src="{{ site.url }}/assets/images/{{ page.title }}/design-process.svg" class="design-process-img">
-    </div>
+    {%include case_study/design_thinking.html%}
+    {%
+    include case_study/about.html
+
+    title_content="
+    <p>
+        The simplest part of planning a trip is deciding the destination.
+        A lot of users have problems during the booking process on an airline’s
+        mobile app, in order to book a flight is required to complete a set of
+        tasks in order to successfully book a flight. Ifly is a user center airline
+        app designed to deliver a smooth booking experience.
+    </p>
+    "
+    %}
     <div class="heading">
         <h1>About Ifly</h1>
     </div>
@@ -142,6 +97,66 @@ description:
             Using empathy to understand the problem
         </p>
     </div>
+
+    {%for section in site.ifly_content %}
+    {%
+    include components/content_section.html
+    title=section.title
+    tools_imgs="pen-paper-dark,figma"
+    tools="Notion,Figma"
+    tools_explanations="To organize my files (text, images, links, etc).|
+    To create a template and to easily edit.
+    Easy to search for the file"
+    is_themed_section=true
+    content=section.content
+    external_link_uri="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?page-id=218%3A477&node-id=218%3A746&viewport=243%2C48%2C0.08&scaling=contain"
+    external_link_description="Go to full remote usability test"
+    slide_show_imgs="research/competitive_benchmark_"
+    slide_show_ext="png"
+    slide_show_img_range="1,4"
+    %}
+    {%endfor%}
+
+    {%
+    include components/content_section.html
+    title="Competitive Benchmark"
+    tools_imgs="pen-paper-dark,figma"
+    tools="Notion,Figma"
+    tools_explanations="To organize my files (text, images, links, etc).|
+    To create a template and to easily edit.
+    Easy to search for the file"
+    is_themed_section=true
+    content="# Hello
+    <h4>Why have I used this methodology</h4>
+    ## Hel
+    <p>
+        The first step in the process is to analyse how competitors are solving the booking process.
+        I focused on three European airlines, two of which were short haul carriers and the
+        other was a long haul carrier. I also analysed AirBnB as a travel related competitor.
+    </p>
+    <h4>Findings</h4>
+    <ul>
+        <li>
+            Looking a flight is a highly structured process, where the user steps through a
+            series of screens.
+        </li>
+        <li>
+            Throughout these steps, the user is required to complete specific tasks such
+            as selecting dates and filling out passenger forms
+        </li>
+    </ul>
+    <h4>My thoughts</h4>
+    <p>
+        Across the airline industry there is a well defined process for booking flights,
+        so breaking that convention could backfire.
+    </p>
+    "
+    external_link_uri="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?page-id=218%3A477&node-id=218%3A746&viewport=243%2C48%2C0.08&scaling=contain"
+    external_link_description="Go to full remote usability test"
+    slide_show_imgs="research/competitive_benchmark_"
+    slide_show_ext="png"
+    slide_show_img_range="1,4"
+    %}
     <div class="col-2">
         <div>
             <h2>Competitive benchmarking</h2>
@@ -153,23 +168,23 @@ description:
 
             <p>
                 The first step in the process is to analyse how competitors are solving the booking process.
-                  I focused on three European airlines, two of which were short haul carriers and the 
-                  other was a long haul carrier. I also analysed AirBnB as a travel related competitor. 
+                  I focused on three European airlines, two of which were short haul carriers and the
+                  other was a long haul carrier. I also analysed AirBnB as a travel related competitor.
             </p>
             <h4>Findings</h4>
             <ul>
                 <li>
-                    Looking a flight is a highly structured process, where the user steps through a 
+                    Looking a flight is a highly structured process, where the user steps through a
                     series of screens.
                 </li>
                 <li>
-                    Throughout these steps, the user is required to complete specific tasks such 
+                    Throughout these steps, the user is required to complete specific tasks such
                     as selecting dates and filling out passenger forms
                 </li>
             </ul>
             <h4>My thoughts</h4>
             <p>
-                Across the airline industry there is a well defined process for booking flights, 
+                Across the airline industry there is a well defined process for booking flights,
                 so breaking that convention could backfire.
             </p>
             <a class="external-link" href="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?page-id=218%3A477&node-id=218%3A746&viewport=243%2C48%2C0.08&scaling=contain" target="_blank">Go to full benchmark</a>
@@ -221,97 +236,87 @@ description:
             </div>
         </div>
         <div class="col-3">
-            <div class="user-quote-section">
-                <div class="user-quote-heading">
-                    <img src="{{ site.url }}/assets/images/person.svg" class="icon">
-                    <div class="quote-heading-text">
-                        <span>User Test 1</span>
-                        <span><b>Survey Answer</b></span>
-                    </div>
-                </div>
-                <p>
-                    <i>
-                        "Wizzair. Lack of clarity, bad design, bad translations, intrusive advertising."
-                    </i>
-                </p>
-            </div>
-            <div class="user-quote-section">
-                <div class="user-quote-heading">
-                    <img src="{{ site.url }}/assets/images/person.svg" class="icon">
-                    <div class="quote-heading-text">
-                        <span>User Test 2</span>
-                        <span><b>Survey Answer</b></span>
-                    </div>
-                </div>
-                <p>
-                    <i>
-                        "Ryanair, the process becomes too long with all the adverts."
-                    </i>
-                </p>
-            </div>
-            <div class="user-quote-section">
-                <div class="user-quote-heading">
-                    <img src="{{ site.url }}/assets/images/person.svg" class="icon">
-                    <div class="quote-heading-text">
-                        <span>User Test 3</span>
-                        <span><b>Survey Answer</b></span>
-                    </div>
-                </div>
-                <p>
-                    <i>
-                        "Jet Airways, the UI was really clunky and confusing.
-                    </i>
-                </p>
-            </div>
+            {%
+            include components/cards.html
+            img_path="/assets/images/person.svg"
+            title="User Test 1"
+            sub_text="Survey Answer"
+            content='
+            <i>
+                "Wizzair. Lack of clarity, bad design, bad translations, intrusive advertising."
+            </i>
+            '
+            background_colour="#fff"
+            %}
+            {%
+            include components/cards.html
+            img_path="/assets/images/person.svg"
+            title="User Test 2"
+            sub_text="Survey Answer"
+            content='
+            <i>
+                "Ryanair, the process becomes too long with all the adverts."
+            </i>
+            '
+            background_colour="#fff"
+            %}
+            {%
+            include components/cards.html
+            img_path="/assets/images/person.svg"
+            title="User Test 3"
+            sub_text="Survey Answer"
+            content='
+            <i>
+                "Jet Airways, the UI was really clunky and confusing.
+            </i>
+            '
+            background_colour="#fff"
+            %}
         </div>
     </div>
-    <div class="col-2">
-        <div>
-            <h2>Remote usability test</h2>
-            <div class="tools">
-                <img src="{{ site.url }}/assets/images/notion-dark.svg" alt="">
-                <img src="{{ site.url }}/assets/images/loom.svg" alt="">
-                Tools: Notion - Loom
-            </div>
+    {%
+    include components/content_section.html
+    title="Remote usability test"
+    tools_imgs="notion-dark,loom"
+    tools="Notion - Loom"
+    content="
+    <p>
+        The next logical step was to perform a usability test. To acheive this,
+        I recruited a friend who travels by air on a regular basis and books their
+        flights online. I conducted the test remotely.
 
-            <p>
-                The next logical step was to perform a usability test. To acheive this,
-                I recruited a friend who travels by air on a regular basis and books their
-                flights online. I conducted the test remotely.
-
-            </p>
-            <p>
-                Since I did not have an existing product but was researching for a new one,
-                I decided to use two existing competitor apps instead. They were
-                SAS and Norwegian apps. I prepared an in depth interview and test 
-                to be completed within one hour. 
-            </p>
-            <b>Task To Complete:</b>
-            <p>
-                Book a flight for a City break. Fly from Copenhagen to Paris from November
-                9th to 11th but flexible with departure dates. The trip is for two people.
-                The flow stops before seat selection. 
-            </p>
-            <h4>Findings</h4>
-            <ul>
-                <li>The SAS interface was less cluttered and that prevented the flow from being interrupted.</li>
-                <li>
-                    In the Norwegian app test, it was more challenging for the user to book a 
-                    flight. There was confusion on selecting the flight and the fares, which 
-                    were not clear. The user was getting lost at different points in the flow.
-                </li>
-            </ul>
-            <h4>My thoughts</h4>
-            <p>
-                The user had never used the SAS or Norwegian app before. But they still knew how 
-                to navigate through them. This confirms that industry conventions are well known.
-            </p>
-            <a  class="external-link" href="https://youtu.be/tBUa1OqhWpw" target="_blank">Go to full remote usability test</a>
-        </div>
-        <div class="diagram-default">
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/research/remote-usability.png">
-        </div>
-    </div>
+    </p>
+    <p>
+        Since I did not have an existing product but was researching for a new one,
+        I decided to use two existing competitor apps instead. They were
+        SAS and Norwegian apps. I prepared an in depth interview and test
+        to be completed within one hour.
+    </p>
+    <b>Task To Complete:</b>
+    <p>
+        Book a flight for a City break. Fly from Copenhagen to Paris from November
+        9th to 11th but flexible with departure dates. The trip is for two people.
+        The flow stops before seat selection.
+    </p>
+    <h4>Findings</h4>
+    <ul>
+        <li>The SAS interface was less cluttered and that prevented the flow from being interrupted.</li>
+        <li>
+            In the Norwegian app test, it was more challenging for the user to book a
+            flight. There was confusion on selecting the flight and the fares, which
+            were not clear. The user was getting lost at different points in the flow.
+        </li>
+    </ul>
+    <h4>My thoughts</h4>
+    <p>
+        The user had never used the SAS or Norwegian app before. But they still knew how
+        to navigate through them. This confirms that industry conventions are well known.
+    </p>
+    "
+    external_link_uri="https://youtu.be/tBUa1OqhWpw"
+    external_link_description="Go to full remote usability test"
+    diagram_img="research/remote-usability.png"
+    %}
     <div class="col-2 theme-background">
         <div>
             <h2>Note taking</h2>

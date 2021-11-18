@@ -33,6 +33,9 @@
     width: auto;
     object-fit: fill;
     grid-template-columns: 1fr;
+    @include media("<=1440px") {
+        height: 100%;
+    }
     .hero-grid {
         max-width: 1440px;
         margin-left: auto;

@@ -1,0 +1,37 @@
+<div class="heading">
+    <h1>About {{page.title}}</h1>
+</div>
+{% comment %}
+<div class="theme-background">
+    <video autoplay loop muted class="img-section">
+        <source src="{{ site.url }}/assets/video/{{ page.title }}/live-demo-480.mp4" type="video/mp4"/>
+    </video>
+</div>
+{%endcomment%}}
+<div class="col-2">
+    <div>
+        {%if include.title%}
+        <h3>{{include.title}}</h3>
+        {%else%}
+        <h3>What is {{page.title}}?</h3>
+        {%endif%}
+        {{include.title_content}}
+        <img src="{{site.url}}/assets/images/{{ page.title }}/about/woman-cat-phone.svg" alt="" class="main-image">
+    </div>
+    <div>
+        <h3>Goal</h3>
+        <p>
+            To keep the user feeling confident throughout the whole booking process.
+        </p>
+        <h3>Challenge</h3>
+        <p>
+            Understanding industry conventions and develop a smooth friction-free booking process.
+        </p>
+        <h3>
+            Constraints
+        </h3>
+        <p>
+            Improve the booking flow but also maintain the user’s mental model throughout the process.
+        </p>
+    </div>
+</div>

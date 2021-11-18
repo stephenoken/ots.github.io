@@ -1,7 +1,7 @@
 @mixin column($primary-color, $accent-color, $tertiary-color) {
     display: grid;
     justify-content: center;
-    margin: 1vh auto;
+    margin: 5em auto;
     padding-top: 2vh;
     padding-bottom: 2vh;
     .thumbnail {
