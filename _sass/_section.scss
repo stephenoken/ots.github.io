@@ -181,11 +181,14 @@
   .user-quote-section {
     background: $base-theme-light-color;
     padding: 2em;
+    margin: auto;
+    height: 20vh;
 
     .user-quote-heading {
       display: block;
-      align-items: center;
-
+      h1 {
+        text-align: center;
+      }
       img {
         display: block;
         margin: auto;
@@ -437,6 +440,42 @@
 }
 
 .blinkin-container {
+  @include theme($blink-theme-color, $blink-accent-color, $blink-tertiary-color, $blink-light-color);
+  @include container($blink-theme-color, $blink-accent-color, $blink-accent-color);
+  @include swiper($blink-theme-color);
+  @include section($background-color, $blink-theme-color);
+
+  .theme-background {
+    background-color: $blink-theme-color;
+  }
+
+  .about-cartoon {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    display: block;
+  }
+}
+
+.portfolio-container {
+  @include theme($blink-theme-color, $blink-accent-color, $blink-tertiary-color, $blink-light-color);
+  @include container($blink-theme-color, $blink-accent-color, $blink-accent-color);
+  @include swiper($blink-theme-color);
+  @include section($background-color, $blink-theme-color);
+
+  .theme-background {
+    background-color: $blink-theme-color;
+  }
+
+  .about-cartoon {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    display: block;
+  }
+}
+
+.cas-container {
   @include theme($blink-theme-color, $blink-accent-color, $blink-tertiary-color, $blink-light-color);
   @include container($blink-theme-color, $blink-accent-color, $blink-accent-color);
   @include swiper($blink-theme-color);

@@ -1,0 +1,77 @@
+<div class="heading">
+    <h1>About {{page.title | capitalize}}</h1>
+</div>
+{% comment %}
+<div class="theme-background">
+    <video autoplay loop muted class="img-section">
+        <source src="{{ site.url }}/assets/video/{{ page.title }}/live-demo-480.mp4" type="video/mp4"/>
+    </video>
+</div>
+{%endcomment%}
+{% comment %}
+<div class="col-2">
+    <div>
+        <h2>What is {{page.title | capitalize}}?</h2>
+        {{include.title_content}}
+        <img src="{{site.url}}/assets/images/{{ page.title }}/about/woman.svg" alt="" class="main-image">
+    </div>
+    <div>
+        <h3>Goal</h3>
+        <p>
+            To keep the user feeling confident throughout the whole booking process.
+        </p>
+        <h3>Challenge</h3>
+        <p>
+            Understanding industry conventions and develop a smooth friction-free booking process.
+        </p>
+        <h3>
+            Constraints
+        </h3>
+        <p>
+            Improve the booking flow but also maintain the user’s mental model throughout the process.
+        </p>
+    </div>
+</div>
+{%endcomment%}
+<div class="col-2">
+    <div>
+        <h2>What is {{page.title | capitalize}}?</h2>
+        <p>
+            {{include.problem_statement | markdownify}}
+        </p>
+    </div>
+    <div>
+        <h2>What I'm doing in this project?</h2>
+        <p>
+            {{include.context_statement | markdownify}}
+        </p>
+    </div>
+    <div>
+        <h2>What is the product I worked on?</h2>
+        <p>
+            {{include.product_purpose | markdownify}}
+        </p>
+    </div>
+    <div>
+
+        <img src="{{site.url}}/assets/images/{{ page.title }}/about/about-person.svg" alt="" class="main-image">
+    </div>
+</div>
+<div class="heading">
+    <h1>Defining the project:</h1>
+</div>
+{%assign project_definitions=include.project_definitions | split: "|"%}
+<div class="col-3" style="margin-top: initial">
+    {%for project_definition in project_definitions%}
+        {%assign card_content=project_definition | split: ":"%}
+            {%assign title=card_content[0]%}
+            {%assign content=card_content[1]%}
+            {%capture img_path%}assets/images/common/about/{{title | strip | downcase}}.svg{%endcapture%}
+    {%
+                include components/cards.html
+                img_path=img_path
+                title=title
+                content=content
+            %}
+    {%endfor%}
+</div>

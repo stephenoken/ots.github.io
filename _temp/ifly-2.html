@@ -1,0 +1,772 @@
+---
+title: ifly
+permalink: /ifly/
+layout: study_case
+navbar-theme: white
+
+description: 
+    headline: "How can we help the users feel more confident during the flight booking experience?"
+    
+
+---
+<div class="spacing"></div>
+<div class="ifly-container">
+    {%
+    include sections/project_overview.html
+    project_by="UX Design Institute and the Glasgow Caledonian University"
+    role="UX Designer"
+    duration="20 Weeks"
+    tools="Miro - Figma"
+    problem="Booking a flight through a mobile app can be a complex experience.
+    Through this case study I propose a booking flow with a
+    friction free experience."
+    role_description="This case study was my graduation project for the UX design institute.
+    Throughout this project I performed both the research and design process in order to
+    achieve the professional diploma."
+    solution="
+    To streamline the fare and flights selection I added a clear button
+    selection and strong visual feedback. To ensure the user get all the
+    information that need in each stage.
+    "
+    learnings="
+    This project gave me valuable insight into the UX process and what is
+    required of them. Also taught me the correct methodology and the right mindset
+    needed to be a thoughtful user advocate, and I have learned how to build
+    something usable and desirable, that creates a positive experience for the user.
+    "
+    %}
+    <linebreak></linebreak>
+    <div class="heading">
+        <h1>My design thinking process</h1>
+    </div>
+    {%include sections/design_thinking.html%}
+    {%
+    include sections/about.html
+
+    title_content="
+    <p>
+        The simplest part of planning a trip is deciding the destination.
+        A lot of users have problems during the booking process on an airline’s
+        mobile app, in order to book a flight is required to complete a set of
+        tasks in order to successfully book a flight. Ifly is a user center airline
+        app designed to deliver a smooth booking experience.
+    </p>
+    "
+    %}
+    <div class="heading">
+        <h1>About Ifly</h1>
+    </div>
+    <div class="theme-background">
+        <video autoplay loop muted class="img-section">
+            <source src="{{ site.url }}/assets/video/{{ page.title }}/live-demo-480.mp4" type="video/mp4"/>
+        </video>
+    </div>
+    <div class="col-2">
+        <div>
+            <h3>What is Ifly?</h3>
+            <p>
+                The simplest part of planning a trip is deciding the destination. 
+                A lot of users have problems during the booking process on an airline’s 
+                mobile app, in order to book a flight is required to complete a set of 
+                tasks in order to successfully book a flight. Ifly is a user center airline
+                app designed to deliver a smooth booking experience.
+            </p>
+            <img src="{{site.url}}/assets/images/{{ page.title }}/about/woman-cat-phone.svg" alt="" class="main-image">
+        </div>
+        <div>
+            <h3>Goal</h3>
+            <p>
+                To keep the user feeling confident throughout the whole booking process.
+            </p>
+            <h3>Challenge</h3>
+            <p>
+                Understanding industry conventions and develop a smooth friction-free booking process.
+            </p>
+            <h3>
+                Constraints
+            </h3>
+            <p>
+                Improve the booking flow but also maintain the user’s mental model throughout the process.
+            </p>
+        </div>
+    </div>
+    <linebreak></linebreak>
+    <div class="heading">
+        <h1>Research</h1>
+        <p>
+            Using empathy to understand the problem
+        </p>
+    </div>
+
+    {%for section in site.ifly_content %}
+    {%
+    include components/content_section.html
+    title=section.title
+    tools_imgs="pen-paper-dark,figma"
+    tools="Notion,Figma"
+    tools_explanations="To organize my files (text, images, links, etc).|
+    To create a template and to easily edit.
+    Easy to search for the file"
+    is_themed_section=true
+    content=section.content
+    external_link_uri="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?page-id=218%3A477&node-id=218%3A746&viewport=243%2C48%2C0.08&scaling=contain"
+    external_link_description="Go to full remote usability test"
+    slide_show_imgs="research/competitive_benchmark_"
+    slide_show_ext="png"
+    slide_show_img_range="1,4"
+    %}
+    {%endfor%}
+
+    {%
+    include components/content_section.html
+    title="Competitive Benchmark"
+    tools_imgs="pen-paper-dark,figma"
+    tools="Notion,Figma"
+    tools_explanations="To organize my files (text, images, links, etc).|
+    To create a template and to easily edit.
+    Easy to search for the file"
+    is_themed_section=true
+    content="# Hello
+    <h4>Why have I used this methodology</h4>
+    ## Hel
+    <p>
+        The first step in the process is to analyse how competitors are solving the booking process.
+        I focused on three European airlines, two of which were short haul carriers and the
+        other was a long haul carrier. I also analysed AirBnB as a travel related competitor.
+    </p>
+    <h4>Findings</h4>
+    <ul>
+        <li>
+            Looking a flight is a highly structured process, where the user steps through a
+            series of screens.
+        </li>
+        <li>
+            Throughout these steps, the user is required to complete specific tasks such
+            as selecting dates and filling out passenger forms
+        </li>
+    </ul>
+    <h4>My thoughts</h4>
+    <p>
+        Across the airline industry there is a well defined process for booking flights,
+        so breaking that convention could backfire.
+    </p>
+    "
+    external_link_uri="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?page-id=218%3A477&node-id=218%3A746&viewport=243%2C48%2C0.08&scaling=contain"
+    external_link_description="Go to full remote usability test"
+    slide_show_imgs="research/competitive_benchmark_"
+    slide_show_ext="png"
+    slide_show_img_range="1,4"
+    %}
+    <div class="col-2">
+        <div>
+            <h2>Competitive benchmarking</h2>
+            <div class="tools">
+                <img src="{{ site.url }}/assets/images/pen-paper-dark.svg" alt="miro logo">
+                <img src="{{ site.url }}/assets/images/figma.svg" alt="miro logo">
+                Tools: Notion - Figma
+            </div>
+
+            <p>
+                The first step in the process is to analyse how competitors are solving the booking process.
+                  I focused on three European airlines, two of which were short haul carriers and the
+                  other was a long haul carrier. I also analysed AirBnB as a travel related competitor.
+            </p>
+            <h4>Findings</h4>
+            <ul>
+                <li>
+                    Looking a flight is a highly structured process, where the user steps through a
+                    series of screens.
+                </li>
+                <li>
+                    Throughout these steps, the user is required to complete specific tasks such
+                    as selecting dates and filling out passenger forms
+                </li>
+            </ul>
+            <h4>My thoughts</h4>
+            <p>
+                Across the airline industry there is a well defined process for booking flights,
+                so breaking that convention could backfire.
+            </p>
+            <a class="external-link" href="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?page-id=218%3A477&node-id=218%3A746&viewport=243%2C48%2C0.08&scaling=contain" target="_blank">Go to full benchmark</a>
+        </div>
+        <div>
+            <div class="swiper autoplay-swiper">
+                <div class="swiper-wrapper">
+                    {% for i in (1..4) %}
+                    <div class="swiper-slide">
+                        <img src="{{ site.url }}/assets/images/{{ page.title }}/research/competitive_benchmark_{{i}}.png">
+                    </div>
+                    {% endfor%}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="theme-background">
+        <div class="col-2 theme-background">
+            <div>
+                <h2>Online Survey</h2>
+                <div class="tools">
+                    <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survery_monkey.svg">
+                    Tools: SurveyMonkey
+                </div>
+
+                <p>
+                    In order to acquire more quantitative and qualitative data about the project,
+                    I ran an online survey. Using both closed-ended and
+                    open-ended questions I was able to collect useful data about user behaviour.
+                </p>
+                <h4>Findings</h4>
+                <ul>
+                    <li>Users prefer searching for flights on airline websites. </li>
+                    <li>Mobile apps are typically used for checking-in.</li>
+                    <li>Most users make short-distance trips.</li>
+                    <li>Users associate their travel experience with the in app experience.</li>
+                </ul>
+                <h4>My thoughts</h4>
+                <p>
+                    This process has helped me gain insight into how users use these types of apps.
+                </p>
+                <h4>
+                    In your opinion which airline had the worst flight booking experience and why?
+                </h4>
+            </div>
+            <div class="diagram-default">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survey_1.png">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/research/survey_2.png">
+            </div>
+        </div>
+        <div class="col-3">
+            {%
+            include components/cards.html
+            img_path="/assets/images/person.svg"
+            title="User Test 1"
+            sub_text="Survey Answer"
+            content='
+            <i>
+                "Wizzair. Lack of clarity, bad design, bad translations, intrusive advertising."
+            </i>
+            '
+            background_colour="#fff"
+            %}
+            {%
+            include components/cards.html
+            img_path="/assets/images/person.svg"
+            title="User Test 2"
+            sub_text="Survey Answer"
+            content='
+            <i>
+                "Ryanair, the process becomes too long with all the adverts."
+            </i>
+            '
+            background_colour="#fff"
+            %}
+            {%
+            include components/cards.html
+            img_path="/assets/images/person.svg"
+            title="User Test 3"
+            sub_text="Survey Answer"
+            content='
+            <i>
+                "Jet Airways, the UI was really clunky and confusing.
+            </i>
+            '
+            background_colour="#fff"
+            %}
+        </div>
+    </div>
+    {%
+    include components/content_section.html
+    title="Remote usability test"
+    tools_imgs="notion-dark,loom"
+    tools="Notion - Loom"
+    content="
+    <p>
+        The next logical step was to perform a usability test. To acheive this,
+        I recruited a friend who travels by air on a regular basis and books their
+        flights online. I conducted the test remotely.
+
+    </p>
+    <p>
+        Since I did not have an existing product but was researching for a new one,
+        I decided to use two existing competitor apps instead. They were
+        SAS and Norwegian apps. I prepared an in depth interview and test
+        to be completed within one hour.
+    </p>
+    <b>Task To Complete:</b>
+    <p>
+        Book a flight for a City break. Fly from Copenhagen to Paris from November
+        9th to 11th but flexible with departure dates. The trip is for two people.
+        The flow stops before seat selection.
+    </p>
+    <h4>Findings</h4>
+    <ul>
+        <li>The SAS interface was less cluttered and that prevented the flow from being interrupted.</li>
+        <li>
+            In the Norwegian app test, it was more challenging for the user to book a
+            flight. There was confusion on selecting the flight and the fares, which
+            were not clear. The user was getting lost at different points in the flow.
+        </li>
+    </ul>
+    <h4>My thoughts</h4>
+    <p>
+        The user had never used the SAS or Norwegian app before. But they still knew how
+        to navigate through them. This confirms that industry conventions are well known.
+    </p>
+    "
+    external_link_uri="https://youtu.be/tBUa1OqhWpw"
+    external_link_description="Go to full remote usability test"
+    diagram_img="research/remote-usability.png"
+    %}
+    <div class="col-2 theme-background">
+        <div>
+            <h2>Note taking</h2>
+            <div class="tools">
+                <img src="{{ site.url }}/assets/images/google_docs.svg" alt="" >
+                Tools: Google docs
+            </div>
+
+            <p>
+                During this phase, I reviewed two usability test recordings that were provided by
+                the UX Institute. Each recording was of a user performing the task of booking a
+                flight in both the Aer Lingus and Eurowings apps. The test began with an in-depth
+                interview to give the user context. Throughout the interviews I took detailed notes
+                about the user’s goals, behaviour, pain points and mental models.
+            </p>
+            <h4>Findings</h4>
+            <ul>
+                <li>Price and flight times are the main search criteria for users.</li>
+                <li>
+                    On the home screen of the apps, the intrusive advertising distracts
+                    the users from their goal of booking a flight.
+                </li>
+                <li>
+                    Extra steps not well highlighted when selecting the breakdown of
+                    different fares. This breaks the user’s mental models of the flow.
+                </li>
+            </ul>
+            <h4>My thoughts</h4>
+            <p>
+                The selection of both the flight and the type of fare is a major pain
+                point for the user.
+            </p>
+        </div>
+        <div class="diagram-default">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/research/notetaking.png" alt="">
+        </div>
+        <div class="col-3">
+            <div class="user-quote-section">
+                <div class="user-quote-heading">
+                    <img src="{{ site.url }}/assets/images/person.svg" class="icon">
+                    <div class="quote-heading-text">
+                        <span>User Test 1</span>
+                        <span><b>Aerlingus App Fare Selection</b></span>
+                    </div>
+                </div>
+                <p>
+                    <i>
+                        “But that has now moved me onto the 2nd of November for some reason.
+                        I don't know why that would happen. Because I want, I don't know why
+                        that has happened.”
+                    </i>
+                </p>
+            </div>
+            <div class="user-quote-section">
+                <div class="user-quote-heading">
+                    <img src="{{ site.url }}/assets/images/person.svg" class="icon">
+                    <div class="quote-heading-text">
+                        <span>User Test 2</span>
+                        <span><b>Eurowings App Fare Selection</b></span>
+                    </div>
+                </div>
+                <p>
+                    <i>
+                        “I didn't like the fact that...
+                        unless you're familiar with the app, you wouldn't
+                        know to click on it for other options.”
+                    </i>
+                </p>
+            </div>
+            <div class="user-quote-section">
+                <div class="user-quote-heading">
+                    <img src="{{ site.url }}/assets/images/person.svg" class="icon">
+                    <div class="quote-heading-text">
+                        <span>User Test 3</span>
+                        <span><b>Norwegian App Selecting Flights</b></span>
+                    </div>
+                </div>
+                <p>
+                    <i>
+                        “The select button didn't actually pop out visually because it
+                        is the same colours as the other menus, so that is maybe why I
+                        miss it. I didn't realize I had to do an extra step to select my
+                        flights.”
+                    </i>
+                </p>
+            </div>
+        </div>
+    </div>
+    <linebreak class="line-margin"></linebreak>
+    <div class="heading heading-margin">
+        <h1>Define</h1>
+        <p>
+            Define the problem
+        </p>
+    </div>
+    <div class="col-2 theme-background">
+        <div>
+            <h2>Affinity Diagram</h2>
+            <div class="tools">
+                <img src="{{ site.url }}/assets/images/pen-paper-white.svg" alt="">
+                <img src="{{ site.url }}/assets/images/miro.svg" alt="">
+                Tools: Handwriting - Miro
+            </div>
+            <h3>
+                About
+            </h3>
+            <p>
+                After obtaining the raw data from the Research phase, I began to analyse it. 
+                I enlisted someone to help me with this phase, we reviewed the data gathered, 
+                took notes on Post-It notes, and then clustered them together into groups and 
+                subgroups on a wall.
+                This helped me at structure to the data collected in the previous steps. 
+                
+            </p>
+            <h4>Findings</h4>
+            <ul>
+                <li>The main goal of the Home screen is to start the flight search.</li>
+                <li>Users get confused when navigating between the departure and return screens.</li>
+                <li>It is important to inform if the selected flight is direct or has a layover.</li>
+                <li>Selecting fares is confusing and the Compare Fares screen has too much information.</li>
+                <li>Giving constant feedback helps users to stay in the flow.</li>
+            </ul>
+            <h4>My thoughts</h4>
+            <p>
+                Working with someone else, we were able to take the unstructured data and clustered 
+                it together into a structured formatand then we were able to identify logical theme
+                patterns. 
+            </p>
+            <a class="external-link" href="https://miro.com/app/board/o9J_lTQu_MQ=/?moveToWidget=3074457364995508587&cot=14" target="_blank">Go to digital version on Miro</a>
+        </div>
+        <div class="diagram-default">
+            <div class="swiper autoplay-swiper">
+                <div class="swiper-wrapper">
+                    {% for i in (1..5) %}
+                    <div class="swiper-slide">
+                        <img src="{{ site.url }}/assets/images/{{ page.title }}/analysis/affinity_{{ i }}.png">
+                    </div>
+                    {% endfor%}
+                </div>
+            </div>
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/analysis/affinity_miro.png">
+            <!-- <video autoplay loop width="100%">
+                <source src="{{ site.url }}/assets/video/{{ page.title }}/affinity-diagram.mp4" type="video/mp4"/>
+            </video>            
+            <div class="description">
+                Affinity Diagram Session
+            </div>
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/affinity-diagram-2.png">
+            <div class="description">
+                Digital Affinity Diagram
+            </div> -->
+            
+        </div>
+    </div>
+    <div class="col-2">
+        <div>
+            <h2>Journey Map</h2>
+            <div class="tools">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/analysis/user_journey_icons.svg" alt="" class="tools-img-double">
+                Tools: Handwriting - Figma
+            </div>
+
+            <p>
+                The purpose of the customer journey diagram was to continue shaping and structuring 
+                the data previously obtained, and to create a visualisation. To achieve this, I put 
+                myself in the mind of the user and attributed their positive and negative points to 
+                each step of the flow.
+            </p>
+            <h4>Findings</h4>
+            <p>
+                From the customer journey diagram I now know the key user goals and more importantly 
+                the common pain points and mental models that prevent the user from having a smooth 
+                booking experience. They are:
+            </p>
+            <ul>
+                <li>Unexpected transition between departure and return flights.</li>
+                <li>Selecting different fare types</li>
+                <li>Unclear information about whether the flight is direct or not.</li>
+            </ul>
+            <h4>My thoughts</h4>
+            <p>
+                Going through this process allowed me to understand that a user’s experience depends 
+                on their goals. These goals are not always global and each step can have its own
+                mini goals. The mini goals can either improve or disprove the user’s experience.
+            </p>
+            <a  target="_blank" class="external-link" href="https://www.figma.com/file/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?node-id=629%3A429">
+                Go to user journey map
+            </a>
+        </div>
+        <div class="diagram-default">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/analysis/user_journey_map.png">
+        </div>
+    </div>
+    <div class="heading">
+        <img src="{{ site.url }}/assets/images/{{ page.title }}/light_bulb.gif">
+        <h1>POINT OF VIEW</h1>
+        <b>Problem statement</b>
+        <p>Tailor the product search experience to help the user efficiently and confidently narrow down the search
+            results allowing them to find the products that suits their needs
+        </p>
+    </div>
+    <linebreak></linebreak>
+    <div class="heading heading-margin">
+        <h1>Ideate</h1>
+        <p>
+            Generating ideas
+        </p>
+    </div>
+    <div class="col-2 theme-background">
+        <div>
+            <h2>Flow diagram</h2>
+            <div class="tools">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/define/flow_chart_icons.svg" alt="" class="tools-img-double">
+                Tools: Handwriting - Figma
+            </div>
+
+            <p>
+                The objective of this phase was to create a high level flow of the booking process. 
+                For this project, my main focus was on one primary use case. To achieve this I 
+                split the flow into more detailed tasks.
+            </p>
+            <p>
+                For me, this process helped me to identify the main and sub screens. It also 
+                informed me which screen the content will go on. 
+            </p>
+            <h4>My thoughts</h4>
+            <p>
+                This step allowed me to further organize the data I collected and I was able 
+                to start designing a more concrete architecture for the booking process.
+            </p>
+            <a target="_blank" class="external-link" href="https://www.figma.com/file/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?node-id=419%3A669">
+                Go to flow diagram
+            </a>
+        </div>
+        <div class="diagram-default">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/define/flow_chart.png">
+        </div>
+    </div>
+    <div class="col-2">
+        <div>
+            <h2>Interaction Design</h2>
+            <div class="tools">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/define/interaction_icons.png" alt="" class="tools-img-double">
+                Tools: Handwriting
+            </div>
+
+            <p>
+                At this point I began to develop a solution to the problem. This involved creating 
+                sketches of the screens that would form part of my solution. To achieve the initial 
+                design I followed the methodology below:
+            </p>
+            <ol>
+                <li>
+                    Using the flow diagram I identified the key screens I needed to design.
+                </li>
+                <li>
+                    Create a list of key features for each screen.
+                </li>
+                <li>
+                    I focused on a single screen, where I put the user goal first. Then I 
+                    took the feature list and sorted it by priority to achieve that goal. 
+                    With these criteria  I made several variations that tried to solve 
+                    this problem.
+                </li>
+                <li>
+                    I reviewed each of these variations and I selected the one that best 
+                    satisfies the user goal. And making sure that I included all the key features.
+                </li>
+                <li>
+                    Once I identified the best sketch for each screen. I brought the sketches together 
+                    to validate that the solution satisfies the user’s end goal of booking a flight.
+                </li>
+            </ol>
+            <h4>My thoughts</h4>
+            <p>
+                By listing the key features and the user’s goal for each section, I was able to 
+                design UI elements that have purpose in mind.
+            </p>
+        </div>
+        <div class="default-image-display">
+            <div class="swiper autoplay-swiper">
+                <div class="swiper-wrapper">
+                    {% for i in (1..6) %}
+                    <div class="swiper-slide">
+                        <img src="{{ site.url }}/assets/images/{{ page.title }}/define/sketch_{{ i }}.png">
+                    </div>
+                    {% endfor%}
+                </div>
+            </div>
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/define/sketches.png" style="padding-left: initial;padding-right: initial">
+            <!-- <video autoplay loop width="100%">
+                <source src="{{ site.url }}/assets/video/{{ page.title }}/sketch-prototype.mp4" type="video/mp4"/>
+            </video> 
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/low-fidelity-sketches.png"> -->
+        </div>
+    </div>
+    <linebreak></linebreak>
+    <div class="heading heading-margin">
+        <h1>Prototyping</h1>
+        <p>
+            Create the solution
+        </p>
+    </div>
+    <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/medium-fidelity.png" alt="" class="section-break-img">
+    <div class="col-2">
+        <div>
+            <h2>Medium fidelity prototyping</h2>
+            <div class="tools">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/figma_icon.svg" alt="" class="tools-img-double">
+                Tools: Figma
+            </div>
+
+            <p>
+                With the sketches I was able to begin creating an interactive prototype of my solution. 
+                This medium fidelity prototype focused on taking the sketches I created and making a 
+                realistic and intuitive prototype. 
+            </p>
+            <p>
+                Where you can see how the end to end booking process 
+                worked. At this point I didn't focus on the theming or branding of the app, since I
+                wanted to focus on building recognizable UI elements with different states. 
+            </p>
+            <a href="https://www.figma.com/proto/iArq9wzE7chG7DFabV9gq4/OlgaTorrents_Project12?page-id=135%3A641&node-id=135%3A1629&viewport=243%2C48%2C0.13&scaling=min-zoom&starting-point-node-id=135%3A1629" target="_blank" class="external-link">
+                Go to medium fidelity prototype
+            </a>
+            <!-- <img src="{{site.url}}/assets/images/{{ page.title }}/man-cat-phone.svg" alt="" class="main-image"> -->
+        </div>
+        <div class="light-image-display theme-background">
+            <img class="resize-gif" src="{{ site.url }}/assets/images/{{ page.title }}/ideate/low_fidelity.gif" alt="">
+        </div>
+    </div>
+    <div class="col-2">
+        <div>
+            <h2>Wireframes</h2>
+            <div class="tools">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/miro_icon.svg" alt="" class="tools-img-double">
+                Tools: Miro
+            </div>
+
+            <p>
+                This was the final project for my UX course. The focus here was to create a wireframe 
+                that provided detailed information to the software engineers and other stakeholders on 
+                how to build this solution.
+            </p>
+            <p>
+                This was the last project I had to do for the course. In it I included extra information, 
+                such as the states of the buttons and form. Also extra to help navigate within the 
+                figma file, as well as font and color systems.For its development I had to detail all 
+                the information to hand over to the developers.
+            </p>
+            <h3>Conclusions</h3>
+            <p>
+                To develop this wireframe I had to go through the entire flow. It was useful to reflect 
+                on the work and see what could be further improved.
+            </p>
+            <a class="external-link" href="https://miro.com/app/board/o9J_lTQu_MQ=/?moveToWidget=3074457364995692175&cot=14" target="_blank">Go to wireframes</a>
+        </div>
+        <div class="light-image-display">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/wireframe.png">
+            
+        </div>
+    </div>
+    <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/high-fidelity.png" alt="" class="section-break-img">
+    <!-- <video autoplay loop muted class="section-break-img">
+        <source src="{{ site.url }}/assets/video/{{ page.title }}/live-demo-480.mp4" type="video/mp4"/>
+    </video> -->
+    <div class="col-2">
+        <div>
+            <h2>High fidelity prototype</h2>
+            <div class="tools">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/ideate/figma_icon.svg" alt="" class="tools-img-double">
+                Tools: Figma
+            </div>
+
+        <p>
+            As an extra step I decided to create a more realistic prototype. My focus was 
+            to improve the look and feel of the prototype as well as include small animations.
+        </p>
+        <h3>Conclusions</h3>
+        <p>
+            From creating this prototype I was able to identify areas of improvement within the solution. 
+            As well as validate design decisions with the UI elements.    
+        </p>
+            <a href="https://www.figma.com/proto/H7pcJUbRhEKlblKTVUZPYl/IFLY-DEFINITIVO?page-id=811%3A18007&node-id=811%3A25407&viewport=243%2C48%2C0.09&scaling=min-zoom&starting-point-node-id=811%3A25407" class="external-link" target="_blank">Go to high fidelity prototype</a>
+        </div>
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); margin: auto" width="400" height="800" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FH7pcJUbRhEKlblKTVUZPYl%2FIFLY-DEFINITIVO%3Fpage-id%3D811%253A18007%26node-id%3D811%253A25353%26viewport%3D243%252C48%252C0.09%26scaling%3Dmin-zoom%26starting-point-node-id%3D811%253A25407" allowfullscreen></iframe>
+        <!-- <div class="diagram">
+            <video autoplay loop class="long-video">
+                <source src="{{ site.url }}/assets/video/{{ page.title }}/evolution-of-design.mp4" type="video/mp4"/>
+            </video>
+            <div class="description">
+                Evolution of the ifly design
+            </div>
+        </div> -->
+    </div>
+    <linebreak></linebreak>
+    <div class="heading heading-margin">
+        <h2>My Solution</h2>
+        <div class="tools" style="display: block">
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/figma_logo.svg" alt="miro logo"
+                 class="tools-img-double">
+            Tools: Figma
+            <p>
+                My focus was to improve the look and feel of the prototype as well as include small animations.
+            </p>
+            <a target="_blank" class="external-link" href="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?page-id=630%3A115&node-id=630%3A115&viewport=243%2C48%2C0.85&scaling=min-zoom&starting-point-node-id=630%3A120">Go to full solution.</a>
+        </div>
+    </div>
+    <div class="swiper carousel-swiper heading-margin">
+        <div class="swiper-wrapper">
+            {% for i in (1..2) %}
+            <div class="swiper-slide">
+                <img src="{{ site.url }}/assets/images/{{ page.title }}/my_solution/my_solution_{{ i }}.png">
+            </div>
+            {% endfor%}
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <linebreak></linebreak>
+    <div class="heading">
+        <h1>Take Aways</h1>
+    </div>
+    <div class="col-2">
+        <div class="summary-point">
+            <img src="{{ site.url }}/assets/images/ifly/telescope.svg" class="icon">
+            <h3>Project Overview</h3>
+            <p>
+                I found that this project really highlighted to me the importance of how each stage 
+                in the process 
+                feeds into the next and how it informs my decision-making throughout the process.
+            </p>
+            <p>
+                It was interesting how I started with a very abstract problem of 
+                just improving the booking experience. But as I worked through the process 
+                I was able to gain a deeper understanding of the industry conventions when 
+                it comes to booking a flight through the app. I was able to identify the user 
+                goals, behaviours, pain points and context in those conventions and the actual 
+                problem to solve.  Which was a rewarding experience.
+            </p>
+        </div>
+        <div  class="summary-point">
+            <img src="{{ site.url }}/assets/images/ifly/milestone.svg" class="icon">
+            <h3>Next step</h3>
+            <p>
+                If I were to continue working on this project, I would start doing usability tests 
+                on the final prototype from this project and begin to further refine this solution.
+            </p>
+        </div>
+    </div>
+    <div class="heading">
+        <h2>Thank you for reading!</h2>
+    </div>
+</div>

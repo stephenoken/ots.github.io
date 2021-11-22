@@ -59,5 +59,3 @@ sass:
 collections:
   study_cases:
     output: true
-  ifly_content:
-    output: true

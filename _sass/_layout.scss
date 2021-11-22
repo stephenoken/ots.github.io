@@ -26,6 +26,8 @@
     .col-3 {
         @include column($primary-color, $accent-color, $tertiary-color);
         grid-template-columns: repeat(3, 40ch);
+        p {
+        }
         gap: 2em;
         @include media("<tablet") {
             grid-template-columns: 1fr;
@@ -34,7 +36,7 @@
 
     .col-4 {
         @include column($primary-color, $accent-color, $tertiary-color);
-        $minmax-content: 32ch;
+        $minmax-content: 29ch;
         grid-template-columns: repeat(4, $minmax-content);
         gap: 1em;
         @include media("<=tablet") {

@@ -98,3 +98,13 @@
     background-color: $blink-theme-color !important;
 
 }
+
+.hero-portfolio {
+    @include hero('portfolio', $base-font-color, 40vh);
+    background-color: $blink-theme-color !important;
+}
+
+.hero-cas {
+    @include hero('cas', $base-font-color, 40vh);
+    background-color: $blink-theme-color !important;
+}

@@ -25,13 +25,12 @@
             <h6>
                 Why I used this tool:
             </h6>
-            {%assign tools-imgs = include.tools_imgs | split: "," %}
             {%assign tools=include.tools | split: ","%}
             {%assign tools_explanations = include.tools_explanations | split: "|"%}
-            {%assign range_bound=tools-imgs.size | minus: 1%}
+            {%assign range_bound=tools.size | minus: 1%}
             {%for i in (0..range_bound)%}
             <div class="tool-card-content">
-                <img class="tool-icon" src="{{ site.url }}/assets/images/{{tools-imgs[i]}}.svg" alt="">
+                <img class="tool-icon" src="{{ site.url }}/assets/images/common/tools/{{tools[i] | downcase | replace : ' ', '_'}}.svg" alt="">
                 {{tools[i]}}: {{tools_explanations[i] | strip}}
             </div>
             {%endfor%}
