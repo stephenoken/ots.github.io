@@ -17,10 +17,22 @@
         @include column($primary-color, $accent-color, $tertiary-color);
         $minmax-content: minmax(25ch, 55ch);
         grid-template-columns: 60ch 60ch;
+        grid-template-areas:
+                "a b"
+                "c c";
         gap: 1em;
         @include media("<tablet") {
             grid-template-columns: $minmax-content;
         }
+      .content {
+        grid-area: a;
+      }
+      .media-asset {
+        grid-area: b;
+      }
+      .additional-content {
+        grid-area: c;
+      }
     }
 
     .col-3 {

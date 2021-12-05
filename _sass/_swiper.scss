@@ -48,6 +48,29 @@
   }
 }
 
+.card-swiper {
+  .slide {
+    padding: 5em;
+    text-align: center;
+    height: 100%;
+  }
+
+  .img-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    img {
+      margin: auto !important;
+      align-self: center;
+    }
+  }
+  --swiper-navigation-color: #1A6AFF !important;
+  --swiper-theme-color: #1A6AFF !important;
+
+  .swiper-slide {
+    height: auto !important;
+  }
+}
 :root {
   --swiper-navigation-color: white !important;
   --swiper-theme-color: white !important;

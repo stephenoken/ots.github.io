@@ -1,23 +1,53 @@
 <div class="col-2 {%if include.is_themed_section%}section-theme{%else%}section-no-theme{%endif%}">
-    <div>
+    <div class="content">
         <h2>{{include.title}}</h2>
         {{include.content | markdownify}}
     </div>
-    {%assign img_range = include.slide_show_img_range | split: "," %}
-    <div class="diagram-default">
+    <div class="diagram-default media-asset">
         {%if include.slide_show_imgs%}
-        <div class="swiper autoplay-swiper">
-            <div class="swiper-wrapper">
-                {% for i in (img_range[0]..img_range[1]) %}
-                <div class="swiper-slide">
-                    <img src="{{ site.url }}/assets/images/{{ page.title }}/{{include.slide_show_imgs}}{{i}}.{{include.slide_show_ext}}">
+            {%if include.interactive_slide_show%}
+		        {%assign slides_data=include.interactive_slide_show | split: "|" %}
+                <div class="swiper card-swiper">
+                    <div class="swiper-wrapper">
+                    {%for slide_data in slides_data%}
+                        <div class="swiper-slide">
+                            {%assign xs=slide_data | split: ","%}
+			                {%assign slide_img_ids=xs[0] | split: "-" %}
+			                {%assign slide_link_text=xs[1]%}
+			                {%assign slide_link_uri=xs[2]%}
+                            <div class="slide {%if include.is_themed_section%}section-no-theme{%else%}section-theme{%endif%} ">
+                                {%assign slide_img_ids_size=slide_img_ids | size%}
+                                <div class="{%if slide_img_ids_size >= 2%} img-grid {%endif%}">
+                                {%for id in slide_img_ids%}
+                                <img src="{{ site.url }}/assets/images/{{ page.title }}/{{include.slide_show_imgs}}{{id}}.{{include.slide_show_ext}}">
+                                {%endfor%}
+                                </div>
+                                {%if slide_link_uri%}
+                                <a href="{{slide_link_uri}}" class="external-link">{{slide_link_text}}</a>
+                                {%endif%}
+                            </div>
+                        </div>
+                    {%endfor%}
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                {% endfor%}
-            </div>
-        </div>
+        {%else%}
+                {%assign img_range = include.slide_show_img_range | split: "," %}
+                <div class="swiper autoplay-swiper">
+                    <div class="swiper-wrapper">
+                    {% for i in (img_range[0]..img_range[1]) %}
+                        <div class="swiper-slide">
+                            <img src="{{ site.url }}/assets/images/{{ page.title }}/{{include.slide_show_imgs}}{{i}}.{{include.slide_show_ext}}">
+                        </div>
+                    {% endfor%}
+                    </div>
+                </div>
+            {%endif%}
         {%elsif include.diagram_img%}
+        <div>
         <img src="{{ site.url }}/assets/images/{{ page.title }}/{{include.diagram_img}}">
-        {%endif%}
+        </div>
+    {%endif%}
         {%if include.external_link_description%}
         <a  class="external-link" href="{{include.external_link_uri}}" target="_blank">{{include.external_link_description}}</a>
         {%endif%}
@@ -36,4 +66,26 @@
             {%endfor%}
         </div>
     </div>
+    <div class="additional-content">
+        {%if include.survey_section_quote%}
+        <div class="heading {%if include.is_themed_section%}section-theme{%else%}section-no-theme{%endif%}">
+            <h2>What the users said</h2>
+            <h3>{{include.survey_section_quote | strip}}</h3>
+        </div>
+        {%endif%}
+        <div class="col-3" style="margin-top: initial">
+            {%assign survey_answers=include.survey_answers | split: "|"%}
+            {%for answer in survey_answers%}
+            {%
+            include components/cards.html
+            img_path="assets/images/common/online_survey/user_icon.svg"
+            title="Survey Answer"
+            title_size="h2"
+            content=answer
+            background_colour="#FFFFFF"
+            %}
+            {%endfor%}
+        </div>
+    </div>
+
 </div>

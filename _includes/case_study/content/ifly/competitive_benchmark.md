@@ -17,7 +17,7 @@ Across the airline industry there is a well-defined process for booking flights,
 {%endcapture%}
 {%
     include components/content_section.html
-    title=section.title
+    title="Competitive Benchmark"
     tools="Google Drive,Figma"
     tools_explanations="To organize my files (text, images, links, etc).|
     To create a template and to easily edit.

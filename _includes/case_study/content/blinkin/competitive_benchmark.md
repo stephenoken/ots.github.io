@@ -10,14 +10,14 @@ In order to get this data I was very thoughtful about how to ask the questions t
 *  The Users know what they are looking for on a website.
 *  The experience of searching doesn't mean anything to them
 *  They know well the process to the level that is not a  challenge or  a funny thing to do.
-*  They want to save time and use the tools that make the searching more fast and effective. ### My hypothesis
+*  They want to save time and use the tools that make the searching more fast and effective.
 
 ### My hypothesis
 There's a lot of different opinions about the search process and the filters. But what about enjoying the experience?
 {%endcapture%}
 {%
 include components/content_section.html
-title=section.title
+title="Competitive Benchmark"
 tools="Notion,Figma"
 tools_explanations="To organize my files (text, images, links, etc).|
 To create a template and to easily edit.
