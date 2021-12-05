@@ -178,6 +178,12 @@
     height: auto;
   }
 
+  .persona_text {
+    text-align: left;
+    p {
+      text-align: left !important;
+    }
+  }
   .user-quote-section {
     background: $base-theme-light-color;
     padding: 2em;

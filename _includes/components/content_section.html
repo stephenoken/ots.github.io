@@ -67,36 +67,55 @@
         </div>
     </div>
     <div class="additional-content">
-        {%if include.survey_section_quote%}
-        <div class="heading {%if include.is_themed_section%}section-theme{%else%}section-no-theme{%endif%}">
-            <h2>What the users said</h2>
-            <h3>{{include.survey_section_quote | strip}}</h3>
-        </div>
+        {%if include.survey_answers%}
+	        {%if include.survey_section_quote%}
+	        <div class="heading {%if include.is_themed_section%}section-theme{%else%}section-no-theme{%endif%}">
+	            <h2>What the users said</h2>
+	            <h3>{{include.survey_section_quote | strip}}</h3>
+	        </div>
+	        {%endif%}
+	        <div class="col-3" style="margin-top: initial">
+	            {%assign survey_answers=include.survey_answers | split: "|"%}
+	            {%assign survey_titles=include.survey_titles | split: "|"%}
+	            {%assign survey_subtexts=include.survey_subtexts | split: "|"%}
+	            {%assign answer_idx=0%}
+	            {%for answer in survey_answers%}
+	            {%capture title%}
+	            {%if include.survey_titles%}{{survey_titles[answer_idx]}}{%else%}Survey Answer{%endif%}
+	            {%endcapture%}
+	            {%capture subtext%}
+	            {%if include.survey_subtexts%}{{survey_subtexts[answer_idx]}}{%endif%}
+	            {%endcapture%}
+	            {%
+	            include components/cards.html
+	            img_path="assets/images/common/online_survey/user_icon.svg"
+	            title=title
+	            title_size="h2"
+	            sub_text=subtext
+	            content=answer
+	            background_colour="#FFFFFF"
+	            %}
+	            {%assign answer_idx=answer_idx | plus: 1%}
+	            {%endfor%}
+	        </div>
+        {%elsif include.target_audience%}
+	        <div class="heading {%if include.is_themed_section%}section-theme{%else%}section-no-theme{%endif%}">
+	            <h2>DEFINING THE TARGET AUDIENCE</h2>
+	            <h3>{{include.survey_section_quote | strip}}</h3>
+                <div  style="display: block">
+                    <img src="{{ site.url }}/assets/images/{{page.title}}/personas/persona_target.gif" style="width: 177px">
+                    <p>I also think in the big picture and the global audience</p>
+                </div>
+                <div class="col-2 {%if include.is_themed_section%}section-theme{%else%}section-no-theme{%endif%} persona_text">
+                    <div>
+                        {{include.target_audience | markdownify}}
+                    </div>
+                    <div>
+                        {{include.target_audience_product_solution | markdownify}}
+                    </div>
+                </div>
+	        </div>
         {%endif%}
-        <div class="col-3" style="margin-top: initial">
-            {%assign survey_answers=include.survey_answers | split: "|"%}
-            {%assign survey_titles=include.survey_titles | split: "|"%}
-            {%assign survey_subtexts=include.survey_subtexts | split: "|"%}
-            {%assign answer_idx=0%}
-            {%for answer in survey_answers%}
-            {%capture title%}
-            {%if include.survey_titles%}{{survey_titles[answer_idx]}}{%else%}Survey Answer{%endif%}
-            {%endcapture%}
-            {%capture subtext%}
-            {%if include.survey_subtexts%}{{survey_subtexts[answer_idx]}}{%endif%}
-            {%endcapture%}
-            {%
-            include components/cards.html
-            img_path="assets/images/common/online_survey/user_icon.svg"
-            title=title
-            title_size="h2"
-            sub_text=subtext
-            content=answer
-            background_colour="#FFFFFF"
-            %}
-            {%assign answer_idx=answer_idx | plus: 1%}
-            {%endfor%}
-        </div>
     </div>
 
 </div>
