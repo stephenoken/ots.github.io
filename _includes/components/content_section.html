@@ -31,7 +31,7 @@
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-        {%else%}
+            {%else%}
                 {%assign img_range = include.slide_show_img_range | split: "," %}
                 <div class="swiper autoplay-swiper">
                     <div class="swiper-wrapper">
@@ -43,7 +43,8 @@
                     </div>
                 </div>
             {%endif%}
-        {%elsif include.diagram_img%}
+        {%endif%}
+        {%if include.diagram_img%}
         <div>
         <img src="{{ site.url }}/assets/images/{{ page.title }}/{{include.diagram_img}}">
         </div>
