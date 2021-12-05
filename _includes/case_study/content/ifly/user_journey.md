@@ -17,7 +17,7 @@ Going through this process allowed me to understand that a user’s experience d
 {%endcapture%}
 {%
 include components/content_section.html
-title="Remote usability test"
+title="Journey map"
 tools="Figma"
 tools_explanations="To create and edit templates that I can share easily"
 is_themed_section=false

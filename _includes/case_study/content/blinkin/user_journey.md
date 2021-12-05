@@ -17,7 +17,7 @@ If the experience does not create happiness, at least we are going to make it me
 {%endcapture%}
 {%
 include components/content_section.html
-title="Remote usability test"
+title="Journey map"
 tools="Miro"
 tools_explanations="To work more efficiently editing an existing template and to easily share it."
 is_themed_section=false
