@@ -75,15 +75,26 @@
         {%endif%}
         <div class="col-3" style="margin-top: initial">
             {%assign survey_answers=include.survey_answers | split: "|"%}
+            {%assign survey_titles=include.survey_titles | split: "|"%}
+            {%assign survey_subtexts=include.survey_subtexts | split: "|"%}
+            {%assign answer_idx=0%}
             {%for answer in survey_answers%}
+            {%capture title%}
+            {%if include.survey_titles%}{{survey_titles[answer_idx]}}{%else%}Survey Answer{%endif%}
+            {%endcapture%}
+            {%capture subtext%}
+            {%if include.survey_subtexts%}{{survey_subtexts[answer_idx]}}{%endif%}
+            {%endcapture%}
             {%
             include components/cards.html
             img_path="assets/images/common/online_survey/user_icon.svg"
-            title="Survey Answer"
+            title=title
             title_size="h2"
+            sub_text=subtext
             content=answer
             background_colour="#FFFFFF"
             %}
+            {%assign answer_idx=answer_idx | plus: 1%}
             {%endfor%}
         </div>
     </div>
