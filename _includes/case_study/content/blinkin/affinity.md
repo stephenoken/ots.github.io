@@ -21,7 +21,7 @@ How can we provide users with better results when looking for a product?
 include components/content_section.html
 title="Affinity Diagram"
 tools="Miro"
-tools_explanations="Traditional mode.|To keep a digital version for the future that I can easily share."
+tools_explanations="To work remotely and collaborate, and also to keep a digital version to share."
 is_themed_section=true
 content=content
 external_link_uri="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?page-id=218%3A477&node-id=218%3A746&viewport=243%2C48%2C0.08&scaling=contain"
