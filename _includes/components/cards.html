@@ -10,7 +10,7 @@
         </div>
         {%endif%}
         <div class="quote-heading-text">
-            {%assign title_size=include.title_size | default: "h1" %}
+            {%assign title_size=include.title_size | default: "h2" %}
             <{{title_size}}>{{include.title}}</{{title_size}}>
             {%if include.sub_text%}
             <span><b>{{include.sub_text}}</b></span>
