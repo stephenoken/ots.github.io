@@ -1,4 +1,4 @@
-<div class="user-quote-section" style="background-color: {{include.background_colour|default: "#F3F2EE"}}">
+<div class="user-quote-section {{include.additional_classes}}" style="background-color: {{include.background_colour|default: "#F3F2EE"}}">
     <div class="user-quote-heading">
         {%if include.img_path%}
         <img src="{{ site.url }}/{{include.img_path}}" class="icon">
@@ -18,6 +18,6 @@
         </div>
     </div>
     <p>
-        {{include.content}}
+        {{include.content | markdownify}}
     </p>
 </div>
