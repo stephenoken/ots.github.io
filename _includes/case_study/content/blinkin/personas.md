@@ -17,6 +17,7 @@ The product is shipped to my country.
 My user persona build based on my research is focused on the free charge shipping process, and that is something that escapes from my control. I'm on the right direction, but I need more participants.
 
 {%endcapture%}
+{%comment%}
 {%capture target_audience%}
 # Who is my target audience?
 
@@ -39,6 +40,7 @@ In order to make it easy for my audience along all my website portfolio I want o
 * The insight for my work
 * The results of my work
 {%endcapture%}
+{%endcomment%}
 {%
 include components/content_section.html
 title="User Persona"
@@ -46,7 +48,7 @@ tools="Miro"
 tools_explanations="To maintain and organize my notes, files and links."
 is_themed_section=false
 content=content
-diagram_img="personas/personas.png"
+diagram_img="personas/persona.jpg"
 external_link_uri="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?page-id=218%3A477&node-id=218%3A746&viewport=243%2C48%2C0.08&scaling=contain"
 external_link_description="Go to full journey map"
 target_audience=target_audience

@@ -22,7 +22,7 @@ tools="Miro"
 tools_explanations="To work more efficiently editing an existing template and to easily share it."
 is_themed_section=false
 content=content
-diagram_img="empathy_map/empathy_map.png"
+diagram_img="empathy_map/empathy_map.jpg"
 external_link_uri="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?page-id=218%3A477&node-id=218%3A746&viewport=243%2C48%2C0.08&scaling=contain"
 external_link_description="Go to full journey map"
 %}
