@@ -3,7 +3,7 @@
         <h2>{{include.title}}</h2>
         {{include.content | markdownify}}
     </div>
-    <div class="diagram-default media-asset">
+    <div class="diagram-default media-asset ">
         {%if include.slide_show_imgs%}
             {%if include.interactive_slide_show%}
 		        {%assign slides_data=include.interactive_slide_show | split: "|" %}
@@ -45,7 +45,7 @@
             {%endif%}
         {%endif%}
         {%if include.diagram_img%}
-        <div>
+        <div class="{{include.diagram_theme}}">
         <img src="{{ site.url }}/assets/images/{{ page.title }}/{{include.diagram_img}}">
         </div>
     {%endif%}

@@ -1,38 +1,27 @@
-{%comment%}
 {%capture content%}
 ### Process
-At this point I began to develop a solution to the problem. This involved creating sketches of the screens that would form part of my solution. To achieve the initial design I followed the methodology below:
+With the sketches I was able to begin creating an interactive prototype of my solution.
 
-1. Using the flow diagram I identified the key screens I needed to
-   design.
-2. Create a list of key features for each screen.
-3. I focused on a single screen, where I put the user goal first.  
-   Then I took the feature list and sorted it by priority to achieve
-   that goal.
-4. With these criteria  I made several variations that tried to solve
-   this problem.
-5. I reviewed each of these variations, and I selected the one that
-   best satisfies the user goal. And making sure that I included all
-   the key features.
-6. Once I identified the best sketch for each screen. I brought
-   the sketches together to validate that the solution satisfies
-   the user’s end goal of booking a flight.
+This medium fidelity prototype focused on taking the sketches I created and making a realistic and intuitive prototype. Where you can see how the end to end booking process worked.
 
-### My hypothesis
-By listing the key features and the user’s goal for each section, I was able to design UI elements that have purpose in mind.
+At this point I didn't focus on the theming or branding of the app, since I wanted to focus on building recognizable UI elements with different states.
 
 {%endcapture%}
+<linebreak class="spacer"></linebreak>
+<div class="heading">
+    <h1>Prototyping</h1>
+    <p>
+      Creating solutions
+    </p>
+</div>
 {%
 include components/content_section.html
-title="Sketches"
-tools="Pen and paper"
-tools_explanations="To quickly put my ideas into a visual state."
+title="Medium fidelity prototype"
+tools="Figma"
+tools_explanations="To design the UI prototypes"
 is_themed_section=false
 content=content
 external_link_uri="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?page-id=218%3A477&node-id=218%3A746&viewport=243%2C48%2C0.08&scaling=contain"
-external_link_description="Go to full Affinity Diagram"
-carousel_imgs="medium_fidelity/carousel_"
-carousel_img_ext="png"
-slide_show_img_range="1,6"
+external_link_description="Go to medium fidelity prototype"
+diagram_img="medium_fidelity/medium_fidelity.gif"
 %}
-{%endcomment%}
