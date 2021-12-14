@@ -48,7 +48,17 @@
         <div class="{{include.diagram_theme}}"{%if include.slide_show_imgs%} style="margin-top: 1em" {%endif%}>
         <img src="{{ site.url }}/assets/images/{{ page.title }}/{{include.diagram_img}}">
         </div>
-    {%endif%}
+        {%endif%}
+        {%if include.diagram_img_2%}
+        <div class="{{include.diagram_theme}}" style="margin-top: 1em" >
+            <img src="{{ site.url }}/assets/images/{{ page.title }}/{{include.diagram_img_2}}">
+        </div>
+        {%endif%}
+        {%if include.video%}
+        <video autoplay loop muted controls>
+            <source src="{{ site.url }}/assets/video/{{ page.title }}/{{include.video}}" type="video/mp4"/>
+        </video>
+        {%endif%}
         {%if include.external_link_uri%}
         <a  class="external-link" href="{{include.external_link_uri}}" target="_blank">{{include.external_link_description}}</a>
         {%elsif include.lightbox%}

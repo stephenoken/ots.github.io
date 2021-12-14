@@ -1,22 +1,20 @@
 {%capture content%}
 ### Why I used this methodology
 
-To evaluate the current online e-commerce by using metric relative to the performance and understand the standards.
+It’s a easy way to gather a lot of  user data, its cheap and relatively fast .
 
 ### Process
-As a starting point, I reviewed retail websites, and I set myself the task of understanding the basics that are generally involved when people searching and buy online clothes.
+The first step was to define the purpose of the Survey. What I want to know to form the users and to get more valuable data about the user's Needs, Thoughts, Emotions, Motivations
 
-For this benchmark, I applied these measures:
-*  Cognitive Biases
-*  Patterns and Conventions
-*  Usability Heuristics.
+In order to get this data I was very thoughtful about how to ask the questions to get input I was looking for, and at the same time get quantitative and qualitative data.
 
 ### Findings
-* The e-commerce retail websites are about search
-  products and apply filters in order to find what the user
-  needs.
+* The Users know what they are looking for on a website. 
+* The experience of searching doesn't mean anything to them 
+* They know well the process to the level that is not a challenge or  a funny thing to do. 
+* They want to save time and use the tools that make the searching more fast and effective.
 ### My hypothesis
-During my desk research, I came to realise that for a relatively simple task as finding and buying a t-shirt many different solutions exist across retail websites. This made me wonder how users are interacting with the different shopping experiences.
+There's a lot of different opinions about the search process and the filters. But what about enjoying the experience?
 {%endcapture%}
 {%
 include components/content_section.html

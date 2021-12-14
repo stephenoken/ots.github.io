@@ -1,6 +1,6 @@
 {%capture content%}
 ### Process
-With the key features and user flow defined, I started to capture my ideas by sketching low-fidelity filters solutions and the sequence and content for the onboarding.
+Once I had a visual direction for the website layout, I started to add more details and precisions to the sketches by turning them into mid-fidelity screens. On these screens, I included elements that directly address user goals, needs, frustrations, while incorporating common design patterns seen on other airline websites
 
 {%endcapture%}
 {%

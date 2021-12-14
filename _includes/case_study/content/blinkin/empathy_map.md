@@ -1,6 +1,6 @@
 {%capture content%}
 ### Why I used this methodology
-If the experience does not create happiness, at least we are going to make it memorable for its effectiveness and simplicity.
+To help me to align on a deep understanding of the end-user. To articulate what I know, find holes in the data. And also to help me to share this information for more collaborative Stages.
 ### Process
 Visualizing user attitudes and behaviours in an empathy map helps me to align on a deep understanding of end-users. The mapping process also reveals some holes in existing user data, like the actual feelings and user mood during the experience.
 

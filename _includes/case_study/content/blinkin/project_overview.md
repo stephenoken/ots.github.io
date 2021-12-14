@@ -32,8 +32,8 @@ hypothesis=hypothesis
 solution=solution
 learnings=learnings
 goals="
-The user: Understanding user online shopping habits.|
-The product: Improve user retention.|
-Personal: Apply the UX methodology to find a solution that improves the User Experience.
+The user: Finding out user habits in doing online shopping|
+The product: A solution that aims to maintain user engagement when searching for a product.|
+Personal: Apply UX methodology to find a solution that improves the User experience.
 "
 %}

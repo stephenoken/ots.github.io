@@ -1,7 +1,8 @@
 {%capture problem_statement%}
-It is an e-commerce website that allows its users to consciously customize their search filters to achieve a faster and more efficient user experience.
+It is an e-commerce website that allows its users to consciously customize their search filter options to achieve a faster and more efficient user experience.
 Fast because they don't have to fill the filters over and over again.
 Effective because you can provide results that really align with the user's style.
+
 {%endcapture%}
 
 {%capture context_statement%}

@@ -9,8 +9,27 @@
         {{content | markdownify}}
     </div>
     {%elsif include.double_col%}
+    <div class="col-2">
+        <div>
+            {{include.section_1 | markdownify}}
+        </div>
+        <div>
+            {{include.section_2 | markdownify}}
+        </div>
+        <div>
+            {{include.section_3 | markdownify}}
+        </div>
+    </div>
     {%endif%}
 </div>
+{%if include.has_project_plan%}
+<div class="heading" >
+    <h2>Project research plan for {{page.title | captialize}}</h2>
+</div>
+<div class="col-1">
+    <img src="{{ site.url }}/assets/images/{{page.title}}/design_thinking/project_plan.jpg" style="display: block;width: 100%;">
+</div>
+{%endif%}
 <div class="heading" style="margin-top: 7em">
     <h1>My design thinking process</h1>
 </div>
