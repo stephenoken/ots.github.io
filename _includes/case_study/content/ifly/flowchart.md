@@ -16,7 +16,7 @@ This step allowed me to further organize the data I collected and I was able to 
 include components/content_section.html
 title="User Flowchart"
 tools="Pen and paper,Figma"
-tools_explanations="To create a sketch and put ideas together.|TO create a digital version that I can share."
+tools_explanations="To create a sketch and put ideas together.|To create a digital version that I can share."
 is_themed_section=true
 content=content
 diagram_img="flowchart/flowchart.png"

@@ -1,5 +1,19 @@
-<div class="col-1">
-    <div data-aos="fade-up" class="">
-        <img src="{{ site.url }}/assets/images/{{ page.title }}/design-process.svg" class="design-process-img">
+<linebreak></linebreak>
+<div class="heading" style="margin-top: 7em">
+    <h1>UX process plan</h1>
+    <p>How I'm going to work</p>
+</div>
+<div class="section-theme">
+    {%if include.single_col%}
+    <div style="padding: 2em; margin: 10em auto; width: 50ch " >
+        {{content | markdownify}}
     </div>
+    {%elsif include.double_col%}
+    {%endif%}
+</div>
+<div class="heading" style="margin-top: 7em">
+    <h1>My design thinking process</h1>
+</div>
+<div style="width: 100vw">
+    <img src="{{ site.url }}/assets/images/{{page.title}}/design_thinking/overview.svg" style="margin: auto; width: 100%">
 </div>

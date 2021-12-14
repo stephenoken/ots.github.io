@@ -45,7 +45,7 @@
             {%endif%}
         {%endif%}
         {%if include.diagram_img%}
-        <div class="{{include.diagram_theme}}">
+        <div class="{{include.diagram_theme}}"{%if include.slide_show_imgs%} style="margin-top: 1em" {%endif%}>
         <img src="{{ site.url }}/assets/images/{{ page.title }}/{{include.diagram_img}}">
         </div>
     {%endif%}

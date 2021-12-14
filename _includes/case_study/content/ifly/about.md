@@ -21,4 +21,5 @@ project_definitions="
     Challenge: Understanding industry conventions and develop a smooth friction-free booking process.|
     Constraints: Improve the booking flow but also maintain the user’s mental model throughout the process.
 "
+enable_video=true
 %}
