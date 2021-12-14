@@ -22,5 +22,5 @@ tools_explanations="To work more efficiently editing an existing template and ea
 is_themed_section=false
 content=content
 diagram_img="delivery/wireframe.png"
-diagram_theme="section-theme image-paddingVk"
+diagram_theme="section-theme image-padding"
 %}

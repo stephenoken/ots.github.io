@@ -121,15 +121,9 @@
 
 </div>
 {%if include.carousel_imgs%}
-<div class="swiper carousel-swiper heading-margin">
-    <div class="swiper-wrapper">
-        {%assign carousel_img_range = include.carousel_img_range | split: "," %}
-        {% for i in (carousel_img_range[0]..carousel_img_range[1]) %}
-        <div class="swiper-slide">
-            <img src="{{ site.url }}/assets/images/{{ page.title }}/{{include.carousel_imgs}}{{ i }}.{{include.carousel_img_ext}}">
-        </div>
-        {% endfor%}
-    </div>
-    <div class="swiper-pagination"></div>
-</div>
+    {%include components/carousel.html
+        carousel_img_range=include.carousel_img_range
+        carousel_imgs=include.carousel_imgs
+        carousel_img_ext=include.carousel_img_ext
+    %}
     {%endif%}
