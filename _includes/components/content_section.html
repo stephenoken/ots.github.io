@@ -49,8 +49,10 @@
         <img src="{{ site.url }}/assets/images/{{ page.title }}/{{include.diagram_img}}">
         </div>
     {%endif%}
-        {%if include.external_link_description%}
+        {%if include.external_link_uri%}
         <a  class="external-link" href="{{include.external_link_uri}}" target="_blank">{{include.external_link_description}}</a>
+        {%elsif include.lightbox%}
+        <a  class="external-link" onclick="openModal('{{ site.url }}/assets/images/{{ page.title }}/{{include.diagram_img}}')">{{include.external_link_description}}</a>
         {%endif%}
         <div class="tool-card">
             <h6>

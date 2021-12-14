@@ -23,7 +23,7 @@ is_themed_section=true
 content=content
 slide_show_imgs="online_survey/online_survey_"
 slide_show_ext="png"
-interactive_slide_show="1,Go to full survey,https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif|
+interactive_slide_show="1,Go to full survey,https://www.surveymonkey.com/r/BQVYPWN|
 2|
 3,Go to full report,https://media.giphy.com/media/13CoXDiaCcCoyk/giphy.gif
 "

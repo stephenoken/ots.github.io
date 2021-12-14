@@ -20,6 +20,6 @@ tools_explanations="To create a sketch and put ideas together.|To create a digit
 is_themed_section=true
 content=content
 diagram_img="flowchart/flowchart.png"
-external_link_uri="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?page-id=218%3A477&node-id=218%3A746&viewport=243%2C48%2C0.08&scaling=contain"
 external_link_description="Go to User Flowchart"
+lightbox=true
 %}
