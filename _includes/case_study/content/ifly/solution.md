@@ -1,5 +1,4 @@
-{%capture content%} The solution depicts the improved booking process. It reduces the dropout rate improving el process
-de selección del Fares y solving the unexpected swipe between departure and return.  
+{%capture content%} The solution depicts the improved booking process. It reduces the dropout rate and improving the selection process of fares and solving the unexpected swipe between departure and return.  
 {%endcapture%}
 
 <div class="section-theme">
