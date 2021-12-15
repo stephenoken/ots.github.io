@@ -1,3 +1,4 @@
+{%comment%}
 {%capture content%}
 ### Why I used this methodology
 To gather relevant facts, for the problem statement
@@ -20,3 +21,4 @@ external_link_uri="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-
 external_link_description="Go to full Affinity Diagram"
 diagram_img="5_ws/5_ws.png"
 %}
+{%endcomment%}

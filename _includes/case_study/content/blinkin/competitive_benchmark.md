@@ -28,6 +28,8 @@ Easy to search for the file"
 is_themed_section=false
 content=content
 slide_show_imgs="competitive_benchmark/competitive_benchmark_"
+external_link_uri="https://www.figma.com/proto/zFlEqMzFWfN0Ia32QPrYPG/Blinkin-Study-Competitive-benchmark?page-id=2%3A1707&node-id=52%3A4621&viewport=295%2C48%2C0.06&scaling=contain"
+external_link_description="Go to full Benchmark"
 slide_show_ext="png"
 slide_show_img_range="1,9"
 %}
