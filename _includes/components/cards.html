@@ -1,0 +1,23 @@
+<div class="user-quote-section {{include.additional_classes}}" style="background-color: {{include.background_colour|default: "#F3F2EE"}}">
+    <div class="user-quote-heading">
+        {%if include.img_path%}
+        <img src="{{ site.url }}/{{include.img_path}}" class="icon">
+        {%elsif include.card_index%}
+        <div>
+           <h1>
+               {{include.card_index}}
+           </h1>
+        </div>
+        {%endif%}
+        <div class="quote-heading-text">
+            {%assign title_size=include.title_size | default: "h2" %}
+            <{{title_size}}>{{include.title}}</{{title_size}}>
+            {%if include.sub_text%}
+            <span><b>{{include.sub_text}}</b></span>
+            {%endif%}
+        </div>
+    </div>
+    <p>
+        {{include.content | markdownify}}
+    </p>
+</div>

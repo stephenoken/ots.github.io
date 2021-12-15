@@ -1,105 +1,169 @@
 @mixin container($primary-color, $accent-color, $tertiary-color) {
-    align-content: center;
-    max-width: 1440px;
-    min-width: min-content;
+  align-content: center;
+  max-width: 1440px;
+  min-width: min-content;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media("<desktop") {
+    margin: 5em 1em;
+  }
+  .col-grid {
+    @include column($primary-color, $accent-color, $tertiary-color);
+    grid-template-areas:
+                ". . a a . ."
+                "b b c c d d"
+                "e e f f g g"
+                ". x x y y .";
+    grid-gap: 1em;
+    .point-0 {
+      grid-area: a;
+    }
+    .point-1 {
+      grid-area: b;
+    }
+    .point-2 {
+      grid-area: c;
+    }
+    .point-3 {
+      grid-area: d;
+    }
+    .point-4 {
+      grid-area: e;
+    }
+    .point-5 {
+      grid-area: f;
+    }
+    .point-6 {
+      grid-area: g;
+    }
+    .point-last-1 {
+      grid-area: x;
+    }
+    .point-last-2 {
+      grid-area: y;
+    }
+  }
+  .col-1 {
+    @include column($primary-color, $accent-color, $tertiary-color);
+    grid-template-columns: 1fr;
+  }
+  .col-2 {
+    @include column($primary-color, $accent-color, $tertiary-color);
+    $minmax-content: minmax(25ch, 55ch);
+    grid-template-columns: 60ch 60ch;
+    grid-template-areas:
+                "a b"
+                "c c";
+    gap: 2em;
+    @include media("<tablet") {
+      grid-template-columns: $minmax-content;
+    }
+
+    .content {
+      grid-area: a;
+    }
+
+    .media-asset {
+      grid-area: b;
+    }
+
+    .additional-content {
+      grid-area: c;
+    }
+  }
+
+  .col-3 {
+    @include column($primary-color, $accent-color, $tertiary-color);
+    grid-template-columns: repeat(3, 40ch);
+
+    p {
+    }
+
+    gap: 2em;
+    @include media("<tablet") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .col-4 {
+    @include column($primary-color, $accent-color, $tertiary-color);
+    $minmax-content: 29ch;
+    grid-template-columns: repeat(4, $minmax-content);
+    gap: 1em;
+    @include media("<=tablet") {
+      grid-template-columns: repeat(2, $minmax-content);
+    }
+    @include media("<tablet") {
+      grid-template-columns: $minmax-content;
+    }
+  }
+
+  .heading {
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
 
-    @include media("<desktop") {
-        margin: 5em 1em;
+    p {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      max-width: 70ch;
+      min-width: 40ch;
+      font-size: 1em;
+    }
+  }
+
+  .heading-margin {
+    margin-bottom: 5em;
+  }
+
+  .col-2-uneven {
+    @include column($primary-color, $accent-color, $tertiary-color);
+    grid-template-columns: 30ch 90ch;
+    @include media("<tablet") {
+      grid-template-columns: 1fr;
     }
 
-    .col-2 {
-        @include column($primary-color, $accent-color, $tertiary-color);
-        $minmax-content: minmax(25ch, 55ch);
-        grid-template-columns: 60ch 60ch;
-        gap: 1em;
-        @include media("<tablet") {
-            grid-template-columns: $minmax-content;
-        }
+    img {
+      margin: auto;
     }
 
-    .col-3 {
-        @include column($primary-color, $accent-color, $tertiary-color);
-        grid-template-columns: repeat(3, 40ch);
-        gap: 2em;
-        @include media("<tablet") {
-            grid-template-columns: 1fr;
-        }
+    align-items: center;
+  }
+
+  .col-2-wip {
+    // @include column;
+    display: grid;
+    // gap: a;
+    grid-template-columns: 1fr 30ch 1fr;
+    // @include media("<tablet") {
+    //     grid-template-columns: 1fr;
+    // }
+    h2, p, a {
+      text-align: center;
+
     }
 
-    .col-4 {
-        @include column($primary-color, $accent-color, $tertiary-color);
-        $minmax-content: 32ch;
-        grid-template-columns: repeat(4, $minmax-content);
-        gap: 1em;
-        @include media("<=tablet") {
-            grid-template-columns: repeat(2, $minmax-content);
-        }
-        @include media("<tablet") {
-            grid-template-columns: $minmax-content;
-        }
+    img {
+      margin: auto 0;
+      margin-left: auto;
     }
 
-    .heading {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        p {
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-            max-width: 70ch;
-            min-width: 40ch;
-            font-size: 1em;
-        }
+    align-items: center;
+
+    a {
+      text-align: center;
+      margin: auto;
+      display: block;
     }
+  }
 
-    .heading-margin {
-        margin-bottom: 5em;
-    }
-
-    .col-2-uneven {
-        @include column($primary-color, $accent-color, $tertiary-color);
-        grid-template-columns: 30ch 90ch;
-        @include media("<tablet") {
-            grid-template-columns: 1fr;
-        }
-        img {
-            margin: auto;
-        }
-        align-items: center;
-    }
-
-    .col-2-wip {
-        // @include column;
-        display: grid;
-        // gap: a;
-        grid-template-columns: 1fr 30ch 1fr;
-        // @include media("<tablet") {
-        //     grid-template-columns: 1fr;
-        // }
-        h2, p, a {
-            text-align: center;
-
-        }
-        img {
-            margin: auto 0;
-            margin-left: auto;
-        }
-        align-items: center;
-        a {
-            text-align: center;
-            margin: auto;
-            display: block;
-        }
-    }
-
-    .col-2-btn {
-        display: grid;
+  .col-2-btn {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     width: fit-content;
     grid-gap: 2em;
     margin: auto;
-    }
+  }
 }

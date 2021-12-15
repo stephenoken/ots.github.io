@@ -33,6 +33,9 @@
     width: auto;
     object-fit: fill;
     grid-template-columns: 1fr;
+    @include media("<=1440px") {
+        height: 100%;
+    }
     .hero-grid {
         max-width: 1440px;
         margin-left: auto;
@@ -94,4 +97,14 @@
     @include hero('blinkin', $base-font-color, 40vh);
     background-color: $blink-theme-color !important;
 
+}
+
+.hero-portfolio {
+    @include hero('portfolio', $base-font-color, 40vh);
+    background-color: $blink-theme-color !important;
+}
+
+.hero-cas {
+    @include hero('cas', $base-font-color, 40vh);
+    background-color: $blink-theme-color !important;
 }

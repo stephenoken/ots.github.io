@@ -1,3 +1,48 @@
+@mixin tool-card($tool-card-background-color) {
+  .tool-card {
+    display: block;
+    background-color: $tool-card-background-color;
+    padding: 1em 2em;
+    margin-top: 5em;
+
+    h6 {
+      margin-top: 0.5em;
+      margin-bottom: 1em;
+    }
+    .tool-card-content {
+      display: flex;
+      align-items: center;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      img {
+        margin: initial;
+        filter: initial;
+      }
+    }
+    .tool-icon {
+      height: 32px;
+      width: auto;
+      vertical-align: middle;
+
+      &:nth-last-child(1) {
+        padding-right: 15px;
+      }
+    }
+  }
+}
+
+@mixin section($section-background-color, $section-background-alternative-color) {
+  .section-no-theme {
+    background-color: $section-background-color;
+    @include tool-card($section-background-alternative-color)
+  }
+
+  .section-theme {
+    background-color: $section-background-alternative-color;
+    @include tool-card($section-background-color)
+  }
+}
+
 @mixin diagram($background-colour) {
   background: $background-colour;
   padding: 1em;
@@ -94,7 +139,7 @@
   }
 
   linebreak {
-    border: $base-line-color solid 1px;
+    border: #000000 solid 1px;
     width: 100%;
     display: block;
   }
@@ -111,6 +156,7 @@
       width: auto;
       //padding-right: 5px;
       vertical-align: middle;
+
       &:nth-last-child(1) {
         padding-right: 5px;
       }
@@ -132,16 +178,34 @@
     height: auto;
   }
 
+  .persona_text {
+    text-align: left;
+    p {
+      text-align: left !important;
+    }
+  }
+  .default-height {
+    height: 25vh !important;
+  }
   .user-quote-section {
-    background: $background-color;
-    border-radius: 8px;
+    background: $base-theme-light-color;
     padding: 2em;
+    margin: auto;
+    height: 20vh;
 
     .user-quote-heading {
-      display: flex;
-      align-items: center;
+      display: block;
+      h1 {
+        text-align: center;
+      }
+      img {
+        display: block;
+        margin: auto;
+      }
 
       .quote-heading-text {
+        text-align: center;
+
         span {
           display: block;
           margin: .5em 0;
@@ -270,6 +334,7 @@
     i {
       margin-right: 1em;
     }
+
     // TODO remove this class
     img {
       width: 12px;
@@ -292,7 +357,6 @@
       color: #828282;
     }
   }
-
 
 
   .washed-out {
@@ -327,6 +391,7 @@
     }
   }
 }
+
 // TODO Fix this css
 .lightbox {
   position: fixed;
@@ -364,7 +429,9 @@
     }
   }
 }
+
 .design-process-img {
+  width: 80vw;
   display: block;
   margin: 7.5em auto;
 }
@@ -373,19 +440,60 @@
   @include theme($ifly-accent-color, $ifly-theme-color, $ifly-tertiary-color, $ifly-light-color);
   @include container($ifly-theme-color, $ifly-accent-color, $ifly-tertiary-color);
   @include swiper($blink-theme-color);
+
   .theme-background {
     background-color: $blink-theme-color;
   }
+
+  @include section($background-color, $blink-theme-color);
 }
 
 .blinkin-container {
   @include theme($blink-theme-color, $blink-accent-color, $blink-tertiary-color, $blink-light-color);
   @include container($blink-theme-color, $blink-accent-color, $blink-accent-color);
   @include swiper($blink-theme-color);
+  @include section($background-color, $blink-theme-color);
 
   .theme-background {
     background-color: $blink-theme-color;
   }
+
+  .about-cartoon {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    display: block;
+  }
+}
+
+.portfolio-container {
+  @include theme($blink-theme-color, $blink-accent-color, $blink-tertiary-color, $blink-light-color);
+  @include container($blink-theme-color, $blink-accent-color, $blink-accent-color);
+  @include swiper($blink-theme-color);
+  @include section($background-color, $blink-theme-color);
+
+  .theme-background {
+    background-color: $blink-theme-color;
+  }
+
+  .about-cartoon {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    display: block;
+  }
+}
+
+.cas-container {
+  @include theme($blink-theme-color, $blink-accent-color, $blink-tertiary-color, $blink-light-color);
+  @include container($blink-theme-color, $blink-accent-color, $blink-accent-color);
+  @include swiper($blink-theme-color);
+  @include section($background-color, $blink-theme-color);
+
+  .theme-background {
+    background-color: $blink-theme-color;
+  }
+
   .about-cartoon {
     width: 50%;
     height: auto;
@@ -397,6 +505,7 @@
 .container {
   @include theme($blink-theme-color, $blink-accent-color, $blink-tertiary-color, $blink-light-color);
   @include container($base-theme-color, $base-theme-light-color, $base-theme-light-color);
+  @include section($background-color, $blink-theme-color);
 }
 
 .about-container {
@@ -416,12 +525,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     .child {
       margin: 4em auto;
       text-align: center;
+
       a {
         margin: auto;
       }
+
       div {
         padding-top: 1em;
         padding-bottom: 1em;
@@ -429,8 +541,12 @@
     }
   }
 }
+
 .background-colour {
   background-color: $blink-theme-color;
   width: 100vw;
   max-width: initial;
+}
+.image-padding {
+  padding: 1em;
 }

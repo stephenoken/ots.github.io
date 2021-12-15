@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<div class="hero-{{page.title}}">
+    <div class="hero-grid">
+        <div class="hero-text">
+            <h1>{{ page.title }}</h1>
+            <h2>
+                {{page.description.headline}}
+            </h2>
+            <p class="subscript">
+                {{ page.description.content}}
+            </p>
+        </div>
+    </div>
+
+</div>
+<div class="spacing"></div>
+<div class="container">
+    <div class="heading">
+        <h1>How do I work?</h1>
+        <p>An overview of my design thinking</p>
+    </div>
+    <div class="col-grid">
+        {{content}}
+    </div>
+    <div id="my-work" class="col-2 fade-in-thumbnails">
+        {% for study_case in site.study_cases reversed %}
+        {% if page.title == "graphic-design" and study_case.is_graphic_design_work%}
+        {%assign show_post=true%}
+        {%elsif page.title == "ux-design" and study_case.is_ux_work%}
+        {%assign show_post=true%}
+        {%else%}
+        {%assign show_post=false%}
+        {%endif%}
+        {%if show_post%}
+        <a href="{{ study_case.url | relative_url}}">
+            <div class="thumbnail fade-in">
+                <img src="/assets/images/{{ study_case.title }}/thumbnail.png" alt="">
+                <div class="overlay">
+                    <div class="text">{{ study_case.description.headline }} </div>
+                </div>
+            </div>
+        </a>
+        {%endif%}
+        {% endfor %}
+    </div>
+</div>
+<a class="scroll-to-top-button" onclick="topFunction()">
+    <img src="{{site.url}}/assets/images/scroll-top-button.svg" alt="">
+</a>

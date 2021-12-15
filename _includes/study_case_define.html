@@ -1,0 +1,18 @@
+<linebreak></linebreak>
+<div class="heading">
+    <h1>Define</h1>
+    <p>
+        Framing the problem - gathering evidence
+    </p>
+</div>
+{%if include.has_empathy_map%}
+    {%include case_study/content/{{page.title}}/empathy_map.md%}
+{%endif%}
+{%if include.has_personas%}
+{%include case_study/content/{{page.title}}/personas.md%}
+{%endif%}
+{%include case_study/content/{{page.title}}/affinity.md%}
+{%comment%}
+{%include case_study/content/{{page.title}}/5_ws.md%}
+{%endcomment%}
+{%include case_study/content/{{page.title}}/problem_statement.md%}

@@ -1,0 +1,111 @@
+<div class="heading" style="margin-top: 7em">
+    <h1>Project Overview</h1>
+    <p>
+        {{include.project_overview}}
+    </p>
+</div>
+<div class="col-4">
+    <div>
+        <p>
+            Project By
+        </p>
+        <linebreak></linebreak>
+        <p>
+            {{include.project_by}}
+        </p>
+    </div>
+    <div>
+        <p>
+            My Role
+        </p>
+        <linebreak></linebreak>
+        <p>
+            {{include.role}}
+        </p>
+    </div>
+    <div>
+        <p>
+            Duration
+        </p>
+        <linebreak></linebreak>
+        <p>
+            {{include.duration}}
+        </p>
+    </div>
+    <div>
+        <p>
+            Key tools
+        </p>
+        <linebreak></linebreak>
+        <p>
+            {{include.tools}}
+        </p>
+    </div>
+</div>
+<div class="col-2">
+    <div>
+        <img src="{{ site.url }}/assets/images/{{page.title}}/project_overview/zap.svg" class="icon">
+        <h3>The problem</h3>
+        <p>
+            {{include.problem}}
+        </p>
+    </div>
+    <div>
+        <img src="{{ site.url }}/assets/images/{{page.title}}/project_overview/gear.svg" class="icon">
+        {%if include.role_description %}
+        <h3>My Role</h3>
+        <p>
+            {{include.role_description}}
+        </p>
+        {%elsif include.hypothesis%}
+        <h3>Hypothesis</h3>
+        <p>{{include.hypothesis}}</p>
+        {%endif%}
+    </div>
+    <div>
+        <img src="{{ site.url }}/assets/images/{{page.title}}/project_overview/rocket.svg" class="icon">
+        <h3>The Solution</h3>
+        <p>
+            {{include.solution}}
+        </p>
+    </div>
+    <div>
+        <img src="{{ site.url }}/assets/images/{{page.title}}/project_overview/learnings.svg" class="icon">
+        <h3>Learnings</h3>
+        <p>
+            {{include.learnings}}
+        </p>
+    </div>
+
+</div>
+
+<div class="heading">
+    <h1>Study Case Goals</h1>
+    <div  style="display: block">
+        <img src="{{ site.url }}/assets/images/{{page.title}}/project_overview/objective.gif">
+    </div>
+</div>
+
+{%assign goals=include.goals | split: "|"%}
+<div class="col-{{goals.size}}" style="margin-top: initial">
+    {%assign i=0%}
+    {%for goal in goals%}
+        {%assign goal_content=goal | split: ":"%}
+        {%assign i=i | plus: 1%}
+        {% if goal_content.size > 1 %}
+            {%assign title=goal_content[0]%}
+            {%assign content=goal_content[1]%}
+            {%
+            include components/cards.html
+            card_index=i
+            title=title
+            content=content
+            %}
+        {%else%}
+            {%
+            include components/cards.html
+            content=goal
+            %}
+        {% endif %}
+    {%endfor%}
+</div>

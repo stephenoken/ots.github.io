@@ -35,11 +35,25 @@ new Swiper(".autoplay-swiper", {
     spaceBetween: 0,
     updateOnWindowResize: false,
     autoplay: {
-        delay: 1000,
+        delay: 2000,
     },
     effect: 'fade',
     fadeEffect: {
         crossFade: true
+    },
+})
+
+new Swiper(".card-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    updateOnWindowResize: false,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
     },
 })
 let scrollToTopButton = document.getElementById("scrollToTopBtn");
