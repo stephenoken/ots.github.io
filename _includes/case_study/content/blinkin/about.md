@@ -6,8 +6,8 @@ Effective because you can provide results that really align with the user's styl
 {%endcapture%}
 
 {%capture context_statement%}
-This is a personal project, where I wanted to improve my UX skills, and apply new learnings. Like user centered, or psychological bias.
-I also focused more on defining technics **??**.
+This is a personal project, where I wanted to improve my UX skills, and apply new learnings. Like user centered design, and psychological bias.
+I also focused more on defining technical details.
 {%endcapture%}
 
 {%capture product_purpose%}

@@ -22,7 +22,7 @@ tools="Figma"
 tools_explanations="To design the UI prototype"
 is_themed_section=false
 content=content
-external_link_uri="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?page-id=218%3A477&node-id=218%3A746&viewport=243%2C48%2C0.08&scaling=contain"
+external_link_uri="https://www.figma.com/proto/Tlia2y86spUTiDWtIAr7z2/🛍-Blinkin-study-case?page-id=35%3A9973&node-id=45%3A5490&viewport=243%2C48%2C0.08&scaling=min-zoom&starting-point-node-id=45%3A5490"
 external_link_description="Go to prototype"
 video="full_flow.mp4"
 %}

@@ -1,13 +1,10 @@
 {%capture content%}
-My solution is based on creating an Onboarding to immerse users in this new feature, which is the possibility of customizing filters.
-Throughout the windos modal it is explained
+My solution is based on creating an immersive onboarding experience to the new feature, which is the possibility of creating customizing filters.
+Modal windows are used to guide the user on how the feature works.
 
-
-
-
-
-
-
+<p>
+<a target="_blank" href="https://www.figma.com/proto/Tlia2y86spUTiDWtIAr7z2/🛍-Blinkin-study-case?page-id=118%3A21230&node-id=138%3A18811&viewport=243%2C48%2C0.06&scaling=scale-down" class="external-link">Go to full solution</a>
+</p>
 {%endcapture%}
 
 <div class="section-theme">

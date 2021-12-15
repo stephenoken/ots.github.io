@@ -25,6 +25,6 @@ content=content
 slide_show_imgs="user_journey/journey_"
 slide_show_ext="png"
 slide_show_img_range="1,2"
-external_link_uri="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?page-id=218%3A477&node-id=218%3A746&viewport=243%2C48%2C0.08&scaling=contain"
+external_link_uri="https://miro.com/app/board/o9J_lTQu_MQ=/?moveToWidget=3074457364997103922&cot=14"
 external_link_description="Go to full journey map"
 %}

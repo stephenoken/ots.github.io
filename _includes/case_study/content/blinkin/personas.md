@@ -49,8 +49,8 @@ tools_explanations="To maintain and organize my notes, files and links."
 is_themed_section=false
 content=content
 diagram_img="personas/persona.jpg"
-external_link_uri="https://www.figma.com/proto/QBTSBuokADGC8T0KG5yMOW/UX-Design-Institute-Ifly-Projects?page-id=218%3A477&node-id=218%3A746&viewport=243%2C48%2C0.08&scaling=contain"
-external_link_description="Go to full journey map"
+external_link_uri="https://miro.com/app/board/o9J_lTQu_MQ=/?moveToWidget=3074457364997104446&cot=14"
+external_link_description="Go to user persona"
 target_audience=target_audience
 target_audience_product_solution=target_audience_product_solution
 %}

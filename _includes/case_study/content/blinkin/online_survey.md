@@ -26,10 +26,10 @@ is_themed_section=true
 content=content
 slide_show_imgs="online_survey/online_survey_"
 slide_show_ext="png"
-interactive_slide_show="1,Go to full survey,https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif|
+interactive_slide_show="1,Go to full survey,https://np6v0n6vt47.typeform.com/to/rJvULnMY|
 2|
-3,Go to full report,https://media.giphy.com/media/13CoXDiaCcCoyk/giphy.gif|
-4,Go to full miro board,https://media.giphy.com/media/13CoXDiaCcCoyk/giphy.gif
+3,Go to full report,https://np6v0n6vt47.typeform.com/report/rJvULnMY/35Q6vuLkikRW1zR7|
+4,Go to full miro board,https://miro.com/app/board/o9J_lTQu_MQ=/?moveToWidget=3074457365378010671&cot=14
 "
 survey_section_quote="Could you explain why you found the search filters useful or not?"
 survey_answers='
@@ -40,5 +40,5 @@ survey_answers='
 
 %}
 {%comment%}
-2-3,Go to full report,https://media.giphy.com/media/13CoXDiaCcCoyk/giphy.gif
+2-3,Go to full report,https://np6v0n6vt47.typeform.com/to/rJvULnMY
 {%endcomment%}

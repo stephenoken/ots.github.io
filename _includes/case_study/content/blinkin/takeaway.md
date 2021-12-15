@@ -16,7 +16,7 @@ I consider this study case in an ongoing stage. I'm just finishing the Build sta
 My key takeaway was that trust the research and analysis process, listen to your users and don't be afraid to learn new insights you never know how you can apply to your work.
 {%endcapture%}
 {%capture next_step%}
-The next step for this project is to test and  design and currently missing steps of the prototype: When user login?, How this process is effected if the user is not login? or if is not registed.  
+The next step for this project is to test and  design and currently missing steps of the prototype: When user login?, How this process is affected if the user is not login? Or if they are not registered.  
 {%endcapture%}
 {% include sections/takeaway.html
 went_well=went_well
