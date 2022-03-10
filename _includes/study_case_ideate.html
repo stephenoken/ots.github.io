@@ -10,6 +10,9 @@
 {%endif%}
 {%include case_study/content/{{page.title}}/low_fidelity.md%}
 {%include case_study/content/{{page.title}}/medium_fidelity.md%}
+{%if include.has_design_system%}
+{%include case_study/content/{{page.title}}/design_system.md%}
+{%endif%}
 {%include case_study/content/{{page.title}}/high_fidelity.md%}
 {%if include.has_delivery%}
 {%include case_study/content/{{page.title}}/delivery.md%}
