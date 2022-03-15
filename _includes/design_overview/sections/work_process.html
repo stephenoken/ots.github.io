@@ -1,0 +1,56 @@
+<div class="heading">
+    <h1>How do I work?</h1>
+    <p>
+        {{include.sub_title}}
+    </p>
+</div>
+<div class="heading section-theme" style="padding-top: 2em">
+    <h2>Tool Kit</h2>
+    <div class="col-2 section-theme" style="margin-top: 1em">
+        <div style="margin-left: auto">
+            <div>
+                {%assign tools=include.tools_left | split: ","%}
+                {%assign range_bound=tools.size | minus: 1%}
+                {%for i in (0..range_bound)%}
+               <div style="display: flex; align-items: center;margin-top: 1em; margin-bottom: 1em;">
+                   <img style="padding-right: 1em" src="{{ site.url }}/assets/images/common/tools/{{tools[i] | downcase | replace : ' ', '_'}}.svg" alt="">
+                   {{tools[i]}}
+               </div>
+                {%endfor%}
+            </div>
+        </div>
+        <div>
+            <div>
+                {%assign tools=include.tools_right | split: ","%}
+                {%assign range_bound=tools.size | minus: 1%}
+                {%for i in (0..range_bound)%}
+                <div style="display: flex; align-items: center;margin-top: 1em; margin-bottom: 1em;">
+                    <img style="padding-right: 1em" src="{{ site.url }}/assets/images/common/tools/{{tools[i] | downcase | replace : ' ', '_'}}.svg" alt="">
+                    {{tools[i]}}
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+</div>
+<img style="width: 100%; height: auto" src="{{ site.url }}/assets/images/{{page.title}}/work_process.svg" alt="">
+<div class="heading">
+    <h1>{{include.work_title}}</h1>
+    <p>
+        {{include.work_sub_title}}
+    </p>
+</div>
+<div id="my-work" class="col-2 fade-in-thumbnails">
+    {% for study_case in site.study_cases%}
+    {%if study_case.is_ux_work == include.ux_work_filter%}
+    <a href="{{ study_case.url | relative_url}}">
+        <div class="thumbnail fade-in">
+            <img src="{{site.url}}/assets/images/{{ study_case.title }}/thumbnail.png" alt="">
+            <div class="overlay">
+                <div class="text">{{ study_case.description.headline }} </div>
+            </div>
+        </div>
+    </a>
+    {%endif%}
+    {% endfor %}
+</div>

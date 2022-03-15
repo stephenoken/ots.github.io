@@ -1,8 +1,13 @@
 <div class="col-2 {%if include.is_themed_section%}section-theme{%else%}section-no-theme{%endif%}">
     <div class="content">
+        {%if include.title%}
         <h2>{{include.title}}</h2>
+        {%endif%}
         {{include.content | markdownify}}
     </div>
+    {%if include.cover_image%}
+    <img src="{{ site.url }}/assets/images/{{ page.title }}/{{include.cover_image}}" alt="" style="height: auto; width: 100%">
+    {%else%}
     <div class="diagram-default media-asset ">
         {%if include.slide_show_imgs%}
             {%if include.interactive_slide_show%}
@@ -64,6 +69,7 @@
         {%elsif include.lightbox%}
         <a  class="external-link" onclick="openModal('{{ site.url }}/assets/images/{{ page.title }}/{{include.diagram_img}}')">{{include.external_link_description}}</a>
         {%endif%}
+        {% if include.tools %}
         <div class="tool-card">
             <h6>
                 Why I used this tool:
@@ -78,7 +84,9 @@
             </div>
             {%endfor%}
         </div>
+        {% endif %}
     </div>
+    {%endif%}
     <div class="additional-content">
         {%if include.survey_answers%}
 	        {%if include.survey_section_quote%}

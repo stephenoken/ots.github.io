@@ -1,0 +1,27 @@
+<div class="heading" style="margin-top: 7em">
+    <linebreak></linebreak>
+    <h1>Branding</h1>
+    <p>
+        Using empathy to understand the user's problem.
+    </p>
+</div>
+<div class="heading" style="margin-top: 3em">
+    <h2>{{include.project_title}}</h2>
+    {%if include.project_overview%}
+    <h3 style="width: 40ch; margin: auto; font-weight: normal">
+        {{include.project_overview}}
+    </h3>
+    {%endif%}
+</div>
+<div class="col-4">
+    {%assign overview_aspects=include.overview_aspects | split: ","%}
+    {%assign overview_explanations = include.overview_explanations | split: ","%}
+    {%assign range_bound=overview_aspects.size | minus: 1%}
+    {%for i in (0..range_bound)%}
+    <div>
+        {{overview_aspects[i]}}
+        <linebreak></linebreak>
+        {{overview_explanations[i]}}
+    </div>
+    {%endfor%}
+</div>

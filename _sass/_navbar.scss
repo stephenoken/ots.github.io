@@ -162,6 +162,18 @@
 }
 
 .navbar-theme-ux-design {
-    background: $blink-theme-color;
+    @include navbar
+}
+
+.navbar-theme-graphic-design {
+    @include navbar
+}
+.navbar-theme-vitavo {
+    @include navbar
+}
+.navbar-theme-documon {
+    @include navbar
+}
+.navbar-theme-editorial {
     @include navbar
 }

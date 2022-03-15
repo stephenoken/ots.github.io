@@ -108,3 +108,13 @@
     @include hero('cas', $base-font-color, 40vh);
     background-color: $blink-theme-color !important;
 }
+
+.hero-editorial {
+    @include hero('editorial', $base-font-color, 40vh);
+}
+.hero-documon {
+    @include hero('documon', $base-font-color, 40vh);
+}
+.hero-vitavo {
+    @include hero('vitavo', $base-font-color, 40vh);
+}

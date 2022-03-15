@@ -502,6 +502,39 @@
   }
 }
 
+.vitavo-container {
+  @include theme($blink-theme-color, $blink-accent-color, $blink-tertiary-color, $blink-light-color);
+  @include container($blink-theme-color, $blink-accent-color, $blink-accent-color);
+  @include swiper($blink-theme-color);
+  @include section($background-color, $blink-theme-color);
+
+  .theme-background {
+    background-color: $blink-theme-color;
+  }
+}
+
+.documon-container {
+  @include theme($blink-theme-color, $blink-accent-color, $blink-tertiary-color, $blink-light-color);
+  @include container($blink-theme-color, $blink-accent-color, $blink-accent-color);
+  @include swiper($blink-theme-color);
+  @include section($background-color, $blink-theme-color);
+
+  .theme-background {
+    background-color: $blink-theme-color;
+  }
+}
+
+.editorial-container {
+  @include theme($blink-theme-color, $blink-accent-color, $blink-tertiary-color, $blink-light-color);
+  @include container($blink-theme-color, $blink-accent-color, $blink-accent-color);
+  @include swiper($blink-theme-color);
+  @include section($background-color, $blink-theme-color);
+
+  .theme-background {
+    background-color: $blink-theme-color;
+  }
+}
+
 .container {
   @include theme($blink-theme-color, $blink-accent-color, $blink-tertiary-color, $blink-light-color);
   @include container($base-theme-color, $base-theme-light-color, $base-theme-light-color);
